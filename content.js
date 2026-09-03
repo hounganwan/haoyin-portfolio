@@ -1,7 +1,62 @@
 /* EDIT THIS FILE. Put images in /assets/. */
-const portfolioContent={projects:[
-{title:"OlfaMate",subtitle:"Visual-Augmented Olfactory Training for Ageing Populations",year:"2025–2026",category:"Preventive Healthcare · Wearable · Service Design",description:"A product-service system exploring multisensory olfactory training, real-time visual feedback and proactive health management.",image:"assets/olfamate.jpg",url:"#"},
-{title:"Eco-Shoe Care",subtitle:"Wearable Footwear & Biomaterial System",year:"2024",category:"Wearable · Biomaterials · Social Impact",description:"A design intervention combining footwear, biomaterials and smart technology to address everyday health and wellbeing.",image:"assets/eco-shoe.jpg",url:"#"},
-{title:"Ageing & Inclusive Care",subtitle:"Designing More Inclusive Care Experiences",year:"2023",category:"Inclusive Design · Service Design",description:"An exploration of ageing, care and inclusive service experiences across personal, community and social contexts.",image:"assets/ageing.jpg",url:"#"},
-{title:"Selected Practice",subtitle:"Communication · Interaction · Systems",year:"2019–2026",category:"Selected Experiments",description:"A collection of selected visual, interaction, communication, teaching and systems-design experiments.",image:"assets/selected.jpg",url:"#"}
-]};
+
+const portfolioContent = {
+  projects: [
+
+    // 01 — EchoSkin
+    {
+      title: "EchoSkin",
+      subtitle: "Wearable Empathetic Interaction for End-of-Life Care",
+      year: "2026",
+      category: "Healthcare · Wearable · Emotional Wellbeing",
+      description: "A smart wearable that translates physiological signals into subtle emotional feedback, enabling non-verbal communication between patients, caregivers and family members.",
+      image: "assets/echoskin.jpg",
+      url: "#"
+    },
+
+    // 02 — OlfaMate
+    {
+      title: "OlfaMate",
+      subtitle: "Designing Preventive Health Through Olfactory Training for Older Adults",
+      year: "2025",
+      category: "Preventive Healthcare · Wearable · Service Design",
+      description: "A multisensory product-service system that combines olfactory training, real-time visual feedback and personalised health insights to support proactive ageing.",
+      image: "assets/olfamate.jpg",
+      url: "#"
+    },
+
+    // 03 — EcoShoe Care
+    {
+      title: "EcoShoe Care",
+      subtitle: "Wearable Footwear & Biomaterial System",
+      year: "2024",
+      category: "Wearable · Biomaterials · Social Impact",
+      description: "A wearable footwear system combining biomaterials and smart technology to address everyday health and wellbeing.",
+      image: "assets/eco-shoe.jpg",
+      url: "#"
+    },
+
+    // 04 — Golden Age SmartOasis
+    {
+      title: "Golden Age SmartOasis",
+      subtitle: "Designing More Inclusive Care Experiences",
+      year: "2023",
+      category: "Inclusive Design · Service Design",
+      description: "An exploration of ageing, care and inclusive service experiences across personal, community and social contexts.",
+      image: "assets/golden-age-smartoasis.jpg",
+      url: "#"
+    },
+
+    // 05 — ThyroFlow Support
+    {
+      title: "ThyroFlow Support",
+      subtitle: "Medical Interactive Product & Interface System Design",
+      year: "2022",
+      category: "Medical Design · Interactive System · Healthcare",
+      description: "An interactive healthcare system for patients experiencing chyle leakage after thyroid cancer surgery, combining a smart neck brace with a nurse-station monitor to support personalised treatment, real-time recovery tracking and more comfortable daily care.",
+      image: "assets/thyroflow.jpg",
+      url: "#"
+    }
+
+  ]
+};
