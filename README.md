@@ -1,23 +1,16 @@
-# Haoyin Yin Portfolio — GitHub + Vercel
+# HAOYIN YIN Portfolio V3
+
+## Upload to GitHub
+Upload the CONTENTS of this folder to the ROOT of your repository. `index.html` must be directly visible in the repository.
 
 ## Edit
-1. Open `content.js` to change project titles, years, categories, descriptions, images and links.
-2. Put project images in `assets/`.
-3. Replace `assets/Haoyin-Yin-CV.pdf` with your CV.
-4. Edit email/social links in `index.html`.
-
-## GitHub
-Create a repository such as `haoyin-portfolio` and upload the CONTENTS of this folder. `index.html` must be in the repository root.
+Edit `content.js` for project information. Put project images in `assets/`.
+Suggested images: `olfamate.jpg`, `eco-shoe.jpg`, `ageing.jpg`, `selected.jpg`.
+Put your CV at `assets/Haoyin-Yin-CV.pdf`.
 
 ## Vercel
-Go to https://vercel.com/ → Add New → Project → Import Git Repository.
-Framework Preset: Other
-Build Command: empty
-Output Directory: .
-Then Deploy.
+Import the GitHub repository. Framework: Other. Build command: empty. Output directory: `.`.
+No build step is required.
 
-## Custom domain
-Vercel → Project → Settings → Domains → Add your domain.
-Follow the DNS records Vercel provides at your domain registrar.
-
-No Node.js or build step is required.
+## Update
+Commit changes to GitHub. Vercel automatically redeploys.
