@@ -9,6 +9,35 @@
 <meta name="description" content="Haoyin Yin — Service Designer, Design Researcher and Educator.">
 
 <link rel="stylesheet" href="styles.css">
+
+<style>
+/* Teaching — two-column project layout */
+.teaching-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 50px;
+  width: 100%;
+}
+
+.teaching-item {
+  padding-bottom: 30px;
+}
+
+.teaching-item h3 {
+  margin-bottom: 10px;
+}
+
+.teaching-item p {
+  margin: 6px 0;
+}
+
+@media (max-width: 800px) {
+  .teaching-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -420,7 +449,7 @@
     </p>
 
 
-    <div class="body">
+    <div class="body teaching-grid">
 
 
       <!-- TEACHING 01 -->
@@ -506,7 +535,9 @@
 
   <div class="cv-links">
 
-    <a href="https://service-design-network.org/case_study/golden-age-smartoasis" target="_blank" rel="noopener">
+    <a href="https://service-design-network.org/case_study/golden-age-smartoasis"
+       target="_blank"
+       rel="noopener">
       Service Design Network ↗
     </a>
 
@@ -532,12 +563,46 @@
 
   <div class="contact-links">
 
+    <!-- EMAIL -->
+
     <a href="mailto:haoryin.yin@gmail.com">
-      haoryin.yin@gmail.com
+      Email ↗
     </a>
 
-    <a href="https://www.linkedin.com/" target="_blank">
+
+    <!-- LINKEDIN -->
+
+    <a href="https://www.linkedin.com/in/haoyin-yin-023898226/"
+       target="_blank"
+       rel="noopener">
       LinkedIn ↗
+    </a>
+
+
+    <!-- ORCID -->
+
+    <a href="https://orcid.org/0009-0003-8514-0490"
+       target="_blank"
+       rel="noopener">
+      ORCID ↗
+    </a>
+
+
+    <!-- RCA GRADUATION WORK -->
+
+    <a href="https://2023.rca.ac.uk/students/haoyin-yin/"
+       target="_blank"
+       rel="noopener">
+      RCA Graduation Work ↗
+    </a>
+
+
+    <!-- YOUTUBE -->
+
+    <a href="https://www.youtube.com/@haoyinyin5917"
+       target="_blank"
+       rel="noopener">
+      YouTube ↗
     </a>
 
   </div>
