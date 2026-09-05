@@ -13,11 +13,11 @@
 <style>
 
 /* =========================================================
-   HERO V9
-   FULL-SCREEN / MINIMAL / EDITORIAL
+   HERO V10
+   FULL-SCREEN IMAGE + PROTECTED TYPOGRAPHY
    ========================================================= */
 
-.hero-v9 {
+.hero-v10 {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -32,17 +32,17 @@
 
 
 /* =========================================================
-   IMAGE
+   FULL-SCREEN IMAGE
    ========================================================= */
 
-.hero-v9-media {
+.hero-v10-media {
   position: absolute;
   inset: 0;
 
   overflow: hidden;
 }
 
-.hero-v9-media img {
+.hero-v10-media img {
   width: 100%;
   height: 100%;
 
@@ -53,16 +53,18 @@
 
   transform: scale(1.015);
 
-  animation: heroV9Image 1.6s cubic-bezier(.16,.7,.2,1) both;
+  animation:
+    heroV10ImageIn 1.6s cubic-bezier(.16,.7,.2,1) both;
 
-  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+  transition:
+    transform 1.2s cubic-bezier(.2,.7,.2,1);
 }
 
-.hero-v9:hover .hero-v9-media img {
+.hero-v10:hover .hero-v10-media img {
   transform: scale(1.025);
 }
 
-@keyframes heroV9Image {
+@keyframes heroV10ImageIn {
 
   from {
     opacity: 0;
@@ -78,10 +80,10 @@
 
 
 /* =========================================================
-   VERY LIGHT CONTRAST
+   IMAGE ATMOSPHERE
    ========================================================= */
 
-.hero-v9-shade {
+.hero-v10-shade {
   position: absolute;
   inset: 0;
 
@@ -90,10 +92,10 @@
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,.24) 0%,
-      rgba(0,0,0,0) 22%,
-      rgba(0,0,0,0) 62%,
-      rgba(0,0,0,.48) 100%
+      rgba(0,0,0,.22) 0%,
+      rgba(0,0,0,0) 28%,
+      rgba(0,0,0,.05) 55%,
+      rgba(0,0,0,.45) 100%
     );
 }
 
@@ -102,14 +104,14 @@
    NAVIGATION
    ========================================================= */
 
-.hero-v9-nav {
+.hero-v10-nav {
   position: absolute;
 
   top: 0;
   left: 0;
   right: 0;
 
-  z-index: 10;
+  z-index: 20;
 
   display: flex;
 
@@ -121,7 +123,7 @@
   color: #fff;
 }
 
-.hero-v9-logo {
+.hero-v10-logo {
   color: #fff;
 
   text-decoration: none;
@@ -134,7 +136,7 @@
   letter-spacing: .04em;
 }
 
-.hero-v9-menu {
+.hero-v10-menu {
   display: flex;
 
   gap: 28px;
@@ -142,7 +144,7 @@
   align-items: center;
 }
 
-.hero-v9-menu a {
+.hero-v10-menu a {
   color: #fff;
 
   text-decoration: none;
@@ -155,125 +157,151 @@
   transition: opacity .25s ease;
 }
 
-.hero-v9-menu a:hover {
+.hero-v10-menu a:hover {
   opacity: .5;
 }
 
 
-/* =========================================================
-   TOP LEFT INDEX
-   ========================================================= */
+/* subtle navigation atmosphere */
 
-.hero-v9-index {
+.hero-v10-nav::after {
+  content: "";
+
   position: absolute;
 
-  top: 84px;
-  left: 32px;
+  top: 0;
+  left: 0;
+  right: 0;
 
-  z-index: 5;
+  height: 130px;
 
-  font-size: 9px;
-  line-height: 1.4;
+  z-index: -1;
 
-  letter-spacing: .14em;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.24),
+      rgba(0,0,0,0)
+    );
 
-  text-transform: uppercase;
-
-  opacity: .65;
+  pointer-events: none;
 }
 
 
 /* =========================================================
-   MAIN TYPOGRAPHY
+   MAIN TYPOGRAPHY ZONE
    ========================================================= */
 
-.hero-v9-main {
+.hero-v10-text-zone {
+
   position: absolute;
 
   left: 32px;
-  right: 32px;
   bottom: 48px;
 
-  z-index: 5;
+  z-index: 8;
+
+  width: min(900px, calc(100% - 64px));
+
+  padding: 28px 34px 30px;
+
+  /*
+    Very subtle glass/editorial surface.
+    It protects text without becoming a heavy panel.
+  */
+
+  background: rgba(0,0,0,.24);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  border-left: 1px solid rgba(255,255,255,.55);
+
+  animation:
+    heroV10TextIn 1s .2s
+    cubic-bezier(.2,.7,.2,1)
+    both;
 }
 
 
-/* small recognition line */
+/* =========================================================
+   AWARD NEWS
+   ========================================================= */
 
-.hero-v9-news {
+.hero-v10-news {
+
   display: flex;
+
+  flex-wrap: wrap;
 
   align-items: center;
 
-  gap: 14px;
+  gap: 8px 18px;
 
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 
   font-size: 9px;
-  line-height: 1;
+
+  line-height: 1.4;
 
   letter-spacing: .1em;
 
   text-transform: uppercase;
 
-  opacity: .82;
-
-  animation:
-    heroV9Rise .9s .35s
-    cubic-bezier(.2,.7,.2,1)
-    both;
+  color: rgba(255,255,255,.86);
 }
 
-.hero-v9-news::before {
-  content: "";
+.hero-v10-news-label {
 
-  width: 26px;
-  height: 1px;
+  opacity: .5;
 
-  background: currentColor;
+  padding-right: 4px;
+}
 
-  opacity: .7;
+.hero-v10-news-item {
+  white-space: nowrap;
 }
 
 
-/* title */
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
 
-.hero-v9-title {
+.hero-v10-title {
+
   margin: 0;
 
-  max-width: 1180px;
+  max-width: 880px;
 
   font-size:
-    clamp(48px, 6.2vw, 102px);
+    clamp(42px, 5.3vw, 78px);
 
-  line-height: .91;
+  line-height: .94;
 
   font-weight: 400;
 
-  letter-spacing: -.055em;
+  letter-spacing: -.052em;
 
-  animation:
-    heroV9Rise 1.1s .12s
-    cubic-bezier(.2,.7,.2,1)
-    both;
+  color: #fff;
 }
 
-.hero-v9-title span {
+.hero-v10-title span {
   display: block;
 }
 
 
 /* =========================================================
-   BOTTOM INFORMATION
+   IDENTITY — RIGHT BOTTOM
    ========================================================= */
 
-.hero-v9-bottom {
+.hero-v10-identity {
+
   position: absolute;
 
   right: 32px;
   bottom: 52px;
 
-  z-index: 6;
+  z-index: 8;
 
   display: flex;
 
@@ -281,27 +309,28 @@
 
   align-items: flex-end;
 
-  gap: 7px;
+  gap: 5px;
 
   text-align: right;
 
   font-size: 9px;
-  line-height: 1.4;
 
-  letter-spacing: .08em;
+  line-height: 1.35;
+
+  letter-spacing: .1em;
 
   text-transform: uppercase;
 
-  opacity: .78;
+  color: rgba(255,255,255,.78);
 
   animation:
-    heroV9Rise .9s .55s
+    heroV10TextIn .9s .5s
     cubic-bezier(.2,.7,.2,1)
     both;
 }
 
-.hero-v9-bottom span:last-child {
-  opacity: .55;
+.hero-v10-identity span:last-child {
+  opacity: .48;
 }
 
 
@@ -309,19 +338,21 @@
    SCROLL
    ========================================================= */
 
-.hero-v9-scroll {
+.hero-v10-scroll {
+
   position: absolute;
 
   left: 32px;
-  bottom: 25px;
+  bottom: 21px;
 
-  z-index: 7;
+  z-index: 10;
 
   color: #fff;
 
   text-decoration: none;
 
   font-size: 9px;
+
   line-height: 1;
 
   letter-spacing: .12em;
@@ -335,10 +366,12 @@
     transform .25s ease;
 }
 
-.hero-v9-scroll:hover {
+.hero-v10-scroll:hover {
+
   opacity: 1;
 
   transform: translateY(3px);
+
 }
 
 
@@ -346,7 +379,7 @@
    ANIMATION
    ========================================================= */
 
-@keyframes heroV9Rise {
+@keyframes heroV10TextIn {
 
   from {
     opacity: 0;
@@ -367,69 +400,91 @@
 
 @media (max-width: 800px) {
 
-  .hero-v9 {
+  .hero-v10 {
     min-height: 680px;
   }
 
-  .hero-v9-nav {
+
+  .hero-v10-nav {
     padding: 22px 20px;
   }
 
-  .hero-v9-menu {
+
+  .hero-v10-menu {
     gap: 16px;
   }
 
-  .hero-v9-menu a {
+
+  .hero-v10-menu a {
     font-size: 9px;
   }
 
-  .hero-v9-index {
+
+  .hero-v10-text-zone {
+
     left: 20px;
-    top: 70px;
+    bottom: 38px;
+
+    width: calc(100% - 40px);
+
+    padding:
+      22px 20px
+      24px;
+
   }
 
-  .hero-v9-main {
-    left: 20px;
-    right: 20px;
-    bottom: 48px;
-  }
 
-  .hero-v9-news {
-    margin-bottom: 18px;
+  .hero-v10-news {
+
+    gap: 7px 12px;
+
+    margin-bottom: 17px;
 
     font-size: 8px;
 
-    max-width: 320px;
-
-    line-height: 1.4;
   }
 
-  .hero-v9-title {
+
+  .hero-v10-news-item {
+    white-space: normal;
+  }
+
+
+  .hero-v10-title {
+
     font-size:
-      clamp(42px, 11vw, 65px);
+      clamp(38px, 10.5vw, 60px);
 
-    line-height: .94;
+    line-height: .95;
 
-    max-width: 95%;
   }
 
-  .hero-v9-bottom {
+
+  .hero-v10-identity {
+
     display: none;
+
   }
 
-  .hero-v9-scroll {
+
+  .hero-v10-scroll {
+
     left: 20px;
-    bottom: 20px;
+    bottom: 17px;
+
   }
 
-  .hero-v9-shade {
+
+  .hero-v10-shade {
+
     background:
       linear-gradient(
         180deg,
         rgba(0,0,0,.3) 0%,
-        rgba(0,0,0,0) 30%,
-        rgba(0,0,0,.58) 100%
+        rgba(0,0,0,.02) 30%,
+        rgba(0,0,0,.62) 100%
       );
+
   }
 
 }
@@ -474,15 +529,15 @@
 
 
 <!-- =========================================================
-     HERO
+     HERO V10
      ========================================================= -->
 
-<section class="hero-v9" id="top">
+<section class="hero-v10" id="top">
 
 
-  <!-- IMAGE -->
+  <!-- FULL-SCREEN IMAGE -->
 
-  <div class="hero-v9-media">
+  <div class="hero-v10-media">
 
     <img
       src="assets/echoskin.jpg"
@@ -492,20 +547,20 @@
   </div>
 
 
-  <!-- IMAGE SHADE -->
+  <!-- IMAGE ATMOSPHERE -->
 
-  <div class="hero-v9-shade"></div>
+  <div class="hero-v10-shade"></div>
 
 
   <!-- NAVIGATION -->
 
-  <header class="hero-v9-nav">
+  <header class="hero-v10-nav">
 
-    <a href="#top" class="hero-v9-logo">
+    <a href="#top" class="hero-v10-logo">
       HAOYIN YIN
     </a>
 
-    <nav class="hero-v9-menu">
+    <nav class="hero-v10-menu">
 
       <a href="#work">Work</a>
 
@@ -522,36 +577,37 @@
   </header>
 
 
-  <!-- INDEX -->
+  <!-- TEXT ZONE -->
 
-  <div class="hero-v9-index">
-    Service Design / Research / Education
-  </div>
-
-
-  <!-- MAIN -->
-
-  <div class="hero-v9-main">
+  <div class="hero-v10-text-zone">
 
 
     <!-- AWARD NEWS -->
 
-    <div class="hero-v9-news">
+    <div class="hero-v10-news">
 
-      <span>Recent Recognition</span>
+      <span class="hero-v10-news-label">
+        Recent Recognition
+      </span>
 
-      <span>London Design Awards — Silver Winner</span>
+      <span class="hero-v10-news-item">
+        London Design Awards — Silver Winner
+      </span>
 
-      <span>Muse Design Awards — Gold &amp; Silver Winner</span>
+      <span class="hero-v10-news-item">
+        Muse Design Awards — Gold &amp; Silver Winner
+      </span>
 
-      <span>August 2026</span>
+      <span class="hero-v10-news-item">
+        August 2026
+      </span>
 
     </div>
 
 
-    <!-- STATEMENT -->
+    <!-- MAIN STATEMENT -->
 
-    <h1 class="hero-v9-title">
+    <h1 class="hero-v10-title">
 
       <span>Designing services, systems</span>
 
@@ -565,9 +621,9 @@
   </div>
 
 
-  <!-- RIGHT BOTTOM -->
+  <!-- IDENTITY -->
 
-  <div class="hero-v9-bottom">
+  <div class="hero-v10-identity">
 
     <span>Service Designer</span>
 
@@ -580,7 +636,7 @@
 
   <!-- SCROLL -->
 
-  <a href="#work" class="hero-v9-scroll">
+  <a href="#work" class="hero-v10-scroll">
     Scroll to explore ↓
   </a>
 
@@ -995,7 +1051,6 @@
 
 
   <div class="two-col">
-
 
     <p class="statement">
       Teaching is part of my design practice: helping designers turn ideas into structured, research-informed and meaningful outcomes.
