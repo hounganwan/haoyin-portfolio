@@ -13,8 +13,8 @@
 <style>
 
 /* =========================================================
-   HERO V10
-   FULL-SCREEN IMAGE + PROTECTED TYPOGRAPHY
+   HERO V11
+   FULL-SCREEN HERO / FULL IMAGE VISIBILITY
    ========================================================= */
 
 .hero-v10 {
@@ -23,23 +23,29 @@
   height: 100vh;
   height: 100svh;
   min-height: 680px;
-
   overflow: hidden;
-
   background: #111;
   color: #fff;
 }
 
 
 /* =========================================================
-   FULL-SCREEN IMAGE
+   HERO IMAGE
+   IMPORTANT:
+   contain = show the COMPLETE image
    ========================================================= */
 
 .hero-v10-media {
   position: absolute;
   inset: 0;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   overflow: hidden;
+
+  background: #111;
 }
 
 .hero-v10-media img {
@@ -48,32 +54,33 @@
 
   display: block;
 
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 
-  transform: scale(1.015);
+  transform: scale(1);
 
   animation:
-    heroV10ImageIn 1.6s cubic-bezier(.16,.7,.2,1) both;
+    heroV11ImageIn 1.6s cubic-bezier(.16,.7,.2,1) both;
 
   transition:
     transform 1.2s cubic-bezier(.2,.7,.2,1);
 }
 
 .hero-v10:hover .hero-v10-media img {
-  transform: scale(1.025);
+  transform: scale(1.015);
 }
 
-@keyframes heroV10ImageIn {
+
+@keyframes heroV11ImageIn {
 
   from {
     opacity: 0;
-    transform: scale(1.07);
+    transform: scale(.98);
   }
 
   to {
     opacity: 1;
-    transform: scale(1.015);
+    transform: scale(1);
   }
 
 }
@@ -92,10 +99,10 @@
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,.22) 0%,
+      rgba(0,0,0,.18) 0%,
       rgba(0,0,0,0) 28%,
-      rgba(0,0,0,.05) 55%,
-      rgba(0,0,0,.45) 100%
+      rgba(0,0,0,.04) 55%,
+      rgba(0,0,0,.38) 100%
     );
 }
 
@@ -162,7 +169,7 @@
 }
 
 
-/* subtle navigation atmosphere */
+/* Navigation gradient */
 
 .hero-v10-nav::after {
   content: "";
@@ -180,7 +187,7 @@
   background:
     linear-gradient(
       180deg,
-      rgba(0,0,0,.24),
+      rgba(0,0,0,.22),
       rgba(0,0,0,0)
     );
 
@@ -189,7 +196,7 @@
 
 
 /* =========================================================
-   MAIN TYPOGRAPHY ZONE
+   TEXT ZONE
    ========================================================= */
 
 .hero-v10-text-zone {
@@ -204,11 +211,6 @@
   width: min(900px, calc(100% - 64px));
 
   padding: 28px 34px 30px;
-
-  /*
-    Very subtle glass/editorial surface.
-    It protects text without becoming a heavy panel.
-  */
 
   background: rgba(0,0,0,.24);
 
@@ -291,7 +293,7 @@
 
 
 /* =========================================================
-   IDENTITY — RIGHT BOTTOM
+   IDENTITY
    ========================================================= */
 
 .hero-v10-identity {
@@ -404,21 +406,17 @@
     min-height: 680px;
   }
 
-
   .hero-v10-nav {
     padding: 22px 20px;
   }
-
 
   .hero-v10-menu {
     gap: 16px;
   }
 
-
   .hero-v10-menu a {
     font-size: 9px;
   }
-
 
   .hero-v10-text-zone {
 
@@ -433,7 +431,6 @@
 
   }
 
-
   .hero-v10-news {
 
     gap: 7px 12px;
@@ -444,11 +441,9 @@
 
   }
 
-
   .hero-v10-news-item {
     white-space: normal;
   }
-
 
   .hero-v10-title {
 
@@ -459,13 +454,9 @@
 
   }
 
-
   .hero-v10-identity {
-
     display: none;
-
   }
-
 
   .hero-v10-scroll {
 
@@ -474,30 +465,22 @@
 
   }
 
-
-  .hero-v10-shade {
-
-    background:
-      linear-gradient(
-        180deg,
-        rgba(0,0,0,.3) 0%,
-        rgba(0,0,0,.02) 30%,
-        rgba(0,0,0,.62) 100%
-      );
-
-  }
-
 }
 
 
 /* =========================================================
-   TEACHING — TWO COLUMN PROJECT LAYOUT
+   TEACHING
    ========================================================= */
 
 .teaching-grid {
+
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
   gap: 40px 50px;
+
   width: 100%;
 }
 
@@ -525,29 +508,26 @@
 
 </head>
 
+
 <body>
 
 
 <!-- =========================================================
-     HERO V10
+     HERO
      ========================================================= -->
 
 <section class="hero-v10" id="top">
 
 
-  <!-- FULL-SCREEN IMAGE -->
-
   <div class="hero-v10-media">
 
     <img
       src="assets/echoskin.jpg"
-      alt="Haoyin Yin — Selected Design Work"
+      alt="Haoyin Yin — EchoSkin"
     >
 
   </div>
 
-
-  <!-- IMAGE ATMOSPHERE -->
 
   <div class="hero-v10-shade"></div>
 
@@ -577,12 +557,10 @@
   </header>
 
 
-  <!-- TEXT ZONE -->
+  <!-- TEXT -->
 
   <div class="hero-v10-text-zone">
 
-
-    <!-- AWARD NEWS -->
 
     <div class="hero-v10-news">
 
@@ -605,8 +583,6 @@
     </div>
 
 
-    <!-- MAIN STATEMENT -->
-
     <h1 class="hero-v10-title">
 
       <span>Designing services, systems</span>
@@ -616,7 +592,6 @@
       <span>more inclusive futures.</span>
 
     </h1>
-
 
   </div>
 
@@ -644,11 +619,12 @@
 </section>
 
 
+
 <main>
 
 
 <!-- =========================================================
-     WORK
+     01 SELECTED WORK
      ========================================================= -->
 
 <section id="work" class="section">
@@ -666,8 +642,9 @@
 </section>
 
 
+
 <!-- =========================================================
-     RESEARCH
+     02 RESEARCH
      ========================================================= -->
 
 <section id="research" class="section dark">
@@ -696,16 +673,13 @@
 
   <div class="research-list">
 
-
     <article>
 
       <span>01</span>
 
       <div>
 
-        <h3>
-          Ageing Well in Place
-        </h3>
+        <h3>Ageing Well in Place</h3>
 
         <p>
           Inclusive services, environments and technologies that support independence, connection and dignity in later life.
@@ -722,9 +696,7 @@
 
       <div>
 
-        <h3>
-          Preventive Healthcare
-        </h3>
+        <h3>Preventive Healthcare</h3>
 
         <p>
           Designing experiences that encourage early awareness, proactive behaviour and everyday health management.
@@ -741,9 +713,7 @@
 
       <div>
 
-        <h3>
-          Multisensory Interaction
-        </h3>
+        <h3>Multisensory Interaction</h3>
 
         <p>
           Exploring sensory experience as a design resource for perception, memory, engagement and wellbeing.
@@ -760,9 +730,7 @@
 
       <div>
 
-        <h3>
-          AI &amp; Emerging Technology
-        </h3>
+        <h3>AI &amp; Emerging Technology</h3>
 
         <p>
           Investigating how AI and emerging technologies can enable personalised, adaptive and human-centred services.
@@ -772,14 +740,14 @@
 
     </article>
 
-
   </div>
 
 </section>
 
 
+
 <!-- =========================================================
-     ABOUT
+     03 ABOUT
      ========================================================= -->
 
 <section id="about" class="section">
@@ -794,7 +762,6 @@
 
 
   <div class="two-col">
-
 
     <div>
 
@@ -820,6 +787,7 @@
   </div>
 
 
+
   <!-- EDUCATION -->
 
   <div class="timeline">
@@ -828,26 +796,18 @@
 
       <span>EDUCATION</span>
 
-      <h3>
-        Royal College of Art
-      </h3>
+      <h3>Royal College of Art</h3>
 
-      <p>
-        London, UK
-      </p>
+      <p>London, UK</p>
 
-      <p>
-        MA, Service Design · 2022-2023
-      </p>
+      <p>MA, Service Design · 2022-2023</p>
 
 
       <h3>
         Communication University of Zhejiang
       </h3>
 
-      <p>
-        Hangzhou, CN
-      </p>
+      <p>Hangzhou, CN</p>
 
       <p>
         BFA, Film &amp; TV Cinematography &amp; Production (TV Cameraing) · 2018-2022
@@ -892,7 +852,8 @@
   </div>
 
 
-  <!-- HONORS & AWARDS -->
+
+  <!-- HONORS -->
 
   <div class="timeline">
 
@@ -901,58 +862,34 @@
       <span>HONORS &amp; AWARDS</span>
 
 
-      <h3>
-        Muse Design Awards
-      </h3>
+      <h3>Muse Design Awards</h3>
 
-      <p>
-        Gold &amp; Silver Winner · Aug 2026
-      </p>
+      <p>Gold &amp; Silver Winner · Aug 2026</p>
 
 
-      <h3>
-        London Design Awards
-      </h3>
+      <h3>London Design Awards</h3>
 
-      <p>
-        Silver Winner · Jul 2026
-      </p>
+      <p>Silver Winner · Jul 2026</p>
 
 
-      <h3>
-        Asian Economics Research Institute
-      </h3>
+      <h3>Asian Economics Research Institute</h3>
 
-      <p>
-        Committee Member · 2026-2028
-      </p>
+      <p>Committee Member · 2026-2028</p>
 
 
-      <h3>
-        American Psychological Association
-      </h3>
+      <h3>American Psychological Association</h3>
 
-      <p>
-        Membership · 2025-2026
-      </p>
+      <p>Membership · 2025-2026</p>
 
 
-      <h3>
-        UK Design for Good
-      </h3>
+      <h3>UK Design for Good</h3>
 
-      <p>
-        Merit Award for Participation · 2023
-      </p>
+      <p>Merit Award for Participation · 2023</p>
 
 
-      <h3>
-        China Scholarship Council (CSC)
-      </h3>
+      <h3>China Scholarship Council (CSC)</h3>
 
-      <p>
-        Scholarship Recipient · Jun 2022
-      </p>
+      <p>Scholarship Recipient · Jun 2022</p>
 
     </div>
 
@@ -964,13 +901,9 @@
       <span>OTHER EDUCATION</span>
 
 
-      <h3>
-        Aalto University
-      </h3>
+      <h3>Aalto University</h3>
 
-      <p>
-        Remote, Online Course
-      </p>
+      <p>Remote, Online Course</p>
 
       <p>
         TU-E3170 Facilitating Change Course · Apr-May 2026
@@ -981,9 +914,7 @@
         University of Oxford - Saïd Business School
       </h3>
 
-      <p>
-        Remote, Online Course
-      </p>
+      <p>Remote, Online Course</p>
 
       <p>
         AI and Digital Transformation in Government · Jan-Dec 2025
@@ -994,9 +925,7 @@
         Imperial College London - Business School
       </h3>
 
-      <p>
-        London, UK
-      </p>
+      <p>London, UK</p>
 
       <p>
         Entrepreneurship Journey, Minor MBA Program · Oct 2022-Jun 2023
@@ -1007,9 +936,7 @@
         University of Jyväskylä - Open University
       </h3>
 
-      <p>
-        Remote · 3 ECTS Credits
-      </p>
+      <p>Remote · 3 ECTS Credits</p>
 
       <p>
         Online Course in Education Curriculum · Jun-Aug 2022
@@ -1020,9 +947,7 @@
         University of the Arts London
       </h3>
 
-      <p>
-        Remote
-      </p>
+      <p>Remote</p>
 
       <p>
         Short-term Researcher on Human Rights and Computation · Mar-May 2022
@@ -1035,8 +960,9 @@
 </section>
 
 
+
 <!-- =========================================================
-     TEACHING
+     04 TEACHING
      ========================================================= -->
 
 <section id="teaching" class="section teaching">
@@ -1052,8 +978,13 @@
 
   <div class="two-col">
 
+
     <p class="statement">
-      Teaching is part of my design practice: helping designers turn ideas into structured, research-informed and meaningful outcomes.
+
+      Teaching is part of my design practice:
+      helping designers turn ideas into structured,
+      research-informed and meaningful outcomes.
+
     </p>
 
 
@@ -1118,6 +1049,7 @@
 </section>
 
 
+
 <!-- =========================================================
      PUBLICATIONS
      ========================================================= -->
@@ -1130,8 +1062,12 @@
       PUBLICATIONS
     </p>
 
+
     <h2>
-      Yin, H. (2025) Golden Age SmartOasis: Transcending single-modal design – an integrated ecosystem of product, app, and space.
+      Yin, H. (2025) Golden Age SmartOasis:
+      Transcending single-modal design –
+      an integrated ecosystem of product,
+      app, and space.
     </h2>
 
   </div>
@@ -1152,8 +1088,9 @@
 </section>
 
 
+
 <!-- =========================================================
-     CONTACT
+     05 CONTACT
      ========================================================= -->
 
 <section id="contact" class="section contact">
@@ -1174,9 +1111,11 @@
 
   <div class="contact-links">
 
+
     <a href="mailto:haoryin.yin@gmail.com">
       Email ↗
     </a>
+
 
     <a
       href="https://www.linkedin.com/in/haoyin-yin-023898226/"
@@ -1186,6 +1125,7 @@
       LinkedIn ↗
     </a>
 
+
     <a
       href="https://orcid.org/0009-0003-8514-0490"
       target="_blank"
@@ -1193,6 +1133,7 @@
     >
       ORCID ↗
     </a>
+
 
     <a
       href="https://2023.rca.ac.uk/students/haoyin-yin/"
@@ -1202,6 +1143,7 @@
       RCA Graduation Work ↗
     </a>
 
+
     <a
       href="https://www.youtube.com/@haoyinyin5917"
       target="_blank"
@@ -1209,6 +1151,7 @@
     >
       YouTube ↗
     </a>
+
 
     <a
       href="https://www.zhihu.com/people/haoyin_yin"
@@ -1218,6 +1161,7 @@
       Zhihu ↗
     </a>
 
+
     <a
       href="https://scholar.google.com/citations?user=JkgD5NwAAAAJ&amp;hl=en"
       target="_blank"
@@ -1226,12 +1170,14 @@
       Google Scholar ↗
     </a>
 
+
   </div>
 
 </section>
 
 
 </main>
+
 
 
 <!-- =========================================================
