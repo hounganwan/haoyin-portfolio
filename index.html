@@ -1,782 +1,906 @@
 <!doctype html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Haoyin Yin — Service Designer & Design Researcher</title>
+
 <meta name="description" content="Haoyin Yin — Service Designer, Design Researcher and Educator.">
+
 <link rel="stylesheet" href="styles.css">
+
 <style>
+
 /* =========================================================
-   HERO V7 — RCA INSPIRED
+   HERO — EDITORIAL / RCA-INSPIRED
    ========================================================= */
-.hero-v7 {
+
+.hero-editorial {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* ---------- Hero image ---------- */
+
+.hero-editorial-image {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 680px;
-  display: flex;
-  align-items: flex-end;
+  min-height: 68vh;
   overflow: hidden;
   background: #111;
-  color: #fff;
 }
-/* ---------------------------------------------------------
-   HERO IMAGE
-   --------------------------------------------------------- */
-.hero-v7-media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-.hero-v7-media img {
+
+.hero-editorial-image img {
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
-  object-position: center;
-  transform: scale(1.015);
-  transition:
-    transform 1.4s cubic-bezier(.2,.65,.2,1);
-}
-.hero-v7:hover .hero-v7-media img {
-  transform: scale(1.045);
-}
-/* Dark cinematic gradient */
-.hero-v7-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.12) 0%,
-      rgba(0,0,0,0.00) 42%,
-      rgba(0,0,0,0.12) 58%,
-      rgba(0,0,0,0.82) 100%
-    );
-}
-/* ---------------------------------------------------------
-   HERO CONTENT
-   --------------------------------------------------------- */
-.hero-v7-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  box-sizing: border-box;
-  padding:
-    120px
-    30px
-    32px;
-}
-/* ---------------------------------------------------------
-   TOP INFORMATION
-   --------------------------------------------------------- */
-.hero-v7-kicker {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 30px;
-}
-.hero-v7-kicker p {
-  margin: 0;
-  color: #fff;
-  font-size: 10px;
-  line-height: 1.45;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-/* ---------------------------------------------------------
-   MAIN STATEMENT
-   --------------------------------------------------------- */
-.hero-v7-title {
-  max-width: 1180px;
-  margin: 0;
-  color: #fff;
-  font-size:
-    clamp(48px, 6.3vw, 98px);
-  line-height: 0.93;
-  font-weight: 400;
-  letter-spacing: -0.05em;
-}
-.hero-v7-title span {
+  object-position: center center;
   display: block;
+
+  transform: scale(1.015);
+  animation: heroImageIn 1.4s cubic-bezier(.2,.7,.2,1) forwards;
 }
-/* ---------------------------------------------------------
-   RECENT WORK
-   --------------------------------------------------------- */
-.hero-v7-project {
-  display: grid;
-  grid-template-columns:
-    160px
-    minmax(300px, 1fr)
-    100px;
-  gap: 30px;
-  align-items: end;
-  max-width: 1180px;
-  margin-top: 42px;
-  padding-top: 15px;
-  border-top:
-    1px solid rgba(255,255,255,0.55);
-}
-.hero-v7-project-label {
-  color: #fff;
-  font-size: 10px;
-  line-height: 1.4;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-.hero-v7-project-title {
-  color: #fff;
-  font-size: 20px;
-  line-height: 1.15;
-  font-weight: 500;
-}
-.hero-v7-project-description {
-  margin-top: 5px;
-  max-width: 500px;
-  color: #fff;
-  font-size: 13px;
-  line-height: 1.4;
-}
-.hero-v7-project-year {
-  color: #fff;
-  text-align: right;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-}
-/* ---------------------------------------------------------
-   SCROLL
-   --------------------------------------------------------- */
-.hero-v7-scroll {
-  position: absolute;
-  right: 30px;
-  bottom: 32px;
-  z-index: 4;
-  color: #fff;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  opacity: 0.9;
-  transition:
-    opacity 0.3s ease;
-}
-.hero-v7-scroll:hover {
-  opacity: 0.55;
-}
-/* ---------------------------------------------------------
-   HERO ENTRANCE
-   --------------------------------------------------------- */
-.hero-v7-kicker,
-.hero-v7-title,
-.hero-v7-project,
-.hero-v7-scroll {
-  animation:
-    heroFadeIn 1s ease both;
-}
-.hero-v7-title {
-  animation-delay: 0.12s;
-}
-.hero-v7-project {
-  animation-delay: 0.28s;
-}
-.hero-v7-scroll {
-  animation-delay: 0.4s;
-}
-@keyframes heroFadeIn {
+
+@keyframes heroImageIn {
   from {
     opacity: 0;
-    transform: translateY(18px);
+    transform: scale(1.06);
   }
+
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1.015);
   }
 }
+
+
+/* ---------- Small image metadata ---------- */
+
+.hero-editorial-index {
+  position: absolute;
+  top: 28px;
+  left: 32px;
+
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  color: #fff;
+  mix-blend-mode: difference;
+
+  z-index: 2;
+}
+
+.hero-editorial-category {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+
+  font-size: 11px;
+  line-height: 1.3;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+  color: #fff;
+  mix-blend-mode: difference;
+  text-align: right;
+
+  z-index: 2;
+}
+
+
+/* ---------- Bottom information ---------- */
+
+.hero-editorial-info {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr 120px;
+
+  column-gap: 40px;
+  align-items: end;
+
+  padding: 30px 32px 34px;
+
+  background: #fff;
+  border-bottom: 1px solid #111;
+}
+
+
+/* small label */
+
+.hero-editorial-label {
+  font-size: 11px;
+  line-height: 1.35;
+
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  margin: 0;
+}
+
+
+/* main statement */
+
+.hero-editorial-title {
+  margin: 0;
+
+  max-width: 920px;
+
+  font-size: clamp(34px, 4.4vw, 72px);
+  line-height: .98;
+  font-weight: 500;
+  letter-spacing: -.045em;
+
+  color: #111;
+}
+
+.hero-editorial-title span {
+  display: block;
+}
+
+
+/* project information */
+
+.hero-editorial-project {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  padding-bottom: 3px;
+}
+
+.hero-editorial-project-name {
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.hero-editorial-project-type {
+  font-size: 11px;
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+
+.hero-editorial-project-year {
+  font-size: 11px;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+
+
+/* ---------- Scroll indicator ---------- */
+
+.hero-editorial-scroll {
+  position: absolute;
+
+  right: 32px;
+  bottom: 34px;
+
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+  color: #111;
+  text-decoration: none;
+
+  writing-mode: vertical-rl;
+
+  transition: opacity .25s ease;
+}
+
+.hero-editorial-scroll:hover {
+  opacity: .45;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 800px) {
+
+  .hero-editorial {
+    min-height: auto;
+    display: block;
+  }
+
+  .hero-editorial-image {
+    height: 62vh;
+    min-height: 480px;
+  }
+
+  .hero-editorial-index {
+    top: 20px;
+    left: 20px;
+  }
+
+  .hero-editorial-category {
+    top: 20px;
+    right: 20px;
+  }
+
+  .hero-editorial-info {
+    grid-template-columns: 1fr;
+    gap: 28px;
+
+    padding: 28px 20px 34px;
+  }
+
+  .hero-editorial-title {
+    font-size: clamp(38px, 10vw, 58px);
+    line-height: .98;
+  }
+
+  .hero-editorial-project {
+    padding-top: 4px;
+  }
+
+  .hero-editorial-scroll {
+    display: none;
+  }
+
+}
+
+
 /* =========================================================
-   TEACHING — ORIGINAL
+   TEACHING — TWO COLUMN PROJECT LAYOUT
    ========================================================= */
+
 .teaching-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 40px 50px;
   width: 100%;
 }
+
 .teaching-item {
   padding-bottom: 30px;
 }
+
 .teaching-item h3 {
   margin-bottom: 10px;
 }
+
 .teaching-item p {
   margin: 6px 0;
 }
-/* =========================================================
-   MOBILE
-   ========================================================= */
+
 @media (max-width: 800px) {
-  .hero-v7 {
-    height: 100svh;
-    min-height: 640px;
-  }
-  .hero-v7-content {
-    padding:
-      100px
-      18px
-      26px;
-  }
-  .hero-v7-kicker {
-    margin-bottom: 24px;
-  }
-  .hero-v7-kicker p {
-    font-size: 8px;
-  }
-  .hero-v7-title {
-    font-size:
-      clamp(40px, 11.5vw, 68px);
-    line-height: 0.94;
-    letter-spacing: -0.045em;
-  }
-  .hero-v7-project {
-    grid-template-columns:
-      1fr 80px;
-    gap: 15px;
-    margin-top: 30px;
-  }
-  .hero-v7-project-label {
-    grid-column: 1 / -1;
-  }
-  .hero-v7-project-title {
-    font-size: 17px;
-  }
-  .hero-v7-project-description {
-    font-size: 11px;
-  }
-  .hero-v7-project-year {
-    text-align: right;
-  }
-  .hero-v7-scroll {
-    right: 13px;
-    bottom: 25px;
-  }
   .teaching-grid {
     grid-template-columns: 1fr;
   }
 }
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-@media (max-width: 500px) {
-  .hero-v7-title {
-    font-size: 40px;
-  }
-  .hero-v7-project {
-    display: block;
-  }
-  .hero-v7-project-label {
-    margin-bottom: 9px;
-  }
-  .hero-v7-project-year {
-    margin-top: 8px;
-    text-align: left;
-  }
-}
+
 </style>
+
 </head>
+
 <body>
+
 <header class="header">
-  <a href="#top" class="logo">
-    HAOYIN YIN
-  </a>
+  <a href="#top" class="logo">HAOYIN YIN</a>
+
   <nav>
-<a href="#work">
-  Work
-</a>
-<a href="#research">
-  Research
-</a>
-<a href="#about">
-  About
-</a>
-<a href="#teaching">
-  Teaching
-</a>
-<a href="#contact">
-  Contact
-</a>
+    <a href="#work">Work</a>
+    <a href="#research">Research</a>
+    <a href="#about">About</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
+
+
 <main id="top">
-<!-- ==================== HERO V7 ==================== -->
-<section class="hero-v7">
-  <!-- FULL SCREEN PROJECT IMAGE -->
-  <div class="hero-v7-media">
-<img
-  src="assets/echoskin.jpg"
-  alt="EchoSkin — Empathetic Wearable Interaction for End-of-Life Care"
->
-  </div>
-  <!-- HERO INFORMATION -->
-  <div class="hero-v7-content">
-<div class="hero-v7-kicker">
-  <p>
-    SERVICE DESIGNER<br>
-    DESIGN RESEARCHER<br>
-    EDUCATOR
-  </p>
-  <p>
-    HEALTHCARE<br>
-    AGEING<br>
-    INCLUSIVE DESIGN
-  </p>
-</div>
-<h1 class="hero-v7-title">
-  <span>
-    Designing services,
-  </span>
-  <span>
-    systems and experiences
-  </span>
-  <span>
-    for healthier, more
-  </span>
-  <span>
-    inclusive futures.
-  </span>
-</h1>
-<div class="hero-v7-project">
-  <div class="hero-v7-project-label">
-    Recent Work
-  </div>
-  <div>
-    <div class="hero-v7-project-title">
-      EchoSkin
+
+
+<!-- ==================== HERO ==================== -->
+
+<section class="hero-editorial">
+
+  <div class="hero-editorial-image">
+
+    <img
+      src="assets/echoskin.jpg"
+      alt="EchoSkin — Empathetic Wearable Interaction for End-of-Life Care"
+    >
+
+    <div class="hero-editorial-index">
+      00 / Selected Project
     </div>
-    <div class="hero-v7-project-description">
-      Empathetic Wearable Interaction for End-of-Life Care
+
+    <div class="hero-editorial-category">
+      Healthcare<br>
+      Wearable<br>
+      Interaction
     </div>
-  </div>
-  <div class="hero-v7-project-year">
-    2026
-  </div>
-</div>
+
   </div>
 
-<a
-href=”#work”
-class=“hero-v7-scroll”
 
-Scroll to explore ↓
+  <div class="hero-editorial-info">
+
+    <p class="hero-editorial-label">
+      SERVICE DESIGNER<br>
+      DESIGN RESEARCHER<br>
+      EDUCATOR
+    </p>
+
+
+    <h1 class="hero-editorial-title">
+      <span>Designing services, systems</span>
+      <span>and experiences for healthier,</span>
+      <span>more inclusive futures.</span>
+    </h1>
+
+
+    <div class="hero-editorial-project">
+
+      <div class="hero-editorial-project-name">
+        EchoSkin
+      </div>
+
+      <div class="hero-editorial-project-type">
+        Empathetic Wearable Interaction<br>
+        for End-of-Life Care
+      </div>
+
+      <div class="hero-editorial-project-year">
+        2026
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <a href="#work" class="hero-editorial-scroll">
+    Scroll ↓
   </a>
+
 </section>
+
+
 <!-- ==================== WORK ==================== -->
+
 <section id="work" class="section">
+
   <div class="section-title">
-<span>
-  01
-</span>
-<h2>
-  Selected Work
-</h2>
+    <span>01</span>
+    <h2>Selected Work</h2>
   </div>
-  <div
-    id="project-grid"
-    class="projects"
-  ></div>
+
+  <div id="project-grid" class="projects"></div>
+
 </section>
+
+
 <!-- ==================== RESEARCH ==================== -->
+
 <section id="research" class="section dark">
+
   <div class="section-title">
-<span>
-  02
-</span>
-<h2>
-  Research
-</h2>
+    <span>02</span>
+    <h2>Research</h2>
   </div>
+
   <div class="research-intro">
-<h3>
-  Designing for healthier, more inclusive futures.
-</h3>
-<p>
-  My research investigates how service design can connect people, technologies, environments and communities to support ageing, preventive health and everyday wellbeing.
-</p>
+
+    <h3>
+      Designing for healthier, more inclusive futures.
+    </h3>
+
+    <p>
+      My research investigates how service design can connect people, technologies, environments and communities to support ageing, preventive health and everyday wellbeing.
+    </p>
+
   </div>
+
+
   <div class="research-list">
-<article>
-  <span>
-    01
-  </span>
-  <div>
-    <h3>
-      Ageing Well in Place
-    </h3>
-    <p>
-      Inclusive services, environments and technologies that support independence, connection and dignity in later life.
-    </p>
+
+    <article>
+      <span>01</span>
+
+      <div>
+        <h3>Ageing Well in Place</h3>
+
+        <p>
+          Inclusive services, environments and technologies that support independence, connection and dignity in later life.
+        </p>
+      </div>
+    </article>
+
+
+    <article>
+      <span>02</span>
+
+      <div>
+        <h3>Preventive Healthcare</h3>
+
+        <p>
+          Designing experiences that encourage early awareness, proactive behaviour and everyday health management.
+        </p>
+      </div>
+    </article>
+
+
+    <article>
+      <span>03</span>
+
+      <div>
+        <h3>Multisensory Interaction</h3>
+
+        <p>
+          Exploring sensory experience as a design resource for perception, memory, engagement and wellbeing.
+        </p>
+      </div>
+    </article>
+
+
+    <article>
+      <span>04</span>
+
+      <div>
+        <h3>AI &amp; Emerging Technology</h3>
+
+        <p>
+          Investigating how AI and emerging technologies can enable personalised, adaptive and human-centred services.
+        </p>
+      </div>
+    </article>
+
   </div>
-</article>
-<article>
-  <span>
-    02
-  </span>
-  <div>
-    <h3>
-      Preventive Healthcare
-    </h3>
-    <p>
-      Designing experiences that encourage early awareness, proactive behaviour and everyday health management.
-    </p>
-  </div>
-</article>
-<article>
-  <span>
-    03
-  </span>
-  <div>
-    <h3>
-      Multisensory Interaction
-    </h3>
-    <p>
-      Exploring sensory experience as a design resource for perception, memory, engagement and wellbeing.
-    </p>
-  </div>
-</article>
-<article>
-  <span>
-    04
-  </span>
-  <div>
-    <h3>
-      AI &amp; Emerging Technology
-    </h3>
-    <p>
-      Investigating how AI and emerging technologies can enable personalised, adaptive and human-centred services.
-    </p>
-  </div>
-</article>
-  </div>
+
 </section>
+
+
 <!-- ==================== ABOUT ==================== -->
+
 <section id="about" class="section">
+
   <div class="section-title">
-<span>
-  03
-</span>
-<h2>
-  About
-</h2>
+    <span>03</span>
+    <h2>About</h2>
   </div>
+
+
   <div class="two-col">
-<div>
-  <p class="statement">
-    I am a service designer and design researcher exploring how design can create more inclusive, caring and meaningful experiences across healthcare, ageing and everyday life.
-  </p>
-</div>
-<div class="body">
-  <p>
-    My practice sits at the intersection of service design, interaction design, healthcare, ageing and inclusive design. I explore how emerging technologies, multisensory interaction and participatory approaches can support more human-centred forms of care.
-  </p>
-  <p>
-    Alongside my design practice and research, I work in design education and management, supporting emerging designers in developing creative thinking, research capabilities and systems-oriented approaches to real-world challenges.
-  </p>
-</div>
+
+    <div>
+
+      <p class="statement">
+        I am a service designer and design researcher exploring how design can create more inclusive, caring and meaningful experiences across healthcare, ageing and everyday life.
+      </p>
+
+    </div>
+
+
+    <div class="body">
+
+      <p>
+        My practice sits at the intersection of service design, interaction design, healthcare, ageing and inclusive design. I explore how emerging technologies, multisensory interaction and participatory approaches can support more human-centred forms of care.
+      </p>
+
+      <p>
+        Alongside my design practice and research, I work in design education and management, supporting emerging designers in developing creative thinking, research capabilities and systems-oriented approaches to real-world challenges.
+      </p>
+
+    </div>
+
   </div>
+
+
   <!-- EDUCATION -->
+
   <div class="timeline">
-<div>
-  <span>
-    EDUCATION
-  </span>
-  <h3>
-    Royal College of Art
-  </h3>
-  <p>
-    London, UK
-  </p>
-  <p>
-    MA, Service Design · 2022-2023
-  </p>
-  <h3>
-    Communication University of Zhejiang
-  </h3>
-  <p>
-    Hangzhou, CN
-  </p>
-  <p>
-    BFA, Film &amp; TV Cinematography &amp; Production (TV Cameraing) · 2018-2022
-  </p>
-</div>
-<!-- EXPERIENCE -->
-<div>
-  <span>
-    EXPERIENCE
-  </span>
-  <h3>
-    ATA Creativity Global Limited
-  </h3>
-  <p>
-    Beijing, CN · Full-time
-  </p>
-  <p>
-    Design Researcher &amp; Senior Manager, Elderly Care Services Lab · 2023-Present
-  </p>
-  <h3>
-    Mercer (Marsh McLennan)
-  </h3>
-  <p>
-    Shanghai, CN
-  </p>
-  <p>
-    Learning and Development Consulting Business Marketing Intern · 2021
-  </p>
-</div>
+
+    <div>
+
+      <span>EDUCATION</span>
+
+      <h3>
+        Royal College of Art
+      </h3>
+
+      <p>
+        London, UK
+      </p>
+
+      <p>
+        MA, Service Design · 2022-2023
+      </p>
+
+
+      <h3>
+        Communication University of Zhejiang
+      </h3>
+
+      <p>
+        Hangzhou, CN
+      </p>
+
+      <p>
+        BFA, Film &amp; TV Cinematography &amp; Production (TV Cameraing) · 2018-2022
+      </p>
+
+    </div>
+
+
+    <!-- EXPERIENCE -->
+
+    <div>
+
+      <span>EXPERIENCE</span>
+
+      <h3>
+        ATA Creativity Global Limited
+      </h3>
+
+      <p>
+        Beijing, CN · Full-time
+      </p>
+
+      <p>
+        Design Researcher &amp; Senior Manager, Elderly Care Services Lab · 2023-Present
+      </p>
+
+
+      <h3>
+        Mercer (Marsh McLennan)
+      </h3>
+
+      <p>
+        Shanghai, CN
+      </p>
+
+      <p>
+        Learning and Development Consulting Business Marketing Intern · 2021
+      </p>
+
+    </div>
+
   </div>
+
+
   <!-- HONORS & AWARDS -->
+
   <div class="timeline">
-<div>
-  <span>
-    HONORS &amp; AWARDS
-  </span>
-  <h3>
-    Muse Design Awards
-  </h3>
-  <p>
-    Gold &amp; Silver Winner · Aug 2026
-  </p>
-  <h3>
-    London Design Awards
-  </h3>
-  <p>
-    Silver Winner · Jul 2026
-  </p>
-  <h3>
-    Asian Economics Research Institute
-  </h3>
-  <p>
-    Committee Member · 2026-2028
-  </p>
-  <h3>
-    American Psychological Association
-  </h3>
-  <p>
-    Membership · 2025-2026
-  </p>
-  <h3>
-    UK Design for Good
-  </h3>
-  <p>
-    Merit Award for Participation · 2023
-  </p>
-  <h3>
-    China Scholarship Council (CSC)
-  </h3>
-  <p>
-    Scholarship Recipient · Jun 2022
-  </p>
-</div>
-<!-- OTHER EDUCATION -->
-<div>
-  <span>
-    OTHER EDUCATION
-  </span>
-  <h3>
-    Aalto University
-  </h3>
-  <p>
-    Remote, Online Course
-  </p>
-  <p>
-    TU-E3170 Facilitating Change Course · Apr-May 2026
-  </p>
-  <h3>
-    University of Oxford - Saïd Business School
-  </h3>
-  <p>
-    Remote, Online Course
-  </p>
-  <p>
-    AI and Digital Transformation in Government · Jan-Dec 2025
-  </p>
-  <h3>
-    Imperial College London - Business School
-  </h3>
-  <p>
-    London, UK
-  </p>
-  <p>
-    Entrepreneurship Journey, Minor MBA Program · Oct 2022-Jun 2023
-  </p>
-  <h3>
-    University of Jyväskylä - Open University
-  </h3>
-  <p>
-    Remote · 3 ECTS Credits
-  </p>
-  <p>
-    Online Course in Education Curriculum · Jun-Aug 2022
-  </p>
-  <h3>
-    University of the Arts London
-  </h3>
-  <p>
-    Remote
-  </p>
-  <p>
-    Short-term Researcher on Human Rights and Computation · Mar-May 2022
-  </p>
-</div>
+
+    <div>
+
+      <span>HONORS &amp; AWARDS</span>
+
+
+      <h3>
+        Muse Design Awards
+      </h3>
+
+      <p>
+        Gold &amp; Silver Winner · Aug 2026
+      </p>
+
+
+      <h3>
+        London Design Awards
+      </h3>
+
+      <p>
+        Silver Winner · Jul 2026
+      </p>
+
+
+      <h3>
+        Asian Economics Research Institute
+      </h3>
+
+      <p>
+        Committee Member · 2026-2028
+      </p>
+
+
+      <h3>
+        American Psychological Association
+      </h3>
+
+      <p>
+        Membership · 2025-2026
+      </p>
+
+
+      <h3>
+        UK Design for Good
+      </h3>
+
+      <p>
+        Merit Award for Participation · 2023
+      </p>
+
+
+      <h3>
+        China Scholarship Council (CSC)
+      </h3>
+
+      <p>
+        Scholarship Recipient · Jun 2022
+      </p>
+
+    </div>
+
+
+    <!-- OTHER EDUCATION -->
+
+    <div>
+
+      <span>OTHER EDUCATION</span>
+
+
+      <h3>
+        Aalto University
+      </h3>
+
+      <p>
+        Remote, Online Course
+      </p>
+
+      <p>
+        TU-E3170 Facilitating Change Course · Apr-May 2026
+      </p>
+
+
+      <h3>
+        University of Oxford - Saïd Business School
+      </h3>
+
+      <p>
+        Remote, Online Course
+      </p>
+
+      <p>
+        AI and Digital Transformation in Government · Jan-Dec 2025
+      </p>
+
+
+      <h3>
+        Imperial College London - Business School
+      </h3>
+
+      <p>
+        London, UK
+      </p>
+
+      <p>
+        Entrepreneurship Journey, Minor MBA Program · Oct 2022-Jun 2023
+      </p>
+
+
+      <h3>
+        University of Jyväskylä - Open University
+      </h3>
+
+      <p>
+        Remote · 3 ECTS Credits
+      </p>
+
+      <p>
+        Online Course in Education Curriculum · Jun-Aug 2022
+      </p>
+
+
+      <h3>
+        University of the Arts London
+      </h3>
+
+      <p>
+        Remote
+      </p>
+
+      <p>
+        Short-term Researcher on Human Rights and Computation · Mar-May 2022
+      </p>
+
+    </div>
+
   </div>
+
 </section>
+
+
 <!-- ==================== TEACHING ==================== -->
+
 <section id="teaching" class="section teaching">
+
   <div class="section-title">
-<span>
-  04
-</span>
-<h2>
-  Teaching
-</h2>
+    <span>04</span>
+    <h2>Teaching</h2>
   </div>
+
+
   <div class="two-col">
-<p class="statement">
-  Teaching is part of my design practice: helping designers turn ideas into structured, research-informed and meaningful outcomes.
-</p>
-<div class="body teaching-grid">
-  <!-- TEACHING 01 -->
-  <div class="teaching-item">
-    <h3>
-      Tsinghua University – Academy of Arts &amp; Design, TA
-    </h3>
-    <p>
-      “Design Futures &amp; Shaped Vision” International Summer Program – Youth Mentor · 06-07, 2026
+
+    <p class="statement">
+      Teaching is part of my design practice: helping designers turn ideas into structured, research-informed and meaningful outcomes.
     </p>
-    <p>
-      Beijing, CN
-    </p>
+
+
+    <div class="body teaching-grid">
+
+
+      <!-- TEACHING 01 -->
+
+      <div class="teaching-item">
+
+        <h3>
+          Tsinghua University – Academy of Arts &amp; Design, TA
+        </h3>
+
+        <p>
+          “Design Futures &amp; Shaped Vision” International Summer Program – Youth Mentor · 06-07, 2026
+        </p>
+
+        <p>
+          Beijing, CN
+        </p>
+
+      </div>
+
+
+      <!-- TEACHING 02 -->
+
+      <div class="teaching-item">
+
+        <h3>
+          Imperial College London &amp; RCA, Innovation Design Engineering Summer School, TA
+        </h3>
+
+        <p>
+          Worked with Dr John Stevens, Senior Tutor · 07-08, 2024
+        </p>
+
+        <p>
+          Beijing, CN
+        </p>
+
+      </div>
+
+
+      <!-- TEACHING 03 -->
+
+      <div class="teaching-item">
+
+        <h3>
+          University of the Arts London, Interaction Design Summer School, TA
+        </h3>
+
+        <p>
+          Worked with Maria Dada, Course Leader · 08-09, 2025
+        </p>
+
+        <p>
+          Beijing, CN
+        </p>
+
+      </div>
+
+
+    </div>
+
   </div>
-  <!-- TEACHING 02 -->
-  <div class="teaching-item">
-    <h3>
-      Imperial College London &amp; RCA, Innovation Design Engineering Summer School, TA
-    </h3>
-    <p>
-      Worked with Dr John Stevens, Senior Tutor · 07-08, 2024
-    </p>
-    <p>
-      Beijing, CN
-    </p>
-  </div>
-  <!-- TEACHING 03 -->
-  <div class="teaching-item">
-    <h3>
-      University of the Arts London, Interaction Design Summer School, TA
-    </h3>
-    <p>
-      Worked with Maria Dada, Course Leader · 08-09, 2025
-    </p>
-    <p>
-      Beijing, CN
-    </p>
-  </div>
-</div>
-  </div>
+
 </section>
+
+
 <!-- ==================== PUBLICATIONS ==================== -->
+
 <section class="section cv">
+
   <div>
-<p class="label">
-  PUBLICATIONS
-</p>
-<h2>
-  Yin, H. (2025) Golden Age SmartOasis: Transcending single-modal design – an integrated ecosystem of product, app, and space.
-</h2>
+
+    <p class="label">
+      PUBLICATIONS
+    </p>
+
+    <h2>
+      Yin, H. (2025) Golden Age SmartOasis: Transcending single-modal design – an integrated ecosystem of product, app, and space.
+    </h2>
+
   </div>
+
+
   <div class="cv-links">
-<a
-  href="https://service-design-network.org/case_study/golden-age-smartoasis"
-  target="_blank"
-  rel="noopener"
->
-  Service Design Network ↗
-</a>
+
+    <a href="https://service-design-network.org/case_study/golden-age-smartoasis"
+       target="_blank"
+       rel="noopener">
+      Service Design Network ↗
+    </a>
+
   </div>
+
 </section>
+
+
 <!-- ==================== CONTACT ==================== -->
+
 <section id="contact" class="section contact">
+
   <div class="section-title">
-<span>
-  05
-</span>
-<h2>
-  Contact
-</h2>
+    <span>05</span>
+    <h2>Contact</h2>
   </div>
+
+
   <h2 class="contact-heading">
     Let's talk about design, research or collaboration.
   </h2>
+
+
   <div class="contact-links">
-<a href="mailto:haoryin.yin@gmail.com">
-  Email ↗
-</a>
-<a
-  href="https://www.linkedin.com/in/haoyin-yin-023898226/"
-  target="_blank"
-  rel="noopener"
->
-  LinkedIn ↗
-</a>
-<a
-  href="https://orcid.org/0009-0003-8514-0490"
-  target="_blank"
-  rel="noopener"
->
-  ORCID ↗
-</a>
-<a
-  href="https://2023.rca.ac.uk/students/haoyin-yin/"
-  target="_blank"
-  rel="noopener"
->
-  RCA Graduation Work ↗
-</a>
-<a
-  href="https://www.youtube.com/@haoyinyin5917"
-  target="_blank"
-  rel="noopener"
->
-  YouTube ↗
-</a>
-<a
-  href="https://www.zhihu.com/people/haoyin_yin"
-  target="_blank"
-  rel="noopener"
->
-  Zhihu ↗
-</a>
-<a
-  href="https://scholar.google.com/citations?user=JkgD5NwAAAAJ&amp;hl=en"
-  target="_blank"
-  rel="noopener"
->
-  Google Scholar ↗
-</a>
+
+    <a href="mailto:haoryin.yin@gmail.com">
+      Email ↗
+    </a>
+
+    <a href="https://www.linkedin.com/in/haoyin-yin-023898226/"
+       target="_blank"
+       rel="noopener">
+      LinkedIn ↗
+    </a>
+
+    <a href="https://orcid.org/0009-0003-8514-0490"
+       target="_blank"
+       rel="noopener">
+      ORCID ↗
+    </a>
+
+    <a href="https://2023.rca.ac.uk/students/haoyin-yin/"
+       target="_blank"
+       rel="noopener">
+      RCA Graduation Work ↗
+    </a>
+
+    <a href="https://www.youtube.com/@haoyinyin5917"
+       target="_blank"
+       rel="noopener">
+      YouTube ↗
+    </a>
+
+    <a href="https://www.zhihu.com/people/haoyin_yin"
+       target="_blank"
+       rel="noopener">
+      Zhihu ↗
+    </a>
+
+    <a href="https://scholar.google.com/citations?user=JkgD5NwAAAAJ&amp;hl=en"
+       target="_blank"
+       rel="noopener">
+      Google Scholar ↗
+    </a>
+
   </div>
+
 </section>
+
 </main>
+
+
 <footer>
+
   <span>
     © <span id="year"></span> HAOYIN YIN
   </span>
+
   <span>
     Service Design · Research · Education
   </span>
+
 </footer>
+
+
 <script src="content.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
