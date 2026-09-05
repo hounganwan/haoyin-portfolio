@@ -13,233 +13,441 @@
 <style>
 
 /* =========================================================
-   HERO — EDITORIAL / RCA-INSPIRED
+   FULL-SCREEN HERO V8
    ========================================================= */
 
-.hero-editorial {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
-  padding: 0;
-  background: #fff;
-  overflow: hidden;
-}
-
-/* ---------- Hero image ---------- */
-
-.hero-editorial-image {
+.hero-v8 {
   position: relative;
   width: 100%;
-  min-height: 68vh;
+  height: 100vh;
+  min-height: 680px;
+
   overflow: hidden;
+
   background: #111;
+  color: #fff;
+
+  display: flex;
+  align-items: flex-end;
 }
 
-.hero-editorial-image img {
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-v8-image {
+  position: absolute;
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+}
+
+.hero-v8-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center center;
+
   display: block;
 
-  transform: scale(1.015);
-  animation: heroImageIn 1.4s cubic-bezier(.2,.7,.2,1) forwards;
+  transform: scale(1.03);
+
+  animation:
+    heroV8ImageIn 1.5s cubic-bezier(.2,.65,.2,1) forwards;
 }
 
-@keyframes heroImageIn {
+@keyframes heroV8ImageIn {
+
   from {
     opacity: 0;
-    transform: scale(1.06);
+    transform: scale(1.08);
   }
 
   to {
     opacity: 1;
-    transform: scale(1.015);
+    transform: scale(1.03);
   }
+
 }
 
 
-/* ---------- Small image metadata ---------- */
+/* ---------- IMAGE GRADIENT ---------- */
 
-.hero-editorial-index {
+/*
+  Very subtle gradient.
+  Keeps the image visible while creating
+  enough contrast for editorial typography.
+*/
+
+.hero-v8-overlay {
   position: absolute;
-  top: 28px;
-  left: 32px;
+  inset: 0;
 
-  font-size: 11px;
-  line-height: 1.3;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.18) 0%,
+      rgba(0,0,0,0) 35%,
+      rgba(0,0,0,.08) 55%,
+      rgba(0,0,0,.68) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   NAVIGATION OVER HERO
+   ========================================================= */
+
+.header {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 20;
+
+  background: transparent !important;
+
+  border-bottom: 0 !important;
 
   color: #fff;
-  mix-blend-mode: difference;
 
-  z-index: 2;
+  mix-blend-mode: normal;
 }
 
-.hero-editorial-category {
+
+/*
+  The navigation remains readable against
+  different image areas.
+*/
+
+.header a {
+  color: #fff !important;
+
+  text-decoration: none;
+
+  transition:
+    opacity .25s ease,
+    color .25s ease;
+}
+
+.header a:hover {
+  opacity: .55;
+}
+
+
+/* subtle top gradient behind navigation */
+
+.hero-v8::before {
+  content: "";
+
   position: absolute;
-  top: 28px;
-  right: 32px;
 
-  font-size: 11px;
-  line-height: 1.3;
-  letter-spacing: .1em;
-  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  right: 0;
 
-  color: #fff;
-  mix-blend-mode: difference;
-  text-align: right;
+  height: 150px;
 
-  z-index: 2;
+  z-index: 10;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.28),
+      rgba(0,0,0,0)
+    );
+
+  pointer-events: none;
 }
 
 
-/* ---------- Bottom information ---------- */
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
 
-.hero-editorial-info {
+.hero-v8-content {
+
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  padding:
+    0 32px
+    54px;
+
   display: grid;
-  grid-template-columns: 1.1fr 2fr 120px;
 
-  column-gap: 40px;
+  grid-template-columns:
+    minmax(190px, .7fr)
+    minmax(500px, 2fr)
+    minmax(180px, .65fr);
+
+  column-gap: 42px;
+
   align-items: end;
-
-  padding: 30px 32px 34px;
-
-  background: #fff;
-  border-bottom: 1px solid #111;
 }
 
 
-/* small label */
+/* ---------- LEFT META ---------- */
 
-.hero-editorial-label {
-  font-size: 11px;
-  line-height: 1.35;
+.hero-v8-meta {
+
+  align-self: end;
+
+  font-size: 10px;
+  line-height: 1.45;
 
   letter-spacing: .12em;
+
   text-transform: uppercase;
 
+  opacity: .9;
+
+  animation:
+    heroV8TextIn .9s .25s
+    cubic-bezier(.2,.7,.2,1)
+    both;
+}
+
+.hero-v8-meta-label {
+  margin-bottom: 16px;
+
+  opacity: .65;
+}
+
+.hero-v8-meta p {
   margin: 0;
 }
 
 
-/* main statement */
+/* ---------- MAIN STATEMENT ---------- */
 
-.hero-editorial-title {
+.hero-v8-title {
+
   margin: 0;
 
-  max-width: 920px;
+  max-width: 1000px;
 
-  font-size: clamp(34px, 4.4vw, 72px);
-  line-height: .98;
+  font-size:
+    clamp(42px, 5vw, 82px);
+
+  line-height: .94;
+
   font-weight: 500;
-  letter-spacing: -.045em;
 
-  color: #111;
+  letter-spacing: -.052em;
+
+  animation:
+    heroV8TitleIn 1s .15s
+    cubic-bezier(.2,.7,.2,1)
+    both;
 }
 
-.hero-editorial-title span {
+.hero-v8-title span {
   display: block;
 }
 
 
-/* project information */
+/* ---------- AWARD NEWS ---------- */
 
-.hero-editorial-project {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.hero-v8-news {
 
-  padding-bottom: 3px;
-}
+  align-self: end;
 
-.hero-editorial-project-name {
-  font-size: 15px;
-  line-height: 1.1;
-  font-weight: 500;
-}
+  padding-left: 20px;
 
-.hero-editorial-project-type {
+  border-left: 1px solid rgba(255,255,255,.55);
+
   font-size: 11px;
-  line-height: 1.35;
-  letter-spacing: .02em;
+
+  line-height: 1.45;
+
+  animation:
+    heroV8TextIn .9s .4s
+    cubic-bezier(.2,.7,.2,1)
+    both;
 }
 
-.hero-editorial-project-year {
-  font-size: 11px;
-  line-height: 1.3;
-  margin-top: 5px;
+.hero-v8-news-label {
+
+  margin-bottom: 14px;
+
+  font-size: 9px;
+
+  letter-spacing: .13em;
+
+  text-transform: uppercase;
+
+  opacity: .58;
+}
+
+.hero-v8-news p {
+  margin: 0 0 7px;
+}
+
+.hero-v8-news .date {
+  margin-top: 12px;
+
+  opacity: .55;
+
+  letter-spacing: .04em;
 }
 
 
-/* ---------- Scroll indicator ---------- */
+/* =========================================================
+   SCROLL
+   ========================================================= */
 
-.hero-editorial-scroll {
+.hero-v8-scroll {
+
   position: absolute;
 
   right: 32px;
-  bottom: 34px;
+  bottom: 52px;
 
-  font-size: 11px;
-  letter-spacing: .1em;
+  z-index: 8;
+
+  color: #fff;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  letter-spacing: .12em;
+
   text-transform: uppercase;
 
-  color: #111;
   text-decoration: none;
 
   writing-mode: vertical-rl;
 
+  opacity: .8;
+
   transition: opacity .25s ease;
 }
 
-.hero-editorial-scroll:hover {
+.hero-v8-scroll:hover {
   opacity: .45;
 }
 
 
-/* ---------- Mobile ---------- */
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
 
-@media (max-width: 800px) {
+@keyframes heroV8TitleIn {
 
-  .hero-editorial {
-    min-height: auto;
-    display: block;
+  from {
+    opacity: 0;
+    transform: translateY(35px);
   }
 
-  .hero-editorial-image {
-    height: 62vh;
-    min-height: 480px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  .hero-editorial-index {
-    top: 20px;
-    left: 20px;
+}
+
+@keyframes heroV8TextIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
 
-  .hero-editorial-category {
-    top: 20px;
-    right: 20px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 
-  .hero-editorial-info {
-    grid-template-columns: 1fr;
-    gap: 28px;
+}
 
-    padding: 28px 20px 34px;
+
+/* =========================================================
+   MOBILE HERO
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero-v8 {
+    min-height: 760px;
+    height: 100svh;
+
+    align-items: flex-end;
   }
 
-  .hero-editorial-title {
-    font-size: clamp(38px, 10vw, 58px);
-    line-height: .98;
+
+  .hero-v8-content {
+
+    padding:
+      0 20px
+      34px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 24px;
   }
 
-  .hero-editorial-project {
-    padding-top: 4px;
+
+  .hero-v8-meta {
+    order: 1;
+
+    font-size: 9px;
   }
 
-  .hero-editorial-scroll {
+
+  .hero-v8-title {
+    order: 2;
+
+    font-size:
+      clamp(38px, 10vw, 60px);
+
+    line-height: .96;
+
+    max-width: 90%;
+  }
+
+
+  .hero-v8-news {
+
+    order: 3;
+
+    padding-left: 14px;
+
+    font-size: 10px;
+
+    max-width: 280px;
+  }
+
+
+  .hero-v8-scroll {
     display: none;
+  }
+
+
+  .hero-v8-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,.28) 0%,
+        rgba(0,0,0,.02) 38%,
+        rgba(0,0,0,.72) 100%
+      );
   }
 
 }
@@ -269,9 +477,11 @@
 }
 
 @media (max-width: 800px) {
+
   .teaching-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
 </style>
@@ -280,96 +490,148 @@
 
 <body>
 
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
 <header class="header">
-  <a href="#top" class="logo">HAOYIN YIN</a>
+
+  <a href="#top" class="logo">
+    HAOYIN YIN
+  </a>
 
   <nav>
+
     <a href="#work">Work</a>
+
     <a href="#research">Research</a>
+
     <a href="#about">About</a>
+
     <a href="#teaching">Teaching</a>
+
     <a href="#contact">Contact</a>
+
   </nav>
+
 </header>
 
 
 <main id="top">
 
 
-<!-- ==================== HERO ==================== -->
+<!-- =========================================================
+     HERO V8
+     ========================================================= -->
 
-<section class="hero-editorial">
+<section class="hero-v8">
 
-  <div class="hero-editorial-image">
+
+  <!-- FULL-SCREEN IMAGE -->
+
+  <div class="hero-v8-image">
 
     <img
       src="assets/echoskin.jpg"
-      alt="EchoSkin — Empathetic Wearable Interaction for End-of-Life Care"
+      alt="Haoyin Yin — Selected Design Work"
     >
-
-    <div class="hero-editorial-index">
-      00 / Selected Project
-    </div>
-
-    <div class="hero-editorial-category">
-      Healthcare<br>
-      Wearable<br>
-      Interaction
-    </div>
 
   </div>
 
 
-  <div class="hero-editorial-info">
+  <!-- IMAGE CONTRAST -->
 
-    <p class="hero-editorial-label">
-      SERVICE DESIGNER<br>
-      DESIGN RESEARCHER<br>
-      EDUCATOR
-    </p>
+  <div class="hero-v8-overlay"></div>
 
 
-    <h1 class="hero-editorial-title">
-      <span>Designing services, systems</span>
-      <span>and experiences for healthier,</span>
-      <span>more inclusive futures.</span>
+  <!-- HERO CONTENT -->
+
+  <div class="hero-v8-content">
+
+
+    <!-- LEFT -->
+
+    <div class="hero-v8-meta">
+
+      <div class="hero-v8-meta-label">
+        Independent Designer
+      </div>
+
+      <p>
+        SERVICE DESIGNER<br>
+        DESIGN RESEARCHER<br>
+        EDUCATOR
+      </p>
+
+    </div>
+
+
+    <!-- MAIN STATEMENT -->
+
+    <h1 class="hero-v8-title">
+
+      <span>Designing services,</span>
+
+      <span>systems and experiences</span>
+
+      <span>for healthier, more inclusive</span>
+
+      <span>futures.</span>
+
     </h1>
 
 
-    <div class="hero-editorial-project">
+    <!-- AWARD NEWS -->
 
-      <div class="hero-editorial-project-name">
-        EchoSkin
+    <div class="hero-v8-news">
+
+      <div class="hero-v8-news-label">
+        Recent Recognition
       </div>
 
-      <div class="hero-editorial-project-type">
-        Empathetic Wearable Interaction<br>
-        for End-of-Life Care
-      </div>
+      <p>
+        London Design Awards<br>
+        <strong>Silver Winner</strong>
+      </p>
 
-      <div class="hero-editorial-project-year">
-        2026
-      </div>
+      <p>
+        Muse Design Awards<br>
+        <strong>Gold &amp; Silver Winner</strong>
+      </p>
+
+      <p class="date">
+        August 2026
+      </p>
 
     </div>
+
 
   </div>
 
 
-  <a href="#work" class="hero-editorial-scroll">
+  <!-- SCROLL -->
+
+  <a href="#work" class="hero-v8-scroll">
     Scroll ↓
   </a>
+
 
 </section>
 
 
-<!-- ==================== WORK ==================== -->
+<!-- =========================================================
+     WORK
+     ========================================================= -->
 
 <section id="work" class="section">
 
   <div class="section-title">
+
     <span>01</span>
+
     <h2>Selected Work</h2>
+
   </div>
 
   <div id="project-grid" class="projects"></div>
@@ -377,14 +639,20 @@
 </section>
 
 
-<!-- ==================== RESEARCH ==================== -->
+<!-- =========================================================
+     RESEARCH
+     ========================================================= -->
 
 <section id="research" class="section dark">
 
   <div class="section-title">
+
     <span>02</span>
+
     <h2>Research</h2>
+
   </div>
+
 
   <div class="research-intro">
 
@@ -401,73 +669,105 @@
 
   <div class="research-list">
 
+
     <article>
+
       <span>01</span>
 
       <div>
-        <h3>Ageing Well in Place</h3>
+
+        <h3>
+          Ageing Well in Place
+        </h3>
 
         <p>
           Inclusive services, environments and technologies that support independence, connection and dignity in later life.
         </p>
+
       </div>
+
     </article>
 
 
     <article>
+
       <span>02</span>
 
       <div>
-        <h3>Preventive Healthcare</h3>
+
+        <h3>
+          Preventive Healthcare
+        </h3>
 
         <p>
           Designing experiences that encourage early awareness, proactive behaviour and everyday health management.
         </p>
+
       </div>
+
     </article>
 
 
     <article>
+
       <span>03</span>
 
       <div>
-        <h3>Multisensory Interaction</h3>
+
+        <h3>
+          Multisensory Interaction
+        </h3>
 
         <p>
           Exploring sensory experience as a design resource for perception, memory, engagement and wellbeing.
         </p>
+
       </div>
+
     </article>
 
 
     <article>
+
       <span>04</span>
 
       <div>
-        <h3>AI &amp; Emerging Technology</h3>
+
+        <h3>
+          AI &amp; Emerging Technology
+        </h3>
 
         <p>
           Investigating how AI and emerging technologies can enable personalised, adaptive and human-centred services.
         </p>
+
       </div>
+
     </article>
+
 
   </div>
 
 </section>
 
 
-<!-- ==================== ABOUT ==================== -->
+<!-- =========================================================
+     ABOUT
+     ========================================================= -->
 
 <section id="about" class="section">
 
   <div class="section-title">
+
     <span>03</span>
+
     <h2>About</h2>
+
   </div>
 
 
   <div class="two-col">
+
 
     <div>
 
@@ -708,17 +1008,23 @@
 </section>
 
 
-<!-- ==================== TEACHING ==================== -->
+<!-- =========================================================
+     TEACHING
+     ========================================================= -->
 
 <section id="teaching" class="section teaching">
 
   <div class="section-title">
+
     <span>04</span>
+
     <h2>Teaching</h2>
+
   </div>
 
 
   <div class="two-col">
+
 
     <p class="statement">
       Teaching is part of my design practice: helping designers turn ideas into structured, research-informed and meaningful outcomes.
@@ -792,7 +1098,9 @@
 </section>
 
 
-<!-- ==================== PUBLICATIONS ==================== -->
+<!-- =========================================================
+     PUBLICATIONS
+     ========================================================= -->
 
 <section class="section cv">
 
@@ -811,9 +1119,11 @@
 
   <div class="cv-links">
 
-    <a href="https://service-design-network.org/case_study/golden-age-smartoasis"
-       target="_blank"
-       rel="noopener">
+    <a
+      href="https://service-design-network.org/case_study/golden-age-smartoasis"
+      target="_blank"
+      rel="noopener"
+    >
       Service Design Network ↗
     </a>
 
@@ -822,13 +1132,18 @@
 </section>
 
 
-<!-- ==================== CONTACT ==================== -->
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
 
 <section id="contact" class="section contact">
 
   <div class="section-title">
+
     <span>05</span>
+
     <h2>Contact</h2>
+
   </div>
 
 
@@ -843,39 +1158,51 @@
       Email ↗
     </a>
 
-    <a href="https://www.linkedin.com/in/haoyin-yin-023898226/"
-       target="_blank"
-       rel="noopener">
+    <a
+      href="https://www.linkedin.com/in/haoyin-yin-023898226/"
+      target="_blank"
+      rel="noopener"
+    >
       LinkedIn ↗
     </a>
 
-    <a href="https://orcid.org/0009-0003-8514-0490"
-       target="_blank"
-       rel="noopener">
+    <a
+      href="https://orcid.org/0009-0003-8514-0490"
+      target="_blank"
+      rel="noopener"
+    >
       ORCID ↗
     </a>
 
-    <a href="https://2023.rca.ac.uk/students/haoyin-yin/"
-       target="_blank"
-       rel="noopener">
+    <a
+      href="https://2023.rca.ac.uk/students/haoyin-yin/"
+      target="_blank"
+      rel="noopener"
+    >
       RCA Graduation Work ↗
     </a>
 
-    <a href="https://www.youtube.com/@haoyinyin5917"
-       target="_blank"
-       rel="noopener">
+    <a
+      href="https://www.youtube.com/@haoyinyin5917"
+      target="_blank"
+      rel="noopener"
+    >
       YouTube ↗
     </a>
 
-    <a href="https://www.zhihu.com/people/haoyin_yin"
-       target="_blank"
-       rel="noopener">
+    <a
+      href="https://www.zhihu.com/people/haoyin_yin"
+      target="_blank"
+      rel="noopener"
+    >
       Zhihu ↗
     </a>
 
-    <a href="https://scholar.google.com/citations?user=JkgD5NwAAAAJ&amp;hl=en"
-       target="_blank"
-       rel="noopener">
+    <a
+      href="https://scholar.google.com/citations?user=JkgD5NwAAAAJ&amp;hl=en"
+      target="_blank"
+      rel="noopener"
+    >
       Google Scholar ↗
     </a>
 
@@ -883,8 +1210,13 @@
 
 </section>
 
+
 </main>
 
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer>
 
