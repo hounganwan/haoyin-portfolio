@@ -49,7 +49,7 @@
   display: block;
 
   object-fit: cover;
-  object-position: center center;
+  object-position: center 65%;
 
   transform: scale(1.015);
 
@@ -204,11 +204,6 @@
   width: min(900px, calc(100% - 64px));
 
   padding: 28px 34px 30px;
-
-  /*
-    Very subtle glass/editorial surface.
-    It protects text without becoming a heavy panel.
-  */
 
   background: rgba(0,0,0,.24);
 
@@ -517,6 +512,123 @@
 
   .teaching-grid {
     grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+   ========================================================= */
+
+.publications {
+  display: grid;
+  grid-template-columns: minmax(220px, .7fr) minmax(0, 1.8fr);
+  gap: 70px;
+}
+
+.publications > div:first-child h2 {
+  max-width: 420px;
+}
+
+.publications-list {
+  width: 100%;
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 35px;
+
+  padding: 28px 0;
+
+  border-top: 1px solid rgba(0,0,0,.16);
+}
+
+.publication-item:last-child {
+  border-bottom: 1px solid rgba(0,0,0,.16);
+}
+
+.publication-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  font-size: 9px;
+  line-height: 1.4;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  opacity: .55;
+}
+
+.publication-content h3 {
+  margin: 0 0 22px;
+
+  max-width: 720px;
+
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1.08;
+  font-weight: 400;
+
+  letter-spacing: -.025em;
+}
+
+.publication-content a {
+  display: inline-block;
+
+  color: inherit;
+  text-decoration: none;
+
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 5px;
+
+  transition:
+    opacity .25s ease,
+    transform .25s ease;
+}
+
+.publication-content a:hover {
+  opacity: .5;
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   PUBLICATIONS — MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .publications {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .publication-item {
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 20px;
+
+    padding: 24px 0;
+  }
+
+  .publication-meta {
+    font-size: 8px;
+  }
+
+  .publication-content h3 {
+    font-size: 21px;
+    line-height: 1.1;
+
+    margin-bottom: 18px;
   }
 
 }
@@ -1122,7 +1234,7 @@
      PUBLICATIONS
      ========================================================= -->
 
-<section class="section cv">
+<section class="section cv publications">
 
   <div>
 
@@ -1131,21 +1243,150 @@
     </p>
 
     <h2>
-      Yin, H. (2025) Golden Age SmartOasis: Transcending single-modal design – an integrated ecosystem of product, app, and space.
+      Selected writing on service design, emerging technology and experience.
     </h2>
 
   </div>
 
 
-  <div class="cv-links">
+  <div class="publications-list">
 
-    <a
-      href="https://service-design-network.org/case_study/golden-age-smartoasis"
-      target="_blank"
-      rel="noopener"
-    >
-      Service Design Network ↗
-    </a>
+
+    <!-- ARTICLE 01 -->
+
+    <article class="publication-item">
+
+      <div class="publication-meta">
+
+        <span>01</span>
+
+        <span>
+          LinkedIn · Article
+        </span>
+
+      </div>
+
+
+      <div class="publication-content">
+
+        <h3>
+          Creating a tourism service ecosystem and brand experience through service design thinking
+        </h3>
+
+        <a
+          href="https://www.linkedin.com/pulse/creating-tourism-service-ecosystem-brand-experience-through-yin-ths5f/?trackingId=%2FAyF8xAKSsqkFrgYw6J9aQ%3D%3D"
+          target="_blank"
+          rel="noopener"
+        >
+          Read article ↗
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 02 -->
+
+    <article class="publication-item">
+
+      <div class="publication-meta">
+
+        <span>02</span>
+
+        <span>
+          LinkedIn · Article
+        </span>
+
+      </div>
+
+
+      <div class="publication-content">
+
+        <h3>
+          How will the demand for empathy shape the future of AI-driven customer experiences
+        </h3>
+
+        <a
+          href="https://www.linkedin.com/pulse/how-demand-empathy-shape-future-ai-driven-customer-experiences-yin-dsuvc/?trackingId=rXJ%2BXqnhTxiujdCwzyvyQQ%3D%3D"
+          target="_blank"
+          rel="noopener"
+        >
+          Read article ↗
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ARTICLE 03 -->
+
+    <article class="publication-item">
+
+      <div class="publication-meta">
+
+        <span>03</span>
+
+        <span>
+          LinkedIn · Article
+        </span>
+
+      </div>
+
+
+      <div class="publication-content">
+
+        <h3>
+          Service Design Implementation Principles (5): Good service enables users to achieve the results they want.
+        </h3>
+
+        <a
+          href="https://www.linkedin.com/pulse/service-design-implementation-principles-5-good-enables-haoyin-yin-apjcc/"
+          target="_blank"
+          rel="noopener"
+        >
+          Read article ↗
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- PUBLICATION 04 -->
+
+    <article class="publication-item">
+
+      <div class="publication-meta">
+
+        <span>04</span>
+
+        <span>
+          Service Design Network · Case Study
+        </span>
+
+      </div>
+
+
+      <div class="publication-content">
+
+        <h3>
+          Yin, H. (2025) Golden Age SmartOasis: Transcending single-modal design – an integrated ecosystem of product, app, and space.
+        </h3>
+
+        <a
+          href="https://service-design-network.org/case_study/golden-age-smartoasis"
+          target="_blank"
+          rel="noopener"
+        >
+          View publication ↗
+        </a>
+
+      </div>
+
+    </article>
+
 
   </div>
 
