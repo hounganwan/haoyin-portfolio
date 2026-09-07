@@ -11,7 +11,7 @@ const portfolioContent = {
       category: "Healthcare · Wearable · Emotional Wellbeing",
       description: "A smart wearable that translates physiological signals into subtle emotional feedback, enabling non-verbal communication between patients, caregivers and family members.",
       image: "assets/echoskin.jpg",
-      url: "#"
+      url: "echoskin/"
     },
 
     // 02 — OlfaMate
