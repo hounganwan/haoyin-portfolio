@@ -50,20 +50,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 28px 0;
-
   border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
 .case-nav a {
   color: inherit;
   text-decoration: none;
-
   font-size: 11px;
   letter-spacing: .08em;
   text-transform: uppercase;
-
   transition: opacity .25s ease;
 }
 
@@ -82,37 +78,27 @@ body {
 
 .case-label {
   margin: 0 0 28px;
-
   font-size: 10px;
   line-height: 1.4;
-
   letter-spacing: .14em;
   text-transform: uppercase;
-
   opacity: .5;
 }
 
 .case-title {
   max-width: 1100px;
-
   margin: 0;
-
   font-size: clamp(64px, 10vw, 150px);
   line-height: .86;
-
   font-weight: 400;
-
   letter-spacing: -.065em;
 }
 
 .case-subtitle {
   max-width: 760px;
-
   margin: 38px 0 0;
-
   font-size: clamp(22px, 2.5vw, 36px);
   line-height: 1.15;
-
   letter-spacing: -.025em;
 }
 
@@ -122,64 +108,44 @@ body {
    ========================================================= */
 
 .case-meta {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 40px;
-
   padding-top: 22px;
-
   margin-bottom: 70px;
-
   border-top: 1px solid rgba(0,0,0,.14);
 }
 
 .case-meta-item span {
-
   display: block;
-
   margin-bottom: 10px;
-
   font-size: 9px;
   line-height: 1.4;
-
   letter-spacing: .12em;
   text-transform: uppercase;
-
   opacity: .5;
 }
 
 .case-meta-item p {
-
   margin: 0;
-
   font-size: 14px;
   line-height: 1.5;
 }
 
 
 /* =========================================================
-   MAIN IMAGE
+   IMAGE
    ========================================================= */
 
 .case-image {
-
   width: 100%;
-
   margin-bottom: 120px;
-
   overflow: hidden;
-
   background: #eee;
 }
 
 .case-image img {
-
   display: block;
-
   width: 100%;
   height: auto;
 }
@@ -190,41 +156,28 @@ body {
    ========================================================= */
 
 .case-content {
-
   display: grid;
-
-  grid-template-columns:
-    minmax(180px, .7fr)
-    minmax(0, 2fr);
-
+  grid-template-columns: minmax(180px, .7fr) minmax(0, 2fr);
   gap: 90px;
-
   margin-bottom: 120px;
 }
 
 .case-heading {
-
   font-size: 10px;
   line-height: 1.4;
-
   letter-spacing: .13em;
   text-transform: uppercase;
-
   opacity: .5;
 }
 
 .case-body {
-
   max-width: 820px;
 }
 
 .case-body p {
-
   margin: 0 0 28px;
-
   font-size: 20px;
   line-height: 1.55;
-
   letter-spacing: -.015em;
 }
 
@@ -238,44 +191,72 @@ body {
    ========================================================= */
 
 .case-statement {
-
   max-width: 1050px;
-
   margin: 150px 0;
-
   font-size: clamp(36px, 5vw, 72px);
   line-height: .98;
-
   letter-spacing: -.05em;
-
   font-weight: 400;
 }
 
 
 /* =========================================================
-   GALLERY
+   SINGLE IMAGE
+   ========================================================= */
+
+.case-single-image {
+  width: 100%;
+  margin: 100px 0 130px;
+}
+
+.case-single-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   TWO COLUMN GALLERY
    ========================================================= */
 
 .case-gallery {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-
   margin: 80px 0 130px;
 }
 
 .case-gallery img {
-
   display: block;
-
   width: 100%;
   height: auto;
-
   background: #eee;
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.case-video {
+  margin: 120px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #eee;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 
@@ -284,16 +265,12 @@ body {
    ========================================================= */
 
 .case-full-image {
-
   width: 100%;
-
   margin: 120px 0;
 }
 
 .case-full-image img {
-
   display: block;
-
   width: 100%;
   height: auto;
 }
@@ -304,43 +281,29 @@ body {
    ========================================================= */
 
 .case-awards {
-
   padding: 60px 0;
-
   margin-top: 100px;
-
   border-top: 1px solid rgba(0,0,0,.14);
   border-bottom: 1px solid rgba(0,0,0,.14);
 }
 
 .case-awards h2 {
-
   margin: 0 0 45px;
-
   font-size: clamp(36px, 4vw, 58px);
   line-height: 1;
-
   font-weight: 400;
-
   letter-spacing: -.045em;
 }
 
 .case-award {
-
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-
   padding: 20px 0;
-
   border-top: 1px solid rgba(0,0,0,.09);
 }
 
 .case-award span {
-
   font-size: 13px;
   line-height: 1.5;
 }
@@ -351,35 +314,41 @@ body {
    ========================================================= */
 
 .case-footer-nav {
-
   display: flex;
-
   justify-content: space-between;
   align-items: center;
-
   margin-top: 130px;
-
   padding-top: 30px;
-
   border-top: 1px solid rgba(0,0,0,.14);
 }
 
 .case-footer-nav a {
-
   color: inherit;
-
   text-decoration: none;
-
   font-size: 11px;
-
   letter-spacing: .08em;
   text-transform: uppercase;
-
   transition: opacity .25s ease;
 }
 
 .case-footer-nav a:hover {
   opacity: .45;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 40px;
+  border-top: 1px solid rgba(0,0,0,.12);
+  font-size: 9px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .55;
 }
 
 
@@ -411,20 +380,14 @@ body {
   }
 
   .case-meta {
-
     grid-template-columns: 1fr;
-
     gap: 24px;
-
     margin-bottom: 50px;
   }
 
   .case-content {
-
     grid-template-columns: 1fr;
-
     gap: 25px;
-
     margin-bottom: 80px;
   }
 
@@ -434,16 +397,21 @@ body {
 
   .case-statement {
     margin: 90px 0;
-
     font-size: 40px;
   }
 
   .case-gallery {
     grid-template-columns: 1fr;
-
     gap: 16px;
-
     margin: 60px 0 80px;
+  }
+
+  .case-single-image {
+    margin: 70px 0 80px;
+  }
+
+  .case-video {
+    margin: 80px 0;
   }
 
   .case-full-image {
@@ -463,40 +431,9 @@ body {
     margin-top: 80px;
   }
 
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  padding: 25px 40px;
-
-  border-top: 1px solid rgba(0,0,0,.12);
-
-  font-size: 9px;
-
-  letter-spacing: .08em;
-
-  text-transform: uppercase;
-
-  opacity: .55;
-}
-
-@media (max-width: 800px) {
-
   footer {
-
     padding: 20px;
-
     flex-direction: column;
-
     gap: 8px;
   }
 
@@ -508,7 +445,6 @@ footer {
 
 
 <body>
-
 
 <main class="case-study">
 
@@ -592,14 +528,14 @@ footer {
 
 
 <!-- =========================================================
-     HERO IMAGE
+     MAIN HERO IMAGE
      ========================================================= -->
 
 <div class="case-image">
 
   <img
-    src="../assets/echoskin.jpg"
-    alt="EchoSkin"
+    src="../assets/echoskin-mainhero.jpg"
+    alt="EchoSkin main hero"
   >
 
 </div>
@@ -614,7 +550,6 @@ footer {
   <div class="case-heading">
     Project Overview
   </div>
-
 
   <div class="case-body">
 
@@ -640,15 +575,14 @@ footer {
 
 
 <!-- =========================================================
-     DESIGN CHALLENGE
+     RESEARCH
      ========================================================= -->
 
 <section class="case-content">
 
   <div class="case-heading">
-    Design Challenge
+    Research
   </div>
-
 
   <div class="case-body">
 
@@ -663,6 +597,20 @@ footer {
   </div>
 
 </section>
+
+
+<!-- =========================================================
+     RESEARCH IMAGE
+     ========================================================= -->
+
+<div class="case-single-image">
+
+  <img
+    src="../assets/echoskin-research.jpg"
+    alt="EchoSkin research"
+  >
+
+</div>
 
 
 <!-- =========================================================
@@ -688,7 +636,6 @@ footer {
     Design Concept
   </div>
 
-
   <div class="case-body">
 
     <p>
@@ -709,26 +656,123 @@ footer {
 
 
 <!-- =========================================================
-     VISUAL DEVELOPMENT
+     CONCEPT IMAGE
      ========================================================= -->
 
-<section class="case-gallery">
+<div class="case-single-image">
 
   <img
-    src="../assets/echoskin.jpg"
-    alt="EchoSkin design development"
+    src="../assets/echoskin-concept.jpg"
+    alt="EchoSkin design concept"
   >
 
-  <img
-    src="../assets/echoskin.jpg"
-    alt="EchoSkin wearable concept"
-  >
+</div>
+
+
+<!-- =========================================================
+     SYSTEM FLOW
+     ========================================================= -->
+
+<section class="case-content">
+
+  <div class="case-heading">
+    System Flow
+  </div>
+
+  <div class="case-body">
+
+    <p>
+      The EchoSkin concept connects physiological sensing, interpretation and human response within a continuous interaction loop.
+    </p>
+
+    <p>
+      The system is designed to transform otherwise invisible changes into an accessible layer of communication, allowing caregivers and family members to better understand moments that may be difficult to express verbally.
+    </p>
+
+  </div>
 
 </section>
 
 
 <!-- =========================================================
-     EMPATHETIC INTERACTION
+     FLOW IMAGE
+     ========================================================= -->
+
+<div class="case-single-image">
+
+  <img
+    src="../assets/echoskin-flow.jpg"
+    alt="EchoSkin system flow"
+  >
+
+</div>
+
+
+<!-- =========================================================
+     DESIGN PROCESS
+     ========================================================= -->
+
+<section class="case-content">
+
+  <div class="case-heading">
+    Design Process
+  </div>
+
+  <div class="case-body">
+
+    <p>
+      The design process explored the relationship between wearable form, physiological sensing and emotional communication.
+    </p>
+
+    <p>
+      Iterative development was used to investigate how the interaction could remain subtle, intuitive and appropriate for sensitive care contexts.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROCESS IMAGE
+     ========================================================= -->
+
+<div class="case-single-image">
+
+  <img
+    src="../assets/echoskin-process.jpg"
+    alt="EchoSkin design process"
+  >
+
+</div>
+
+
+<!-- =========================================================
+     PROJECT VIDEO
+     ========================================================= -->
+
+<section class="case-video">
+
+  <div class="case-heading">
+    Project Video
+  </div>
+
+  <div class="video-wrapper">
+
+    <iframe
+      src="https://www.youtube.com/embed/I15xWBN8jhc"
+      title="EchoSkin Project Video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROTOTYPE / EMPATHETIC INTERACTION
      ========================================================= -->
 
 <section class="case-content">
@@ -736,7 +780,6 @@ footer {
   <div class="case-heading">
     Empathetic Interaction
   </div>
-
 
   <div class="case-body">
 
@@ -758,14 +801,49 @@ footer {
 
 
 <!-- =========================================================
-     FULL WIDTH VISUAL
+     PROTOTYPE IMAGE
+     ========================================================= -->
+
+<div class="case-single-image">
+
+  <img
+    src="../assets/echoskin-prototype.jpg"
+    alt="EchoSkin prototype"
+  >
+
+</div>
+
+
+<!-- =========================================================
+     FINAL DESIGN
+     ========================================================= -->
+
+<section class="case-content">
+
+  <div class="case-heading">
+    Final Design
+  </div>
+
+  <div class="case-body">
+
+    <p>
+      EchoSkin proposes a wearable interaction system that brings together sensing, feedback and human connection within a more empathetic approach to end-of-life care.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL IMAGE
      ========================================================= -->
 
 <div class="case-full-image">
 
   <img
-    src="../assets/echoskin.jpg"
-    alt="EchoSkin final concept"
+    src="../assets/echoskin-final.jpg"
+    alt="EchoSkin final design"
   >
 
 </div>
@@ -841,6 +919,10 @@ footer {
 
 </main>
 
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer>
 
