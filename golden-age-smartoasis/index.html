@@ -4,69 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Golden Age SmartOasis — Haoyin Yin</title>
+  <title>Golden Age Smartoasis — Haoyin Yin</title>
+
+  <link rel="stylesheet" href="../styles.css">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f5;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-    }
 
     /* =========================
-       NAVIGATION
-    ========================= */
-
-    .case-nav {
-      width: 100%;
-      padding: 25px 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(0,0,0,.14);
-      font-size: 13px;
-      letter-spacing: .02em;
-    }
-
-    .case-nav-left {
-      font-weight: 600;
-    }
-
-    .case-nav-right {
-      display: flex;
-      gap: 30px;
-    }
-
-    .case-nav-right a {
-      opacity: .65;
-      transition: opacity .2s ease;
-    }
-
-    .case-nav-right a:hover {
-      opacity: 1;
-    }
-
-    /* =========================
-       CASE STUDY CONTAINER
+       CASE STUDY
     ========================= */
 
     .case-study {
@@ -74,40 +19,88 @@
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 5vw 100px;
+      box-sizing: border-box;
     }
+
+    .case-section {
+      width: 100%;
+      padding: 85px 0;
+      border-top: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-section-content {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .case-section-content h2 {
+      max-width: 1050px;
+    }
+
+    .case-section-content p {
+      max-width: 950px;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .case-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-nav a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .case-back {
+      font-size: 14px;
+    }
+
+    .case-index {
+      font-size: 14px;
+      opacity: .5;
+    }
+
 
     /* =========================
        HERO
     ========================= */
 
     .case-hero {
-      padding: 90px 0 80px;
+      padding: 90px 0 75px;
     }
 
-    .case-number {
+    .case-kicker {
       font-size: 13px;
-      letter-spacing: .08em;
       text-transform: uppercase;
-      margin-bottom: 35px;
+      letter-spacing: .12em;
       opacity: .55;
+      margin-bottom: 25px;
     }
 
     .case-hero h1 {
+      font-size: clamp(52px, 8vw, 112px);
+      line-height: .92;
+      letter-spacing: -.055em;
       margin: 0;
-      font-size: clamp(60px, 10vw, 145px);
-      line-height: .88;
-      letter-spacing: -.065em;
-      font-weight: 600;
-      max-width: 1200px;
+      max-width: 1100px;
     }
 
     .case-subtitle {
-      margin-top: 38px;
       font-size: clamp(22px, 3vw, 38px);
       line-height: 1.15;
+      max-width: 900px;
+      margin: 35px 0 0;
       letter-spacing: -.025em;
-      max-width: 850px;
     }
+
 
     /* =========================
        TEAM
@@ -124,17 +117,19 @@
 
     .case-team-item span {
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
       opacity: .5;
-      margin-bottom: 7px;
+      margin-bottom: 10px;
     }
 
     .case-team-item p {
       margin: 0;
-      font-size: 15px;
+      font-size: 16px;
+      line-height: 1.5;
     }
+
 
     /* =========================
        META
@@ -143,90 +138,30 @@
     .case-meta {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      padding: 22px 0 45px;
+      gap: 35px;
+      margin-top: 45px;
+      padding-top: 25px;
       border-top: 1px solid rgba(0,0,0,.14);
     }
 
     .case-meta-item span {
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
       opacity: .5;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
 
     .case-meta-item p {
       margin: 0;
-      font-size: 14px;
+      font-size: 15px;
+      line-height: 1.45;
     }
+
 
     /* =========================
-       HERO IMAGE
-    ========================= */
-
-    .case-hero-image {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    .case-hero-image img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .case-section {
-      width: 100%;
-      padding: 85px 0;
-      border-top: 1px solid rgba(0,0,0,.14);
-    }
-
-    .case-section-content {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .case-section-content h2 {
-      max-width: 1050px;
-      margin: 0 0 30px;
-      font-size: clamp(38px, 5vw, 72px);
-      line-height: .98;
-      letter-spacing: -.045em;
-      font-weight: 500;
-    }
-
-    .case-section-content h3 {
-      margin: 60px 0 20px;
-      font-size: 24px;
-      line-height: 1.1;
-      font-weight: 500;
-      letter-spacing: -.02em;
-    }
-
-    .case-section-content p {
-      max-width: 950px;
-      margin: 0 0 20px;
-      font-size: 18px;
-      line-height: 1.55;
-    }
-
-    .section-label {
-      display: block;
-      margin-bottom: 25px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .09em;
-      opacity: .5;
-    }
-
-    /* =========================
-       IMAGE
+       IMAGES
     ========================= */
 
     .case-content-image {
@@ -240,27 +175,53 @@
       height: auto;
     }
 
-    .image-placeholder {
-      width: 100%;
-      min-height: 420px;
-      background: #e8e8e4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      opacity: .55;
+    .case-image-caption {
+      margin-top: 12px;
+      font-size: 12px !important;
+      line-height: 1.4 !important;
+      opacity: .5;
     }
 
+
     /* =========================
-       TWO COLUMN TEXT
+       TYPOGRAPHY
+    ========================= */
+
+    .case-section h2 {
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin: 0 0 30px;
+    }
+
+    .case-section h3 {
+      font-size: 21px;
+      line-height: 1.2;
+      margin: 0 0 15px;
+    }
+
+    .case-section p {
+      font-size: 18px;
+      line-height: 1.65;
+      margin: 0 0 22px;
+    }
+
+    .case-lead {
+      font-size: clamp(22px, 3vw, 34px) !important;
+      line-height: 1.35 !important;
+      letter-spacing: -.02em;
+      max-width: 1000px !important;
+    }
+
+
+    /* =========================
+       TWO COLUMN
     ========================= */
 
     .case-two-column {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 70px;
       margin-top: 55px;
     }
 
@@ -268,938 +229,1338 @@
       min-width: 0;
     }
 
-    .case-two-column h3 {
-      margin-top: 0;
-    }
 
     /* =========================
-       HIGHLIGHT CARDS
+       HIGHLIGHTS
     ========================= */
 
     .case-highlights {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
       margin-top: 55px;
     }
 
     .case-highlight {
+      padding-top: 20px;
       border-top: 1px solid rgba(0,0,0,.25);
-      padding-top: 18px;
     }
 
     .case-highlight-number {
       font-size: 12px;
       opacity: .5;
-      margin-bottom: 45px;
+      letter-spacing: .1em;
+      margin-bottom: 22px;
     }
 
     .case-highlight h3 {
-      margin: 0 0 12px;
-      font-size: 25px;
-      line-height: 1;
+      font-size: 22px;
+      margin-bottom: 12px;
     }
 
     .case-highlight p {
-      font-size: 15px;
-      line-height: 1.45;
-      margin: 0;
+      font-size: 16px;
+      line-height: 1.55;
     }
+
 
     /* =========================
-       QUOTE / KEY QUESTION
+       RESEARCH RESULT
     ========================= */
 
-    .case-question {
-      padding: 90px 0;
-    }
-
-    .case-question p {
-      max-width: 1200px;
-      font-size: clamp(32px, 5vw, 68px);
-      line-height: 1.02;
-      letter-spacing: -.045em;
-      margin: 0;
-    }
-
-    /* =========================
-       PROCESS GRID
-    ========================= */
-
-    .case-process {
+    .research-result {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
       margin-top: 55px;
     }
 
-    .case-process-item {
-      border-top: 1px solid rgba(0,0,0,.25);
-      padding-top: 18px;
+    .result-card {
+      padding: 30px;
+      border: 1px solid rgba(0,0,0,.18);
     }
 
-    .case-process-item span {
-      font-size: 11px;
+    .result-card span {
+      display: block;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
       opacity: .5;
+      margin-bottom: 18px;
     }
 
-    .case-process-item h3 {
-      margin: 35px 0 12px;
-      font-size: 21px;
+    .result-number {
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin-bottom: 15px;
     }
 
-    .case-process-item p {
-      font-size: 14px;
-      line-height: 1.45;
-      margin: 0;
+    .result-card p {
+      font-size: 15px;
+      line-height: 1.5;
     }
+
 
     /* =========================
-       RECOGNITION
+       SDN
     ========================= */
 
-    .recognition {
+    .case-recognition {
       margin-top: 50px;
-      padding-top: 22px;
-      border-top: 1px solid rgba(0,0,0,.2);
-      max-width: 800px;
+      padding: 30px;
+      border: 1px solid rgba(0,0,0,.18);
     }
 
-    .recognition span {
+    .case-recognition-label {
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
       opacity: .5;
-      margin-bottom: 8px;
+      margin-bottom: 15px;
     }
 
-    .recognition p {
-      margin: 0;
-      font-size: 17px;
+    .case-recognition-title {
+      font-size: 21px;
+      line-height: 1.35;
+      margin-bottom: 18px;
     }
+
+    .case-recognition a {
+      display: inline-block;
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 3px;
+      font-size: 14px;
+    }
+
 
     /* =========================
        CLOSING
     ========================= */
 
     .case-closing {
-      padding: 120px 0 100px;
+      padding: 120px 0 80px;
       border-top: 1px solid rgba(0,0,0,.14);
     }
 
-    .case-closing p {
-      max-width: 1000px;
-      margin: 0;
-      font-size: clamp(38px, 6vw, 82px);
+    .case-closing h2 {
+      font-size: clamp(40px, 6vw, 80px);
       line-height: .98;
-      letter-spacing: -.055em;
+      letter-spacing: -.05em;
+      max-width: 1050px;
+      margin: 0;
     }
+
+    .case-closing p {
+      max-width: 750px;
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
 
     /* =========================
        FOOTER
     ========================= */
 
     .case-footer {
-      width: 100%;
-      padding: 30px 5vw;
-      border-top: 1px solid rgba(0,0,0,.14);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 12px;
-      opacity: .7;
+      padding-top: 30px;
+      border-top: 1px solid rgba(0,0,0,.14);
+      font-size: 13px;
     }
 
     .case-footer a {
-      transition: opacity .2s ease;
+      color: inherit;
+      text-decoration: none;
     }
 
-    .case-footer a:hover {
-      opacity: .5;
-    }
 
     /* =========================
-       RESPONSIVE
+       MOBILE
     ========================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
 
-      .case-nav {
-        padding: 20px 5vw;
-      }
-
-      .case-nav-right {
-        gap: 15px;
+      .case-study {
+        padding: 0 6vw 60px;
       }
 
       .case-hero {
-        padding: 65px 0 55px;
+        padding: 60px 0 55px;
       }
 
-      .case-hero h1 {
-        font-size: clamp(55px, 16vw, 100px);
-      }
-
-      .case-subtitle {
-        font-size: 25px;
-      }
-
-      .case-team {
+      .case-team,
+      .case-meta,
+      .case-two-column,
+      .case-highlights,
+      .research-result {
         grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .case-meta {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 35px;
       }
 
       .case-section {
         padding: 60px 0;
       }
 
-      .case-section-content h2 {
-        font-size: 45px;
-      }
-
       .case-section-content p {
         font-size: 16px;
       }
 
-      .case-two-column {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .case-highlights {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .case-process {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .case-question {
-        padding: 65px 0;
-      }
-
-      .case-question p {
-        font-size: 38px;
-      }
-
-      .case-closing {
-        padding: 80px 0;
+      .case-content-image {
+        margin-top: 35px;
       }
 
       .case-footer {
-        padding: 25px 5vw;
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
       }
+
     }
 
-    @media (max-width: 500px) {
-
-      .case-process {
-        grid-template-columns: 1fr;
-      }
-
-      .case-nav-right a:nth-child(2) {
-        display: none;
-      }
-
-      .image-placeholder {
-        min-height: 260px;
-      }
-    }
   </style>
 </head>
 
+
 <body>
+
+<main class="case-study">
+
 
   <!-- =========================
        NAVIGATION
   ========================= -->
 
   <nav class="case-nav">
-    <a href="../index.html" class="case-nav-left">
-      HAOYIN YIN
+
+    <a href="../index.html" class="case-back">
+      ← Back to selected work
     </a>
 
-    <div class="case-nav-right">
-      <a href="../index.html">Selected Work</a>
-      <a href="../index.html#about">About</a>
-    </div>
+    <span class="case-index">
+      04 / 06
+    </span>
+
   </nav>
 
 
-  <main class="case-study">
 
-    <!-- =========================
-         HERO
+  <!-- =========================
+       HERO
     ========================= -->
 
-    <header class="case-hero">
+  <header class="case-hero">
 
-      <div class="case-number">
-        Selected Work / 04
-      </div>
+    <div class="case-kicker">
+      Selected Work / 04
+    </div>
 
-      <h1>
-        Golden Age<br>
-        SmartOasis
-      </h1>
+    <h1>
+      Golden Age Smartoasis
+    </h1>
 
-      <div class="case-subtitle">
-        Designing More Inclusive Care Experiences
-      </div>
+    <p class="case-subtitle">
+      Design of an Age-Friendly Smart Community
+    </p>
 
-    </header>
-
-
-    <!-- =========================
-         PROJECT TEAM
-    ========================= -->
-
-    <section class="case-team">
-
-      <div class="case-team-item">
-        <span>Project Leader</span>
-        <p>
-          Haoyin Yin · MA Service Design, Royal College of Art
-        </p>
-      </div>
-
-      <div class="case-team-item">
-        <span>Project Type</span>
-        <p>
-          Design Research &amp; Service Design Project
-        </p>
-      </div>
-
-    </section>
+  </header>
 
 
-    <!-- =========================
-         PROJECT META
-    ========================= -->
 
-    <section class="case-meta">
+  <!-- =========================
+       PROJECT TEAM
+  ========================= -->
 
-      <div class="case-meta-item">
-        <span>Year</span>
-        <p>2023</p>
-      </div>
+  <section class="case-team">
 
-      <div class="case-meta-item">
-        <span>Discipline</span>
-        <p>
-          Inclusive Design · Service Design
-        </p>
-      </div>
+    <div class="case-team-item">
 
-      <div class="case-meta-item">
-        <span>Focus</span>
-        <p>
-          Ageing · Care · Inclusive Experiences
-        </p>
-      </div>
+      <span>
+        Project Leader
+      </span>
 
-    </section>
-
-
-    <!-- =========================
-         MAIN HERO IMAGE
-    ========================= -->
-
-    <div class="case-hero-image">
-
-      <img
-        src="../assets/golden-age-smartoasis-mainhero.jpg"
-        alt="Golden Age SmartOasis main project image"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      >
-
-      <div class="image-placeholder" style="display:none;">
-        Main Hero Image
-      </div>
+      <p>
+        Haoyin Yin · MA Service Design, Royal College of Art
+      </p>
 
     </div>
 
 
-    <!-- =========================
-         PROJECT OVERVIEW
-    ========================= -->
+    <div class="case-team-item">
 
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          01 / Project Overview
-        </span>
-
-        <h2>
-          Designing more inclusive care experiences for ageing populations.
-        </h2>
-
-        <p>
-          Golden Age SmartOasis explores how design can create more inclusive,
-          supportive and meaningful care experiences for older adults.
-        </p>
-
-        <p>
-          The project looks beyond individual healthcare interventions and
-          considers the wider ecosystem of ageing, care, everyday life and
-          community support.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/golden-age-smartoasis-research.jpg"
-            alt="Golden Age SmartOasis research"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Project Overview Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         RESEARCH
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          02 / Research
-        </span>
-
-        <h2>
-          Understanding ageing as an experience, not simply a healthcare issue.
-        </h2>
-
-        <p>
-          The research investigates the everyday experiences surrounding
-          ageing and care, mapping relationships between older adults,
-          families, caregivers, healthcare systems and community environments.
-        </p>
-
-        <p>
-          Rather than focusing exclusively on medical needs, the project
-          considers emotional wellbeing, independence, social connection and
-          the ability to participate in everyday life.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/golden-age-smartoasis-research.jpg"
-            alt="Research process"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Research Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         KEY QUESTION
-    ========================= -->
-
-    <section class="case-section case-question">
-
-      <span class="section-label">
-        03 / Key Question
+      <span>
+        Team Member
       </span>
 
       <p>
-        How might we create more inclusive care experiences that support
-        older adults' independence, wellbeing and connection with others?
+        Wencong Zhang · B.Eng Industrial Design, Shandong University of Art &amp; Design
       </p>
 
-    </section>
+    </div>
 
+  </section>
 
-    <!-- =========================
-         DESIGN OPPORTUNITY
-    ========================= -->
 
-    <section class="case-section">
 
-      <div class="case-section-content">
+  <!-- =========================
+       PROJECT META
+  ========================= -->
 
-        <span class="section-label">
-          04 / Design Opportunity
-        </span>
+  <section class="case-meta">
 
-        <h2>
-          From care as a service to care as an everyday experience.
-        </h2>
+    <div class="case-meta-item">
 
-        <div class="case-two-column">
+      <span>
+        Year
+      </span>
 
-          <div>
-            <h3>
-              Personal
-            </h3>
+      <p>
+        2025
+      </p>
 
-            <p>
-              Supporting individual wellbeing, autonomy and confidence in
-              everyday activities.
-            </p>
-          </div>
+    </div>
 
-          <div>
-            <h3>
-              Social
-            </h3>
 
-            <p>
-              Strengthening relationships between older adults, families,
-              caregivers and wider communities.
-            </p>
-          </div>
+    <div class="case-meta-item">
 
-        </div>
+      <span>
+        Discipline
+      </span>
 
-      </div>
+      <p>
+        Service Design · Product Design · Spatial Design
+      </p>
 
-    </section>
+    </div>
 
 
-    <!-- =========================
-         DESIGN CONCEPT
-    ========================= -->
+    <div class="case-meta-item">
 
-    <section class="case-section">
+      <span>
+        Focus
+      </span>
 
-      <div class="case-section-content">
+      <p>
+        Ageing · Loneliness · Intergenerational Interaction · Smart Community
+      </p>
 
-        <span class="section-label">
-          05 / Design Concept
-        </span>
+    </div>
 
-        <h2>
-          Creating a supportive environment where ageing, care and everyday
-          life can coexist.
-        </h2>
+  </section>
 
-        <p>
-          The concept explores an integrated care experience that connects
-          personal needs with community resources and social interaction.
-        </p>
 
-        <p>
-          Instead of treating older adults as passive recipients of care,
-          the design positions them as active participants within a broader
-          care ecosystem.
-        </p>
 
-        <div class="case-content-image">
+  <!-- =========================
+       HERO IMAGE
+       golden-age-smartoasis-hero.jpg
+  ========================= -->
 
-          <img
-            src="../assets/golden-age-smartoasis-concept.jpg"
-            alt="Design concept"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
+  <div class="case-content-image">
 
-          <div class="image-placeholder" style="display:none;">
-            Design Concept Image
-          </div>
+    <img
+      src="../assets/golden-age-smartoasis-hero.jpg"
+      alt="Golden Age Smartoasis age-friendly smart community"
+    >
 
-        </div>
+  </div>
 
-      </div>
 
-    </section>
 
+  <!-- =========================
+       PROJECT OVERVIEW
+  ========================= -->
 
-    <!-- =========================
-         SYSTEM
-    ========================= -->
+  <section class="case-section">
 
-    <section class="case-section">
+    <div class="case-section-content">
 
-      <div class="case-section-content">
+      <h2>
+        Project Overview
+      </h2>
 
-        <span class="section-label">
-          06 / Care System
-        </span>
+      <p class="case-lead">
+        Golden Age Smartoasis is a service design project that
+        explores how an age-friendly smart community can alleviate
+        loneliness and strengthen intergenerational connections.
+      </p>
 
-        <h2>
-          A connected ecosystem of people, services and environments.
-        </h2>
+      <p>
+        Rather than treating ageing as an isolated healthcare issue,
+        the project approaches loneliness as a social and community
+        challenge. It connects a modular physical product, a digital
+        platform and community space into one integrated ecosystem.
+      </p>
 
-        <div class="case-highlights">
+      <div class="case-two-column">
 
-          <div class="case-highlight">
+        <div>
 
-            <div class="case-highlight-number">
-              01
-            </div>
-
-            <h3>
-              Personal
-            </h3>
-
-            <p>
-              Supporting individual needs, routines and everyday wellbeing.
-            </p>
-
-          </div>
-
-
-          <div class="case-highlight">
-
-            <div class="case-highlight-number">
-              02
-            </div>
-
-            <h3>
-              Community
-            </h3>
-
-            <p>
-              Connecting older adults with local resources, activities and
-              social opportunities.
-            </p>
-
-          </div>
-
-
-          <div class="case-highlight">
-
-            <div class="case-highlight-number">
-              03
-            </div>
-
-            <h3>
-              Care Network
-            </h3>
-
-            <p>
-              Enabling families, caregivers and services to work together
-              around everyday ageing needs.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/golden-age-smartoasis-system.jpg"
-            alt="Care system"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            System Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         EXPERIENCE DESIGN
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          07 / Experience Design
-        </span>
-
-        <h2>
-          Designing touchpoints across the ageing journey.
-        </h2>
-
-        <p>
-          The service experience is structured around different moments of
-          everyday life, creating opportunities for support before,
-          during and after care interactions.
-        </p>
-
-        <div class="case-process">
-
-          <div class="case-process-item">
-
-            <span>Stage 01</span>
-
-            <h3>
-              Discover
-            </h3>
-
-            <p>
-              Identify needs, interests and opportunities for participation.
-            </p>
-
-          </div>
-
-
-          <div class="case-process-item">
-
-            <span>Stage 02</span>
-
-            <h3>
-              Connect
-            </h3>
-
-            <p>
-              Connect individuals with people, resources and community
-              services.
-            </p>
-
-          </div>
-
-
-          <div class="case-process-item">
-
-            <span>Stage 03</span>
-
-            <h3>
-              Participate
-            </h3>
-
-            <p>
-              Encourage meaningful engagement through everyday activities
-              and social experiences.
-            </p>
-
-          </div>
-
-
-          <div class="case-process-item">
-
-            <span>Stage 04</span>
-
-            <h3>
-              Sustain
-            </h3>
-
-            <p>
-              Build long-term relationships and continuity of support.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/golden-age-smartoasis-experience.jpg"
-            alt="Experience design"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Experience Design Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROTOTYPE
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          08 / Prototype
-        </span>
-
-        <h2>
-          From service ideas to tangible care experiences.
-        </h2>
-
-        <p>
-          Prototyping was used to explore how different service touchpoints,
-          interactions and environments could work together as one coherent
-          experience.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/golden-age-smartoasis-prototype.jpg"
-            alt="Prototype development"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Prototype Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         FINAL DESIGN
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          09 / Final Design
-        </span>
-
-        <h2>
-          A more connected approach to inclusive ageing.
-        </h2>
-
-        <p>
-          Golden Age SmartOasis brings together personal wellbeing,
-          community participation and care support into a more connected
-          service experience.
-        </p>
-
-        <p>
-          The final proposal demonstrates how service design can shift the
-          focus from isolated care interventions toward longer-term,
-          inclusive relationships between people and their environments.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/golden-age-smartoasis-final.jpg"
-            alt="Golden Age SmartOasis final design"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Final Design Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         DESIGN SIGNIFICANCE
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          10 / Design Significance
-        </span>
-
-        <h2>
-          Designing for ageing means designing for participation,
-          dignity and connection.
-        </h2>
-
-        <p>
-          The project demonstrates the potential of service design to
-          reframe ageing not simply as a problem of healthcare provision,
-          but as a complex social and everyday experience.
-        </p>
-
-        <p>
-          By connecting personal needs with wider care networks and
-          community environments, inclusive design can help create more
-          sustainable and meaningful experiences of ageing.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         RECOGNITION
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          11 / Recognition
-        </span>
-
-        <h2>
-          Recognition
-        </h2>
-
-        <div class="recognition">
-
-          <span>
-            Recognition / Award
-          </span>
+          <h3>
+            The Core Problem
+          </h3>
 
           <p>
-            Recognition information to be added.
+            As populations age, many older adults experience reduced
+            companionship, weaker social connections and increasing
+            feelings of loneliness.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            The Design Approach
+          </h3>
+
+          <p>
+            The project uses intergenerational integration as a
+            foundation, creating opportunities for older and younger
+            people to interact through shared community activities.
           </p>
 
         </div>
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         CLOSING
-    ========================= -->
 
-    <section class="case-closing">
+  <!-- =========================
+       DESK RESEARCH
+       golden-age-smartoasis-deskresearch.jpg
+  ========================= -->
 
-      <p>
-        Reimagining ageing through more inclusive, connected and
-        human-centred care experiences.
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Desk Research
+      </h2>
+
+      <p class="case-lead">
+        The research began by examining the changing global ageing
+        population, the mental health implications of ageing and
+        existing age-friendly community and smart-care solutions.
       </p>
 
-    </section>
+      <div class="case-content-image">
 
-  </main>
+        <img
+          src="../assets/golden-age-smartoasis-deskresearch.jpg"
+          alt="Golden Age Smartoasis desk research"
+        >
+
+        <p class="case-image-caption">
+          Desk research, existing smart elderly-care models and
+          age-friendly community precedents
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       USER RESEARCH
+       golden-age-smartoasis-userresearch.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        User Research
+      </h2>
+
+      <p class="case-lead">
+        Questionnaires, interviews, focus groups and stakeholder
+        visits were used to understand how loneliness is experienced
+        by older adults and how generational differences influence
+        communication.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis-userresearch.jpg"
+          alt="Golden Age Smartoasis user research"
+        >
+
+        <p class="case-image-caption">
+          Questionnaire, interviews, focus groups and stakeholder visits
+        </p>
+
+      </div>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Lack of Companionship
+          </h3>
+
+          <p>
+            A lack of companionship and communication contributes
+            strongly to feelings of loneliness.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Community Disconnection
+          </h3>
+
+          <p>
+            Modern urban environments can create unfamiliarity
+            between neighbours and reduce opportunities for
+            meaningful social interaction.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Generation Gap
+          </h3>
+
+          <p>
+            Differences between older and younger generations
+            create barriers to communication and participation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PERSONA & JOURNEY
+       golden-age-smartoasis-concept.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Personas &amp; User Journey
+      </h2>
+
+      <p class="case-lead">
+        Personas and journey mapping helped translate research
+        findings into opportunities for intergenerational
+        interaction within the community.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis-concept.jpg"
+          alt="Golden Age Smartoasis personas user journey and design concept"
+        >
+
+        <p class="case-image-caption">
+          Personas, user journey map, thinking process and concept development
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       DESIGN CONCEPT
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Design Concept
+      </h2>
+
+      <p class="case-lead">
+        Golden Age Smartoasis proposes a new service system centred
+        on seniors within the community, connecting product,
+        application and community space.
+      </p>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            AGEJOY App
+          </h3>
+
+          <p>
+            A digital platform for communication, community
+            activities, product exchange and intergenerational
+            participation.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            UnionCube
+          </h3>
+
+          <p>
+            A modular physical product system supporting community
+            activities, exchange and flexible spatial use.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Community Space
+          </h3>
+
+          <p>
+            A physical environment designed to encourage interaction
+            between older adults, younger people and neighbours.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       UNIONCUBE PRODUCT
+       golden-age-smartoasis- product.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        UnionCube — Modular Community Product
+      </h2>
+
+      <p class="case-lead">
+        UnionCube is a modular physical product designed to support
+        flexible community activities and intergenerational exchange.
+      </p>
+
+      <p>
+        The product evolved through multiple rounds of prototyping.
+        Early tests revealed issues around assembly, usability and
+        elderly-friendly design, which informed subsequent iterations.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis- product.jpg"
+          alt="Golden Age Smartoasis UnionCube product prototype"
+        >
+
+        <p class="case-image-caption">
+          UnionCube prototype development and first design iterations
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       UNIONCUBE ADVANCED
+       golden-age-smartoasis- product2.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        From Prototype to Modular System
+      </h2>
+
+      <p class="case-lead">
+        Further development refined UnionCube around modularity,
+        magnetic connections, ergonomic dimensions and a more
+        elderly-friendly visual language.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis- product2.jpg"
+          alt="Golden Age Smartoasis UnionCube advanced product design"
+        >
+
+        <p class="case-image-caption">
+          Advanced UnionCube design, material structure and modular system
+        </p>
+
+      </div>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Modular
+          </h3>
+
+          <p>
+            Modules can be assembled and disassembled to support
+            different community scenarios.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Magnetic
+          </h3>
+
+          <p>
+            Magnetic connections simplify joining and reconfiguration
+            compared with more complex assembly structures.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Elderly-Friendly
+          </h3>
+
+          <p>
+            Rounded forms, accessible dimensions and clearer visual
+            differentiation respond to elderly users' needs.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       APP DESIGN
+       golden-age-smartoasis-app.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        AGEJOY App
+      </h2>
+
+      <p class="case-lead">
+        AGEJOY extends the community experience into a digital
+        platform where older and younger users can communicate,
+        participate and exchange.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis-app.jpg"
+          alt="Golden Age Smartoasis AGEJOY app design"
+        >
+
+        <p class="case-image-caption">
+          AGEJOY app information architecture and early interface design
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       APP ITERATION
+       golden-age-smartoasis-appfinal.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Elderly-Friendly Interface
+      </h2>
+
+      <p class="case-lead">
+        User testing showed that older users preferred larger text,
+        clearer images and simpler page structures, leading to
+        an elderly-friendly version of the interface.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis-appfinal.jpg"
+          alt="Golden Age Smartoasis AGEJOY final app interface"
+        >
+
+        <p class="case-image-caption">
+          AGEJOY final interface and elderly-friendly interaction design
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       COMMUNITY SPACE
+       golden-age-smartoasis-space.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Age-Friendly Smart Community Space
+      </h2>
+
+      <p class="case-lead">
+        The physical community environment brings the digital
+        service and modular products into shared spaces where
+        older and younger people can meet and participate together.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis-space.jpg"
+          alt="Golden Age Smartoasis age-friendly smart community space"
+        >
+
+        <p class="case-image-caption">
+          Community Garden, Nostalgia Swap and Offline Events
+        </p>
+
+      </div>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Community Garden
+          </h3>
+
+          <p>
+            Older and younger people grow vegetables together,
+            creating opportunities for shared activity and knowledge.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Nostalgia Swap
+          </h3>
+
+          <p>
+            Older people can share meaningful objects and stories,
+            while younger participants engage through the exchange.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Offline Events
+          </h3>
+
+          <p>
+            Community activities create opportunities for older and
+            younger people to participate together beyond the digital
+            platform.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       STORYBOARD
+       golden-age-smartoasis- storyboard.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Intergenerational Interaction
+      </h2>
+
+      <p class="case-lead">
+        Storyboarding was used to translate the service concept
+        into concrete moments of interaction between older and
+        younger community members.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis- storyboard.jpg"
+          alt="Golden Age Smartoasis service storyboard"
+        >
+
+        <p class="case-image-caption">
+          Service scenarios across Community Garden, Nostalgia Swap
+          and Offline Events
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       ECO-SYSTEM
+       TEXT ONLY
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Eco-System
+      </h2>
+
+      <p class="case-lead">
+        The three design components work together as one community
+        ecosystem rather than as independent products.
+      </p>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Product
+          </h3>
+
+          <p>
+            UnionCube provides the physical infrastructure for
+            exchange, display and community activities.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            App
+          </h3>
+
+          <p>
+            AGEJOY connects users, activities, communication and
+            community resources digitally.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Space
+          </h3>
+
+          <p>
+            The community environment turns digital connections
+            into physical social participation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       VALIDATION
+       golden-age-smartoasis-validation.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Research Methods &amp; Validation
+      </h2>
+
+      <p class="case-lead">
+        The final service concept was evaluated through field
+        testing and a pre-test / post-test study using the
+        UCLA Loneliness Scale, Third Edition.
+      </p>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/golden-age-smartoasis-validation.jpg"
+          alt="Golden Age Smartoasis research validation"
+        >
+
+        <p class="case-image-caption">
+          Field testing, research methodology and validation results
+        </p>
+
+      </div>
+
+
+      <div class="research-result">
+
+        <div class="result-card">
+
+          <span>
+            Pre-test
+          </span>
+
+          <div class="result-number">
+            50.37 ± 8.62
+          </div>
+
+          <p>
+            Extreme loneliness level recorded before the intervention.
+          </p>
+
+        </div>
+
+
+        <div class="result-card">
+
+          <span>
+            Post-test
+          </span>
+
+          <div class="result-number">
+            38.21 ± 7.14
+          </div>
+
+          <p>
+            Intermediate level recorded after the intervention,
+            representing a 24.26% reduction.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       DESIGN SIGNIFICANCE
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Design Significance
+      </h2>
+
+      <p class="case-lead">
+        Golden Age Smartoasis moves beyond single-modal design by
+        integrating product, app and community space into one
+        interconnected service ecosystem.
+      </p>
+
+      <div class="case-two-column">
+
+        <div>
+
+          <h3>
+            From Product to Ecosystem
+          </h3>
+
+          <p>
+            The project demonstrates how a modular physical product,
+            digital service and spatial environment can work together
+            to support a continuous community experience.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            From Loneliness to Connection
+          </h3>
+
+          <p>
+            Instead of addressing loneliness only through individual
+            services, the project creates opportunities for social
+            participation, neighbour interaction and intergenerational
+            exchange.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       RECOGNITION — SDN
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Recognition
+      </h2>
+
+      <p class="case-lead">
+        The project was published by the Service Design Network
+        as a case exploring an integrated ecosystem of product,
+        app and community space.
+      </p>
+
+      <div class="case-recognition">
+
+        <span class="case-recognition-label">
+          Service Design Network
+        </span>
+
+        <div class="case-recognition-title">
+          Yin, H. (2025). <em>Golden Age SmartOasis:
+          Transcending single-modal design – an integrated
+          ecosystem of product, app, and space.</em>
+        </div>
+
+        <a
+          href="https://www.service-design-network.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View on Service Design Network ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       REFLECTION
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Reflection
+      </h2>
+
+      <p class="case-lead">
+        The project changed my understanding of ageing from a
+        primarily functional problem into a question of social
+        connection, participation and belonging.
+      </p>
+
+      <p>
+        Through the development of UnionCube, AGEJOY and the
+        community space, the project explored how product, digital
+        and spatial interventions can work together rather than
+        operate as isolated design outcomes.
+      </p>
+
+      <p>
+        The research and validation process also reinforced the
+        importance of designing with the social realities of older
+        adults, rather than assuming that providing facilities or
+        technology alone will resolve loneliness.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CLOSING
+  ========================= -->
+
+  <section class="case-closing">
+
+    <h2>
+      Designing connections,
+      not just spaces,
+      products or interfaces.
+    </h2>
+
+    <p>
+      Golden Age Smartoasis explores how service design can connect
+      physical products, digital interaction and community space
+      to create more socially connected ageing experiences.
+    </p>
+
+  </section>
+
 
 
   <!-- =========================
@@ -1219,10 +1580,13 @@
   </footer>
 
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+</main>
+
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
 </html>
