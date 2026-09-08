@@ -33,7 +33,7 @@ const portfolioContent = {
       category: "Wearable · Biomaterials · Social Impact",
       description: "A wearable footwear system combining biomaterials and smart technology to address everyday health and wellbeing.",
       image: "assets/eco-shoe.jpg",
-      url: "#"
+      url: "ecoshoe-care/"
     },
 
 
