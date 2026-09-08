@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>OlfaMate — Haoyin Yin</title>
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+
+    /* =========================================================
+       OLFAMATE CASE STUDY
+       ========================================================= */
+
+    .case-study {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5vw 100px;
+      box-sizing: border-box;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .case-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 28px 0;
+
+      border-bottom: 1px solid rgba(0,0,0,.14);
+
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .case-nav a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .case-nav a:hover {
+      opacity: .55;
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .case-hero {
+      padding: 85px 0 55px;
+    }
+
+    .case-kicker {
+      margin-bottom: 25px;
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+
+      opacity: .55;
+    }
+
+    .case-title {
+      margin: 0;
+
+      font-size: clamp(60px, 10vw, 150px);
+      line-height: .88;
+
+      font-weight: 500;
+      letter-spacing: -.055em;
+    }
+
+    .case-subtitle {
+      max-width: 800px;
+
+      margin: 35px 0 0;
+
+      font-size: clamp(20px, 2.2vw, 30px);
+      line-height: 1.3;
+
+      letter-spacing: -.02em;
+    }
+
+
+    /* =========================================================
+       PROJECT TEAM
+       ========================================================= */
+
+    .case-team {
+      display: grid;
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      gap: 40px;
+
+      padding-top: 22px;
+      margin-bottom: 28px;
+
+      border-top: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-team-item span {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+
+      opacity: .5;
+    }
+
+    .case-team-item p {
+      margin: 0;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       PROJECT META
+       ========================================================= */
+
+    .case-meta {
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 40px;
+
+      padding: 22px 0 30px;
+
+      border-top: 1px solid rgba(0,0,0,.14);
+      border-bottom: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-meta-item span {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+
+      opacity: .5;
+    }
+
+    .case-meta-item p {
+      margin: 0;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       MAIN IMAGES
+       ========================================================= */
+
+    .case-image {
+      width: 100%;
+      margin: 45px 0 100px;
+    }
+
+    .case-image img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
+    }
+
+
+    /* =========================================================
+       CONTENT
+       ========================================================= */
+
+    .case-section {
+      width: 100%;
+
+      padding: 85px 0;
+
+      border-top: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-section-label {
+      margin-bottom: 30px;
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+
+      opacity: .5;
+    }
+
+    .case-section-content {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .case-section-content h2 {
+      max-width: 1050px;
+
+      margin: 0 0 30px;
+
+      font-size: clamp(34px, 5vw, 68px);
+      line-height: 1.02;
+
+      font-weight: 500;
+      letter-spacing: -.045em;
+    }
+
+    .case-section-content p {
+      max-width: 950px;
+
+      margin: 0 0 24px;
+
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .case-section-content p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================================================
+       CONTENT IMAGES
+       ========================================================= */
+
+    .case-content-image {
+      width: 100%;
+
+      margin-top: 55px;
+    }
+
+    .case-content-image img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
+    }
+
+
+    /* =========================================================
+       KEY QUESTION
+       ========================================================= */
+
+    .case-question {
+      width: 100%;
+
+      padding: 100px 0;
+
+      border-top: 1px solid rgba(0,0,0,.14);
+      border-bottom: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-question-label {
+      margin-bottom: 30px;
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+
+      opacity: .5;
+    }
+
+    .case-question h2 {
+      max-width: 1150px;
+
+      margin: 0;
+
+      font-size: clamp(38px, 6vw, 88px);
+      line-height: 1;
+
+      font-weight: 500;
+      letter-spacing: -.05em;
+    }
+
+
+    /* =========================================================
+       SYSTEM HIGHLIGHTS
+       ========================================================= */
+
+    .case-highlights {
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 40px;
+
+      margin-top: 60px;
+    }
+
+    .case-highlight {
+      padding-top: 20px;
+
+      border-top: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-highlight-number {
+      display: block;
+
+      margin-bottom: 20px;
+
+      font-size: 11px;
+      letter-spacing: .1em;
+
+      opacity: .5;
+    }
+
+    .case-highlight h3 {
+      margin: 0 0 12px;
+
+      font-size: 22px;
+      line-height: 1.1;
+
+      font-weight: 500;
+      letter-spacing: -.02em;
+    }
+
+    .case-highlight p {
+      margin: 0;
+
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       VIDEO
+       ========================================================= */
+
+    .case-video {
+      width: 100%;
+
+      margin-top: 55px;
+
+      aspect-ratio: 16 / 9;
+
+      background: #000;
+    }
+
+    .case-video iframe {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      border: 0;
+    }
+
+
+    /* =========================================================
+       RECOGNITION
+       ========================================================= */
+
+    .case-recognition {
+      width: 100%;
+
+      padding: 85px 0;
+
+      border-top: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-recognition-label {
+      margin-bottom: 30px;
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+
+      opacity: .5;
+    }
+
+    .case-recognition-list {
+      width: 100%;
+      max-width: 950px;
+    }
+
+    .recognition-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      gap: 30px;
+
+      padding: 18px 0;
+
+      border-bottom: 1px solid rgba(0,0,0,.12);
+
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .recognition-item:first-child {
+      padding-top: 0;
+    }
+
+    .recognition-item span:last-child {
+      opacity: .55;
+      white-space: nowrap;
+    }
+
+
+    /* =========================================================
+       CLOSING STATEMENT
+       ========================================================= */
+
+    .case-closing {
+      padding: 120px 0 90px;
+    }
+
+    .case-closing p {
+      max-width: 1150px;
+
+      margin: 0;
+
+      font-size: clamp(36px, 5.5vw, 78px);
+      line-height: 1;
+
+      letter-spacing: -.05em;
+    }
+
+
+    /* =========================================================
+       FOOTER NAVIGATION
+       ========================================================= */
+
+    .case-footer-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-top: 28px;
+
+      border-top: 1px solid rgba(0,0,0,.14);
+
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .case-footer-nav a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .case-footer-nav a:hover {
+      opacity: .55;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .case-study {
+        padding: 0 6vw 70px;
+      }
+
+      .case-nav {
+        padding: 22px 0;
+      }
+
+      .case-hero {
+        padding: 60px 0 45px;
+      }
+
+      .case-title {
+        font-size: clamp(58px, 18vw, 100px);
+      }
+
+      .case-subtitle {
+        margin-top: 28px;
+        font-size: 20px;
+      }
+
+      .case-team {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .case-meta {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .case-image {
+        margin: 35px 0 70px;
+      }
+
+      .case-section {
+        padding: 60px 0;
+      }
+
+      .case-section-content h2 {
+        font-size: clamp(34px, 10vw, 52px);
+      }
+
+      .case-section-content p {
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      .case-content-image {
+        margin-top: 40px;
+      }
+
+      .case-question {
+        padding: 70px 0;
+      }
+
+      .case-question h2 {
+        font-size: clamp(38px, 11vw, 60px);
+      }
+
+      .case-highlights {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .case-recognition {
+        padding: 60px 0;
+      }
+
+      .recognition-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .case-closing {
+        padding: 80px 0 60px;
+      }
+
+      .case-footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <main class="case-study">
+
+
+    <!-- =======================================================
+         NAVIGATION
+         ======================================================= -->
+
+    <nav class="case-nav">
+
+      <a href="../index.html">
+        ← Back to Portfolio
+      </a>
+
+      <a href="../index.html#selected-work">
+        Selected Work
+      </a>
+
+    </nav>
+
+
+    <!-- =======================================================
+         HERO
+         ======================================================= -->
+
+    <header class="case-hero">
+
+      <div class="case-kicker">
+        Selected Work / 02
+      </div>
+
+      <h1 class="case-title">
+        OlfaMate
+      </h1>
+
+      <p class="case-subtitle">
+        Designing Preventive Health Through Olfactory Training for Older Adults
+      </p>
+
+    </header>
+
+
+    <!-- =======================================================
+         PROJECT TEAM
+         ======================================================= -->
+
+    <section class="case-team">
+
+      <div class="case-team-item">
+
+        <span>
+          Project Leader
+        </span>
+
+        <p>
+          Haoyin Yin · Royal College of Art
+        </p>
+
+      </div>
+
+
+      <div class="case-team-item">
+
+        <span>
+          Project
+        </span>
+
+        <p>
+          Individual Research & Design Project
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PROJECT META
+         ======================================================= -->
+
+    <section class="case-meta">
+
+      <div class="case-meta-item">
+
+        <span>
+          Year
+        </span>
+
+        <p>
+          2025
+        </p>
+
+      </div>
+
+
+      <div class="case-meta-item">
+
+        <span>
+          Discipline
+        </span>
+
+        <p>
+          Preventive Healthcare · Wearable · Service Design
+        </p>
+
+      </div>
+
+
+      <div class="case-meta-item">
+
+        <span>
+          Focus
+        </span>
+
+        <p>
+          Ageing · Olfactory Health · Multisensory Interaction
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         MAIN HERO IMAGE
+         ======================================================= -->
+
+    <div class="case-image">
+
+      <img
+        src="../assets/olfamate-mainhero.jpg"
+        alt="OlfaMate main project presentation"
+      >
+
+    </div>
+
+
+    <!-- =======================================================
+         PROJECT OVERVIEW
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Project Overview
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          Reframing olfactory training as an everyday preventive health experience.
+        </h2>
+
+        <p>
+          OlfaMate is a multisensory product-service system designed to support proactive health management among older adults through olfactory training.
+        </p>
+
+        <p>
+          Olfactory decline is often overlooked in everyday healthcare, despite its potential relationship with broader changes in cognitive and neurological health. Rather than treating smell as an isolated sensory function, OlfaMate explores how olfactory training can become part of a more engaging and accessible preventive health routine.
+        </p>
+
+        <p>
+          The system combines a wearable olfactory training device, real-time visual feedback, a mobile application for personalised data analysis and health insights, and offline workshops that introduce a social dimension to the training experience.
+        </p>
+
+        <p>
+          Together, these components create a connected experience spanning individual training, personal reflection, health monitoring and community support.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         RESEARCH
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Research
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          From overlooked sensory decline to proactive health awareness.
+        </h2>
+
+        <p>
+          Ageing is commonly discussed through visible and measurable changes in mobility, vision and hearing. Olfactory decline, however, can remain unnoticed or be dismissed as a normal consequence of ageing.
+        </p>
+
+        <p>
+          This project investigates how design can make olfactory health more visible, understandable and actionable without turning everyday sensory training into a clinical experience.
+        </p>
+
+        <p>
+          The research considers the needs and relationships of older adults, healthcare professionals and family members across hospital, home and community contexts.
+        </p>
+
+
+        <div class="case-content-image">
+
+          <img
+            src="../assets/olfamate-research.jpg"
+            alt="OlfaMate research"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         KEY QUESTION
+         ======================================================= -->
+
+    <section class="case-question">
+
+      <div class="case-question-label">
+        Key Question
+      </div>
+
+      <h2>
+        How might olfactory training become an engaging, multisensory and socially supported preventive health experience for older adults?
+      </h2>
+
+    </section>
+
+
+    <!-- =======================================================
+         DESIGN CONCEPT
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Design Concept
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          Turning an invisible sense into an interactive experience.
+        </h2>
+
+        <p>
+          OlfaMate transforms olfactory training from a repetitive sensory exercise into a multisensory interaction.
+        </p>
+
+        <p>
+          The wearable device provides olfactory stimulation while translating training responses into real-time visual feedback. This visual layer gives users a more immediate understanding of their interaction with the system and creates a stronger connection between sensory perception, attention and memory.
+        </p>
+
+        <p>
+          The design therefore explores multisensory interaction not as an additional interface feature, but as a way of making an otherwise invisible sensory process more tangible and engaging.
+        </p>
+
+
+        <div class="case-content-image">
+
+          <img
+            src="../assets/olfamate-concept.jpg"
+            alt="OlfaMate design concept"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         SYSTEM FLOW
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        System Flow
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          A connected loop between sensory training, data and preventive care.
+        </h2>
+
+        <p>
+          OlfaMate connects the physical training device, digital application and offline service experience into one continuous product-service ecosystem.
+        </p>
+
+        <p>
+          During training, the wearable device delivers olfactory stimuli and captures interaction data. Real-time visual feedback helps users understand their performance, while the mobile application analyses accumulated training data to provide personalised insights.
+        </p>
+
+        <p>
+          Offline workshops extend the system beyond individual use by creating opportunities for guided training, social interaction and continued engagement.
+        </p>
+
+
+        <div class="case-content-image">
+
+          <img
+            src="../assets/olfamate-flow.jpg"
+            alt="OlfaMate system flow"
+          >
+
+        </div>
+
+
+        <!-- =====================================================
+             SYSTEM HIGHLIGHTS
+             ===================================================== -->
+
+        <div class="case-highlights">
+
+          <div class="case-highlight">
+
+            <span class="case-highlight-number">
+              01
+            </span>
+
+            <h3>
+              Wearable Training
+            </h3>
+
+            <p>
+              Olfactory stimulation is delivered through a wearable interaction device designed for repeated and accessible training.
+            </p>
+
+          </div>
+
+
+          <div class="case-highlight">
+
+            <span class="case-highlight-number">
+              02
+            </span>
+
+            <h3>
+              Visual Feedback
+            </h3>
+
+            <p>
+              Real-time visualisation makes sensory responses more perceptible and helps users remain engaged throughout training.
+            </p>
+
+          </div>
+
+
+          <div class="case-highlight">
+
+            <span class="case-highlight-number">
+              03
+            </span>
+
+            <h3>
+              Health & Community
+            </h3>
+
+            <p>
+              Personalised insights and offline workshops connect individual training with longer-term preventive health management.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         DESIGN PROCESS
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Design Process
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          Moving between research, interaction and service design.
+        </h2>
+
+        <p>
+          The design process explored OlfaMate as both a physical product and a wider service ecosystem.
+        </p>
+
+        <p>
+          Research insights were translated into interaction principles, wearable form development, multisensory feedback experiments and service touchpoints across home, healthcare and community settings.
+        </p>
+
+        <p>
+          Iterative prototyping was used to explore how technology could remain approachable for older adults while providing enough feedback and personalisation to sustain long-term engagement.
+        </p>
+
+
+        <div class="case-content-image">
+
+          <img
+            src="../assets/olfamate-process.jpg"
+            alt="OlfaMate design process"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PROJECT VIDEO
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Project Video
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          OlfaMate in use.
+        </h2>
+
+
+        <div class="case-video">
+
+          <!--
+            Replace the iframe src below if you have an
+            OlfaMate YouTube video.
+          -->
+
+          <iframe
+            src="https://www.youtube.com/embed/"
+            title="OlfaMate Project Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PRODUCT-SERVICE SYSTEM
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Product-Service System
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          From a wearable device to a wider preventive health ecosystem.
+        </h2>
+
+        <p>
+          OlfaMate is not designed as a standalone wearable. Its value emerges through the relationship between hardware, software and human services.
+        </p>
+
+        <p>
+          The wearable creates the physical interaction with olfactory training. The mobile application transforms accumulated training data into personalised feedback and potential early risk insights. Offline workshops provide guidance, motivation and social support.
+        </p>
+
+        <p>
+          This combination shifts the experience from a single product interaction toward an ongoing preventive health service that can accompany older adults across different stages and contexts of everyday life.
+        </p>
+
+
+        <div class="case-content-image">
+
+          <img
+            src="../assets/olfamate-prototype.jpg"
+            alt="OlfaMate prototype"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         FINAL DESIGN
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Final Design
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          Designing preventive health through multisensory interaction.
+        </h2>
+
+        <p>
+          OlfaMate brings together olfactory stimulation, visual feedback, personalised data analysis and social support within a single preventive health ecosystem.
+        </p>
+
+        <p>
+          By making olfactory training more tangible, interactive and socially connected, the project explores a shift from reactive healthcare toward more proactive approaches to healthy ageing.
+        </p>
+
+
+        <div class="case-content-image">
+
+          <img
+            src="../assets/olfamate-final.jpg"
+            alt="OlfaMate final design"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         RESEARCH SIGNIFICANCE
+         ======================================================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-label">
+        Research Significance
+      </div>
+
+
+      <div class="case-section-content">
+
+        <h2>
+          Making preventive health more perceptible, participatory and continuous.
+        </h2>
+
+        <p>
+          OlfaMate proposes a design approach in which multisensory interaction can support preventive health behaviours rather than simply deliver information.
+        </p>
+
+        <p>
+          The project contributes to an emerging space between wearable technology, service design and healthy ageing, exploring how sensory training can become part of a continuous and human-centred health experience.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         RECOGNITION
+         ======================================================= -->
+
+    <section class="case-recognition">
+
+      <div class="case-recognition-label">
+        Recognition
+      </div>
+
+
+      <div class="case-recognition-list">
+
+        <div class="recognition-item">
+
+          <span>
+            OlfaMate
+          </span>
+
+          <span>
+            Selected Work · 2025
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         CLOSING
+         ======================================================= -->
+
+    <section class="case-closing">
+
+      <p>
+        Reimagining olfactory health as a more engaging, connected and proactive part of ageing well.
+      </p>
+
+    </section>
+
+
+    <!-- =======================================================
+         FOOTER NAVIGATION
+         ======================================================= -->
+
+    <nav class="case-footer-nav">
+
+      <a href="../index.html">
+        ← All Projects
+      </a>
+
+      <a href="../index.html#selected-work">
+        Back to Selected Work ↑
+      </a>
+
+    </nav>
+
+
+  </main>
+
+
+  <script>
+    document.querySelectorAll("[data-year]").forEach(function(el) {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+</html>
