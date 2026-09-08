@@ -1,5 +1,3 @@
-/* EDIT THIS FILE. Put images in /assets/. */
-
 const portfolioContent = {
   projects: [
 
@@ -14,6 +12,7 @@ const portfolioContent = {
       url: "echoskin/"
     },
 
+
     // 02 — OlfaMate
     {
       title: "OlfaMate",
@@ -22,8 +21,9 @@ const portfolioContent = {
       category: "Preventive Healthcare · Wearable · Service Design",
       description: "A multisensory product-service system that combines olfactory training, real-time visual feedback and personalised health insights to support proactive ageing.",
       image: "assets/olfamate.jpg",
-      url: "#"
+      url: "olfamate/"
     },
+
 
     // 03 — EcoShoe Care
     {
@@ -36,6 +36,7 @@ const portfolioContent = {
       url: "#"
     },
 
+
     // 04 — Golden Age SmartOasis
     {
       title: "Golden Age SmartOasis",
@@ -47,6 +48,7 @@ const portfolioContent = {
       url: "#"
     },
 
+
     // 05 — ThyroFlow Support
     {
       title: "ThyroFlow Support",
@@ -57,6 +59,7 @@ const portfolioContent = {
       image: "assets/thyroflow.jpg",
       url: "#"
     },
+
 
     // 06 — Resonance
     {
