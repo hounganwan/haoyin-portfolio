@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>EcoShoe Care — Haoyin Yin</title>
 
   <style>
@@ -16,10 +17,16 @@
 
     body {
       margin: 0;
-      background: #f7f7f4;
+      background: #f7f7f5;
       color: #111;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     a {
@@ -27,11 +34,10 @@
       text-decoration: none;
     }
 
-    img {
-      max-width: 100%;
-    }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     .case-nav {
       width: 100%;
@@ -44,14 +50,16 @@
 
     .case-nav a {
       font-size: 14px;
-      letter-spacing: .02em;
     }
 
-    .back {
-      opacity: .65;
+    .case-nav .back {
+      opacity: .55;
     }
 
-    /* MAIN */
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
 
     .case-study {
       width: 100%;
@@ -60,105 +68,109 @@
       padding: 0 5vw 100px;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .case-hero {
-      padding: 90px 0 70px;
+      padding: 90px 0 65px;
     }
 
     .case-kicker {
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: .08em;
-      opacity: .55;
-      margin-bottom: 24px;
+      letter-spacing: .09em;
+      opacity: .5;
+      margin-bottom: 25px;
     }
 
     .case-hero h1 {
       margin: 0;
-      font-size: clamp(56px, 9vw, 128px);
-      line-height: .92;
+      max-width: 1100px;
+      font-size: clamp(58px, 9vw, 128px);
+      line-height: .9;
       font-weight: 500;
       letter-spacing: -.055em;
-      max-width: 1100px;
     }
 
     .case-subtitle {
-      margin-top: 35px;
+      max-width: 850px;
+      margin-top: 38px;
       font-size: clamp(20px, 2.2vw, 30px);
       line-height: 1.25;
-      max-width: 850px;
-      font-weight: 400;
     }
 
-    /* TEAM */
+
+    /* =========================
+       TEAM
+    ========================= */
 
     .case-team {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 40px;
+
       padding-top: 22px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
+
       border-top: 1px solid rgba(0,0,0,.14);
     }
 
-    .case-team-item span {
+    .case-team-item span,
+    .case-meta-item span {
       display: block;
-      font-size: 12px;
+
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .09em;
+
       opacity: .5;
       margin-bottom: 8px;
     }
 
     .case-team-item p {
       margin: 0;
-      font-size: 16px;
+      font-size: 15px;
+      line-height: 1.5;
     }
 
-    /* META */
+
+    /* =========================
+       META
+    ========================= */
 
     .case-meta {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      padding: 24px 0 60px;
-    }
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 35px;
 
-    .case-meta-item span {
-      display: block;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      opacity: .5;
-      margin-bottom: 8px;
+      padding: 0 0 60px;
     }
 
     .case-meta-item p {
       margin: 0;
       font-size: 15px;
+      line-height: 1.5;
     }
 
-    /* IMAGES */
+
+    /* =========================
+       HERO IMAGE
+    ========================= */
 
     .case-hero-image {
       width: 100%;
-      margin-bottom: 0;
     }
 
-    .case-hero-image img,
-    .case-content-image img {
-      display: block;
+    .case-hero-image img {
       width: 100%;
-      height: auto;
     }
 
-    .case-content-image {
-      width: 100%;
-      margin-top: 55px;
-    }
 
-    /* SECTIONS */
+    /* =========================
+       SECTIONS
+    ========================= */
 
     .case-section {
       width: 100%;
@@ -171,31 +183,38 @@
       max-width: 100%;
     }
 
+    .case-label {
+      margin-bottom: 20px;
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+
+      opacity: .5;
+    }
+
     .case-section-content h2 {
       max-width: 1050px;
       margin: 0 0 30px;
-      font-size: clamp(34px, 5vw, 68px);
+
+      font-size: clamp(36px, 5vw, 68px);
       line-height: 1;
-      letter-spacing: -.04em;
       font-weight: 500;
+      letter-spacing: -.045em;
     }
 
     .case-section-content p {
       max-width: 950px;
       margin: 0 0 20px;
+
       font-size: 18px;
       line-height: 1.65;
     }
 
-    .case-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      opacity: .5;
-      margin-bottom: 20px;
-    }
 
-    /* TWO COLUMN */
+    /* =========================
+       TWO COLUMN
+    ========================= */
 
     .case-two-column {
       display: grid;
@@ -204,85 +223,100 @@
       align-items: start;
     }
 
-    .case-two-column .case-section-content h2 {
-      margin-bottom: 0;
+
+    /* =========================
+       CONTENT IMAGE
+    ========================= */
+
+    .case-content-image {
+      width: 100%;
+      margin-top: 55px;
     }
 
-    /* HIGHLIGHTS */
+    .case-content-image img {
+      width: 100%;
+      height: auto;
+    }
+
+
+    /* =========================
+       HIGHLIGHTS
+    ========================= */
 
     .case-highlights {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+
       margin-top: 55px;
     }
 
     .case-highlight {
-      border-top: 1px solid rgba(0,0,0,.25);
       padding-top: 18px;
+      border-top: 1px solid rgba(0,0,0,.25);
     }
 
     .case-highlight-number {
-      font-size: 13px;
+      font-size: 12px;
       opacity: .5;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .case-highlight h3 {
       margin: 0 0 12px;
-      font-size: 24px;
+
+      font-size: 23px;
+      line-height: 1.1;
       font-weight: 500;
-      letter-spacing: -.02em;
     }
 
     .case-highlight p {
+      margin: 0;
       font-size: 15px;
       line-height: 1.55;
-      margin: 0;
     }
 
-    /* IMAGE PLACEHOLDER */
 
-    .image-placeholder {
-      width: 100%;
-      min-height: 420px;
-      background: #e8e8e3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 13px;
-      letter-spacing: .04em;
-    }
-
-    /* CLOSING */
+    /* =========================
+       CLOSING
+    ========================= */
 
     .case-closing {
-      padding: 120px 0 40px;
+      padding: 120px 0 50px;
     }
 
     .case-closing h2 {
-      max-width: 1000px;
-      font-size: clamp(40px, 6vw, 82px);
-      line-height: 1;
-      letter-spacing: -.05em;
-      font-weight: 500;
+      max-width: 1050px;
+
       margin: 0;
+
+      font-size: clamp(42px, 6vw, 82px);
+      line-height: .98;
+      font-weight: 500;
+      letter-spacing: -.05em;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     .case-footer {
-      border-top: 1px solid rgba(0,0,0,.14);
-      margin-top: 50px;
-      padding-top: 25px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      padding-top: 25px;
+      border-top: 1px solid rgba(0,0,0,.14);
+
       font-size: 13px;
-      opacity: .55;
+      opacity: .5;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 800px) {
 
@@ -297,9 +331,12 @@
 
       .case-team,
       .case-meta,
-      .case-highlights,
-      .case-two-column {
+      .case-two-column,
+      .case-highlights {
         grid-template-columns: 1fr;
+      }
+
+      .case-two-column {
         gap: 30px;
       }
 
@@ -313,31 +350,47 @@
 
       .case-footer {
         flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <nav class="case-nav">
-    <a href="../index.html">Haoyin Yin</a>
-    <a class="back" href="../index.html">← Back to Selected Work</a>
+    <a href="../index.html">
+      Haoyin Yin
+    </a>
+
+    <a class="back" href="../index.html">
+      ← Back to Selected Work
+    </a>
   </nav>
 
 
   <main class="case-study">
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
     <header class="case-hero">
 
       <div class="case-kicker">
         Selected Work / 03
       </div>
 
-      <h1>EcoShoe Care</h1>
+      <h1>
+        EcoShoe Care
+      </h1>
 
       <div class="case-subtitle">
         Designing a Circular Footwear Care System Through Wearable Technology and Biomaterials
@@ -346,80 +399,135 @@
     </header>
 
 
-    <!-- TEAM -->
+    <!-- =========================
+         PROJECT TEAM
+    ========================= -->
+
     <section class="case-team">
 
       <div class="case-team-item">
-        <span>Project Leader</span>
+
+        <span>
+          Project Leader
+        </span>
+
         <p>
-          Haoyin Yin · MA Service Design, Royal College of Art
+          Haoyin Yin, MA Service Design, Royal College of Art
         </p>
+
       </div>
 
+
       <div class="case-team-item">
-        <span>Team Member</span>
+
+        <span>
+          Team Member
+        </span>
+
         <p>
-          Bohan Yu · BFA Fashion and Accessories Design, Sichuan University
+          Bohan Yu, BFA Fashion and Accessories Design, Sichuan University
         </p>
+
       </div>
 
     </section>
 
 
-    <!-- META -->
+    <!-- =========================
+         PROJECT META
+    ========================= -->
+
     <section class="case-meta">
 
       <div class="case-meta-item">
-        <span>Year</span>
-        <p>2024</p>
+
+        <span>
+          Year
+        </span>
+
+        <p>
+          2024
+        </p>
+
       </div>
 
-      <div class="case-meta-item">
-        <span>Discipline</span>
-        <p>Wearable · Biomaterials · Product-Service Design</p>
-      </div>
 
       <div class="case-meta-item">
-        <span>Focus</span>
-        <p>Sustainability · Footwear · Everyday Care</p>
+
+        <span>
+          Discipline
+        </span>
+
+        <p>
+          Wearable · Biomaterials · Product-Service Design
+        </p>
+
+      </div>
+
+
+      <div class="case-meta-item">
+
+        <span>
+          Focus
+        </span>
+
+        <p>
+          Sustainability · Footwear · Everyday Care
+        </p>
+
       </div>
 
     </section>
 
 
-    <!-- MAIN HERO IMAGE -->
+    <!-- =========================
+         MAIN HERO IMAGE
+         eco-shoe.jpg
+    ========================= -->
+
     <div class="case-hero-image">
+
       <img
-        src="../assets/eco-shoe-mainhero.jpg"
-        alt="EcoShoe Care main project visual"
+        src="../assets/eco-shoe.jpg"
+        alt="EcoShoe Care"
       >
+
     </div>
 
 
-    <!-- OVERVIEW -->
+    <!-- =========================
+         PROJECT OVERVIEW
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-section-content">
 
-        <div class="case-label">Project Overview</div>
+        <div class="case-label">
+          Project Overview
+        </div>
 
         <h2>
-          Rethinking footwear care as part of a circular everyday system.
+          Rethinking footwear care through a circular design approach.
         </h2>
 
         <p>
-          EcoShoe Care explores how footwear can be designed not only for
-          use, but also for long-term care, maintenance and extended life.
-          The project brings together wearable technology, biomaterials and
-          service design to rethink the relationship between people and the
-          products they use every day.
+          EcoShoe Care explores how footwear can be designed as part of a
+          longer and more sustainable relationship between people, products
+          and materials.
         </p>
 
         <p>
-          Rather than treating worn footwear as waste at the end of its
-          lifecycle, EcoShoe Care proposes a system that encourages people
-          to understand the condition of their shoes, care for them through
-          everyday interventions and ultimately extend their useful life.
+          Instead of treating footwear as a disposable object that eventually
+          becomes waste, the project investigates how design can encourage
+          people to better understand, maintain and extend the life of their
+          shoes.
+        </p>
+
+        <p>
+          The project combines wearable technology, biomaterial exploration
+          and product-service design to create a more proactive approach to
+          everyday footwear care.
         </p>
 
       </div>
@@ -427,57 +535,77 @@
     </section>
 
 
-    <!-- RESEARCH -->
+    <!-- =========================
+         RESEARCH
+         eco-shoe-research.jpg
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-two-column">
 
         <div class="case-section-content">
-          <div class="case-label">01 / Research</div>
+
+          <div class="case-label">
+            01 / Research
+          </div>
 
           <h2>
-            Understanding the hidden lifecycle of footwear.
+            Understanding how footwear is used, worn and discarded.
           </h2>
+
         </div>
+
 
         <div class="case-section-content">
 
           <p>
-            Footwear is exposed to continuous physical stress, moisture,
-            friction and environmental conditions throughout everyday use.
-            However, maintenance is often reactive rather than proactive,
-            and many people replace shoes when they are visibly worn rather
-            than considering how their condition could be monitored and
-            improved.
+            Footwear is continuously exposed to friction, moisture, pressure
+            and environmental conditions. Over time, these factors gradually
+            affect the material and performance of the shoe.
           </p>
 
           <p>
-            The research therefore investigated the everyday behaviours,
-            material conditions and opportunities surrounding footwear care,
-            looking beyond the shoe itself toward the wider relationship
-            between user, product and maintenance service.
+            However, footwear care is often reactive. People tend to respond
+            only when damage becomes visible, while maintenance and repair
+            are frequently separated from the everyday experience of using
+            the product.
+          </p>
+
+          <p>
+            The research therefore looked at footwear not as a single
+            finished product, but as part of an ongoing lifecycle involving
+            use, maintenance, repair and eventual replacement.
           </p>
 
         </div>
 
       </div>
 
+
       <div class="case-content-image">
+
         <img
           src="../assets/eco-shoe-research.jpg"
           alt="EcoShoe Care research"
         >
+
       </div>
 
     </section>
 
 
-    <!-- KEY QUESTION -->
+    <!-- =========================
+         KEY QUESTION
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-section-content">
 
-        <div class="case-label">02 / Key Question</div>
+        <div class="case-label">
+          02 / Key Question
+        </div>
 
         <h2>
           How might wearable technology and biomaterials encourage people
@@ -489,33 +617,44 @@
     </section>
 
 
-    <!-- DESIGN OPPORTUNITY -->
+    <!-- =========================
+         DESIGN OPPORTUNITY
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-two-column">
 
         <div class="case-section-content">
-          <div class="case-label">03 / Design Opportunity</div>
+
+          <div class="case-label">
+            03 / Design Opportunity
+          </div>
 
           <h2>
             From replacement to care.
           </h2>
+
         </div>
+
 
         <div class="case-section-content">
 
           <p>
-            The opportunity lies in making footwear care more visible,
-            understandable and engaging. Instead of relying on users to
-            recognise deterioration themselves, the system can create a
-            feedback loop between sensing, material intervention and
-            everyday behaviour.
+            The project identifies an opportunity to make footwear care more
+            visible and easier to integrate into everyday behaviour.
           </p>
 
           <p>
-            This shifts the design challenge from creating another
-            disposable product toward creating an ecosystem that supports
-            longer use and more responsible consumption.
+            Rather than asking users to replace footwear when it reaches the
+            end of its perceived life, the system encourages earlier
+            intervention through sensing, material care and maintenance.
+          </p>
+
+          <p>
+            This reframes sustainability from simply choosing better
+            materials to designing better relationships with existing
+            products.
           </p>
 
         </div>
@@ -525,50 +664,84 @@
     </section>
 
 
-    <!-- DESIGN CONCEPT -->
+    <!-- =========================
+         DESIGN CONCEPT
+         No additional image
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-section-content">
 
-        <div class="case-label">04 / Design Concept</div>
+        <div class="case-label">
+          04 / Design Concept
+        </div>
 
         <h2>
-          A footwear care system connecting sensing, material and service.
+          A circular footwear care system connecting technology, material
+          and behaviour.
         </h2>
 
         <p>
-          EcoShoe Care combines three interconnected layers: understanding
-          the condition of footwear, providing appropriate care interventions,
-          and extending the product's useful life.
+          EcoShoe Care proposes a system in which footwear condition,
+          maintenance and material intervention are connected rather than
+          treated as separate activities.
         </p>
+
 
         <div class="case-highlights">
 
           <div class="case-highlight">
-            <div class="case-highlight-number">01</div>
-            <h3>Understand</h3>
+
+            <div class="case-highlight-number">
+              01
+            </div>
+
+            <h3>
+              Understand
+            </h3>
+
             <p>
-              Make everyday footwear conditions more visible through
-              wearable sensing and feedback.
+              Help users recognise the condition and changing needs of their
+              footwear.
             </p>
+
           </div>
 
-          <div class="case-highlight">
-            <div class="case-highlight-number">02</div>
-            <h3>Care</h3>
-            <p>
-              Provide material and maintenance interventions that respond
-              to specific footwear conditions.
-            </p>
-          </div>
 
           <div class="case-highlight">
-            <div class="case-highlight-number">03</div>
-            <h3>Extend</h3>
+
+            <div class="case-highlight-number">
+              02
+            </div>
+
+            <h3>
+              Care
+            </h3>
+
             <p>
-              Encourage longer product use by integrating care into everyday
-              routines and services.
+              Introduce appropriate maintenance and material interventions
+              into everyday routines.
             </p>
+
+          </div>
+
+
+          <div class="case-highlight">
+
+            <div class="case-highlight-number">
+              03
+            </div>
+
+            <h3>
+              Extend
+            </h3>
+
+            <p>
+              Support longer use and reduce unnecessary replacement through
+              continuous care.
+            </p>
+
           </div>
 
         </div>
@@ -578,228 +751,215 @@
     </section>
 
 
-    <!-- BIOMATERIAL -->
+    <!-- =========================
+         BIOMATERIAL
+         eco-shoe-material.jpg
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-two-column">
 
         <div class="case-section-content">
-          <div class="case-label">05 / Biomaterial Exploration</div>
+
+          <div class="case-label">
+            05 / Biomaterial Exploration
+          </div>
 
           <h2>
-            Materials designed for a second life.
+            Exploring materials as part of the care cycle.
           </h2>
+
         </div>
+
 
         <div class="case-section-content">
 
           <p>
-            Biomaterial exploration investigates how renewable and
-            biodegradable materials could become part of footwear care
-            rather than simply part of footwear production.
+            Biomaterial exploration investigates how alternative materials
+            can contribute to a more circular footwear lifecycle.
           </p>
 
           <p>
-            The material system is considered as an active component of
-            maintenance, creating opportunities for repair, replacement and
-            regeneration while reducing dependence on disposable
-            maintenance products.
+            Instead of considering material only as something used to
+            manufacture the shoe, the project explores how material qualities
+            can support repair, maintenance and renewal.
+          </p>
+
+          <p>
+            This creates a connection between the physical material system
+            and the wider ambition of extending product life.
           </p>
 
         </div>
 
       </div>
 
+
       <div class="case-content-image">
+
         <img
           src="../assets/eco-shoe-material.jpg"
           alt="EcoShoe Care biomaterial exploration"
         >
+
       </div>
 
     </section>
 
 
-    <!-- PRODUCT -->
+    <!-- =========================
+         PRODUCT DESIGN
+         eco-shoe-product.jpg
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-two-column">
 
         <div class="case-section-content">
-          <div class="case-label">06 / Product Design</div>
+
+          <div class="case-label">
+            06 / Product Design
+          </div>
 
           <h2>
-            Bringing care into the everyday footwear experience.
+            Bringing footwear care into the everyday experience.
           </h2>
+
         </div>
+
 
         <div class="case-section-content">
 
           <p>
-            The product design translates the broader care system into a
-            tangible wearable and footwear interaction. The design considers
-            how sensing, feedback and material intervention can become part
-            of the user's normal routine without adding unnecessary
-            complexity.
+            The product design translates the wider circular care concept
+            into a tangible footwear experience.
           </p>
 
           <p>
-            The physical form is developed around comfort, accessibility
-            and the practical realities of everyday footwear use.
+            Wearable technology is considered not simply as a technological
+            feature, but as a means of creating a more visible relationship
+            between the user and the condition of the product.
+          </p>
+
+          <p>
+            The physical design focuses on usability, comfort and the
+            integration of care into existing routines.
           </p>
 
         </div>
 
       </div>
 
+
       <div class="case-content-image">
+
         <img
           src="../assets/eco-shoe-product.jpg"
           alt="EcoShoe Care product design"
         >
-      </div>
-
-    </section>
-
-
-    <!-- PROTOTYPE -->
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <div class="case-label">07 / Prototype</div>
-
-        <h2>
-          Testing the relationship between technology, material and behaviour.
-        </h2>
-
-        <p>
-          Prototyping was used to explore the physical interaction,
-          material qualities and potential service touchpoints of the
-          EcoShoe Care system.
-        </p>
-
-        <div class="image-placeholder">
-          Prototype documentation to be added
-        </div>
 
       </div>
 
     </section>
 
 
-    <!-- SERVICE SYSTEM -->
-    <section class="case-section">
+    <!-- =========================
+         SERVICE SYSTEM
+         No photo because no matching asset
+    ========================= -->
 
-      <div class="case-section-content">
-
-        <div class="case-label">08 / Service System</div>
-
-        <h2>
-          Extending footwear care beyond the product.
-        </h2>
-
-        <p>
-          EcoShoe Care is conceived as a product-service system rather than
-          a standalone wearable product. The service layer connects users
-          with information, maintenance interventions and opportunities to
-          repair or renew their footwear.
-        </p>
-
-        <div class="case-highlights">
-
-          <div class="case-highlight">
-            <div class="case-highlight-number">01</div>
-            <h3>Awareness</h3>
-            <p>
-              Help users understand when and why footwear requires care.
-            </p>
-          </div>
-
-          <div class="case-highlight">
-            <div class="case-highlight-number">02</div>
-            <h3>Maintenance</h3>
-            <p>
-              Connect users with appropriate care and material solutions.
-            </p>
-          </div>
-
-          <div class="case-highlight">
-            <div class="case-highlight-number">03</div>
-            <h3>Extension</h3>
-            <p>
-              Support longer product lifecycles and more responsible
-              consumption.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FINAL DESIGN -->
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <div class="case-label">09 / Final Design</div>
-
-        <h2>
-          A circular approach to everyday footwear care.
-        </h2>
-
-        <p>
-          The final EcoShoe Care proposal brings together wearable
-          interaction, biomaterial exploration, product design and service
-          thinking into a unified footwear care ecosystem.
-        </p>
-
-        <p>
-          Rather than focusing solely on the production of a new shoe,
-          the project asks how design can support the continued use,
-          maintenance and renewal of products that already exist.
-        </p>
-
-      </div>
-
-      <div class="case-content-image">
-        <img
-          src="../assets/eco-shoe-final.jpg"
-          alt="EcoShoe Care final design"
-        >
-      </div>
-
-    </section>
-
-
-    <!-- SIGNIFICANCE -->
     <section class="case-section">
 
       <div class="case-two-column">
 
         <div class="case-section-content">
-          <div class="case-label">10 / Design Significance</div>
+
+          <div class="case-label">
+            07 / Service System
+          </div>
 
           <h2>
-            Designing for longer relationships with products.
+            Making care part of the product lifecycle.
           </h2>
+
         </div>
+
 
         <div class="case-section-content">
 
           <p>
-            EcoShoe Care explores how sustainability can move beyond
-            material substitution and become part of everyday product
-            relationships.
+            EcoShoe Care extends beyond the physical footwear product to
+            consider the supporting service ecosystem around maintenance
+            and repair.
           </p>
 
           <p>
-            By combining wearable technology, biomaterials and service
-            design, the project proposes a more active role for users in
-            maintaining and extending the life of their possessions.
+            The system connects information, product use and care
+            interventions, creating opportunities for users to make more
+            informed decisions about when and how their footwear should be
+            maintained.
+          </p>
+
+          <p>
+            In this way, sustainability becomes an ongoing service
+            relationship rather than a one-time purchasing decision.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Awareness
+          </h3>
+
+          <p>
+            Make the condition of footwear easier to understand.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Maintenance
+          </h3>
+
+          <p>
+            Encourage timely care before damage becomes irreversible.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Extension
+          </h3>
+
+          <p>
+            Support longer and more meaningful product lifecycles.
           </p>
 
         </div>
@@ -809,19 +969,111 @@
     </section>
 
 
-    <!-- RECOGNITION -->
+    <!-- =========================
+         FINAL DESIGN
+         eco-shoe-final.jpg
+    ========================= -->
+
     <section class="case-section">
 
       <div class="case-section-content">
 
-        <div class="case-label">11 / Recognition</div>
+        <div class="case-label">
+          08 / Final Design
+        </div>
+
+        <h2>
+          Designing a longer relationship between people and footwear.
+        </h2>
+
+        <p>
+          The final EcoShoe Care proposal brings together wearable
+          interaction, biomaterial exploration and product-service thinking
+          into a circular footwear care system.
+        </p>
+
+        <p>
+          The project shifts the focus from designing products for
+          replacement toward designing systems that support continued use,
+          maintenance and renewal.
+        </p>
+
+      </div>
+
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/eco-shoe-final.jpg"
+          alt="EcoShoe Care final design"
+        >
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DESIGN SIGNIFICANCE
+         No photo
+    ========================= -->
+
+    <section class="case-section">
+
+      <div class="case-two-column">
+
+        <div class="case-section-content">
+
+          <div class="case-label">
+            09 / Design Significance
+          </div>
+
+          <h2>
+            Designing for longer product relationships.
+          </h2>
+
+        </div>
+
+
+        <div class="case-section-content">
+
+          <p>
+            EcoShoe Care explores sustainability as a behavioural and
+            systemic design challenge rather than only a material challenge.
+          </p>
+
+          <p>
+            By connecting wearable technology, biomaterials and service
+            design, the project proposes a more active role for users in
+            maintaining and extending the life of everyday products.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RECOGNITION
+         No photo
+    ========================= -->
+
+    <section class="case-section">
+
+      <div class="case-section-content">
+
+        <div class="case-label">
+          10 / Recognition
+        </div>
 
         <h2>
           Recognition & Awards
         </h2>
 
         <p>
-          Project recognition and related achievements can be added here.
+          Recognition and project-related achievements can be added here.
         </p>
 
       </div>
@@ -829,26 +1081,36 @@
     </section>
 
 
-    <!-- CLOSING -->
+    <!-- =========================
+         CLOSING
+    ========================= -->
+
     <section class="case-closing">
 
       <h2>
-        Care can be designed as part of the product lifecycle.
+        Care is not an afterthought.
+        It can become part of the product itself.
       </h2>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
     <footer class="case-footer">
 
-      <span>EcoShoe Care · 2024</span>
+      <span>
+        EcoShoe Care · 2024
+      </span>
 
       <a href="../index.html">
         Back to Selected Work ↗
       </a>
 
     </footer>
+
 
   </main>
 
