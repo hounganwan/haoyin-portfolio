@@ -12,7 +12,6 @@ const portfolioContent = {
       url: "echoskin/"
     },
 
-
     // 02 — OlfaMate
     {
       title: "OlfaMate",
@@ -23,7 +22,6 @@ const portfolioContent = {
       image: "assets/olfamate.jpg",
       url: "olfamate/"
     },
-
 
     // 03 — EcoShoe Care
     {
@@ -36,7 +34,6 @@ const portfolioContent = {
       url: "ecoshoe-care/"
     },
 
-
     // 04 — Golden Age SmartOasis
     {
       title: "Golden Age SmartOasis",
@@ -45,9 +42,8 @@ const portfolioContent = {
       category: "Inclusive Design · Service Design",
       description: "An exploration of ageing, care and inclusive service experiences across personal, community and social contexts.",
       image: "assets/golden-age-smartoasis.jpg",
-      url: "#"
+      url: "golden-age-smartoasis/"
     },
-
 
     // 05 — ThyroFlow Support
     {
@@ -57,9 +53,8 @@ const portfolioContent = {
       category: "Medical Design · Interactive System · Healthcare",
       description: "An interactive healthcare system for patients experiencing chyle leakage after thyroid cancer surgery, combining a smart neck brace with a nurse-station monitor to support personalised treatment, real-time recovery tracking and more comfortable daily care.",
       image: "assets/thyroflow.jpg",
-      url: "#"
+      url: "thyroflow-support/"
     },
-
 
     // 06 — Resonance
     {
@@ -69,7 +64,7 @@ const portfolioContent = {
       category: "Interaction Design · Product Design · HCI",
       description: "A wearable system that translates music rhythm into touch and light, enabling hearing-impaired seniors to participate in shared musical experiences through tactile and visual interaction.",
       image: "assets/resonance.jpg",
-      url: "#"
+      url: "resonance/"
     }
 
   ]
