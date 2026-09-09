@@ -635,32 +635,137 @@
 
 
 /* =========================================================
-   ABOUT — PERSONAL PHOTO
-   Added only for the About section
+   ABOUT — DESIGN STATEMENT + PERSONAL IMAGES
    ========================================================= */
 
-.about-photo {
-  width: 100%;
-  max-width: 360px;
-  margin-bottom: 30px;
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+  gap: 70px;
+  align-items: start;
+  margin-bottom: 95px;
 }
 
-.about-photo img {
+
+/* DESIGN STATEMENT */
+
+.about-statement {
+  max-width: 900px;
+}
+
+.about-statement-label {
   display: block;
+
+  margin-bottom: 28px;
+
+  font-size: 9px;
+  line-height: 1;
+
+  letter-spacing: .12em;
+  text-transform: uppercase;
+
+  opacity: .5;
+}
+
+.about-statement h3 {
+  margin: 0 0 30px;
+
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: .98;
+  font-weight: 400;
+
+  letter-spacing: -.045em;
+}
+
+.about-statement p {
+  max-width: 850px;
+
+  margin: 0 0 22px;
+
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+
+/* PERSONAL IMAGES */
+
+.about-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.about-images figure {
+  margin: 0;
+  overflow: hidden;
+  background: #eee;
+}
+
+.about-images img {
+  display: block;
+
   width: 100%;
   height: auto;
+
+  object-fit: cover;
+
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.about-images figure:hover img {
+  transform: scale(1.025);
 }
 
 
-/* =========================================================
-   ABOUT PHOTO — MOBILE
-   ========================================================= */
+/* IMAGE CAPTION */
+
+.about-image-caption {
+  margin-top: 9px;
+
+  font-size: 8px;
+  line-height: 1.4;
+
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  opacity: .45;
+}
+
+
+/* ABOUT — EXISTING CV AREA */
+
+.about-cv {
+  margin-top: 20px;
+}
+
+
+/* ABOUT — MOBILE */
 
 @media (max-width: 800px) {
 
-  .about-photo {
-    max-width: 280px;
-    margin-bottom: 25px;
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    margin-bottom: 65px;
+  }
+
+  .about-statement h3 {
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  .about-statement p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .about-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .about-images figure {
+    width: 100%;
   }
 
 }
@@ -825,46 +930,82 @@
   </div>
 
 
-  <div class="two-col">
+  <!-- =======================================================
+       DESIGN STATEMENT + PERSONAL IMAGES
+       ======================================================= -->
+
+  <div class="about-intro">
 
 
-    <div>
+    <!-- DESIGN STATEMENT -->
 
-      <!-- PERSONAL PHOTO -->
+    <div class="about-statement">
 
-      <div class="about-photo">
+      <span class="about-statement-label">
+        Design Statement
+      </span>
+
+      <h3>
+        Design Empowering Human Well-being
+      </h3>
+
+
+      <p>
+        To me, design is never merely about creating objects or interfaces; it is a methodology for understanding complex social systems and translating cutting-edge technology into meaningful human experiences. From film and television production and communication to service design and interdisciplinary innovation, my academic and professional journey has consistently affirmed a belief: designers should bridge technology, society, and culture to address pressing global challenges.
+      </p>
+
+
+      <p>
+        In my PhD research, I plan to explore how artificial intelligence, multimodal interaction, wearable computing, and information visualization can contribute to preventive healthcare and healthy aging. Specifically, I aim to design adaptive information systems that integrate physiological sensing, machine learning, and multisensory interaction, in order to identify cognitive decline at an earlier stage and continuously enhance users' long-term engagement. Beyond technical development, I am also committed to establishing a design methodology that ensures intelligent systems are interpretable, ethically sound, and genuinely human-centered.
+      </p>
+
+
+      <p>
+        Ultimately, I hope my research will help construct a future vision: intelligent technology not only enhances efficiency, but also upholds human dignity, promotes social inclusion, and advances public well-being. I believe design should not only address current problems, but also anticipate future challenges, shaping technology that truly serves people with empathy, responsibility, and imagination.
+      </p>
+
+    </div>
+
+
+    <!-- PERSONAL IMAGES -->
+
+    <div class="about-images">
+
+      <figure>
 
         <img
           src="assets/Photo.jpg"
           alt="Haoyin Yin"
         >
 
-      </div>
+        <figcaption class="about-image-caption">
+          Haoyin Yin · Service Designer &amp; Design Researcher
+        </figcaption>
+
+      </figure>
 
 
-      <p class="statement">
-        I am a service designer and design researcher exploring how design can create more inclusive, caring and meaningful experiences across healthcare, ageing and everyday life.
-      </p>
+      <figure>
 
-    </div>
+        <img
+          src="assets/photo2.jpg"
+          alt="Haoyin Yin"
+        >
 
+        <figcaption class="about-image-caption">
+          Design Practice · Research · Education
+        </figcaption>
 
-    <div class="body">
-
-      <p>
-        My practice sits at the intersection of service design, interaction design, healthcare, ageing and inclusive design. I explore how emerging technologies, multisensory interaction and participatory approaches can support more human-centred forms of care.
-      </p>
-
-      <p>
-        Alongside my design practice and research, I work in design education and management, supporting emerging designers in developing creative thinking, research capabilities and systems-oriented approaches to real-world challenges.
-      </p>
+      </figure>
 
     </div>
 
   </div>
 
 
-  <!-- EDUCATION -->
+  <!-- =======================================================
+       EDUCATION & EXPERIENCE
+       ======================================================= -->
 
   <div class="timeline">
 
@@ -936,9 +1077,11 @@
   </div>
 
 
-  <!-- HONORS & AWARDS -->
+  <!-- =======================================================
+       HONORS & AWARDS / OTHER EDUCATION
+       ======================================================= -->
 
-  <div class="timeline">
+  <div class="timeline about-cv">
 
     <div>
 
@@ -1000,8 +1143,6 @@
 
     </div>
 
-
-    <!-- OTHER EDUCATION -->
 
     <div>
 
