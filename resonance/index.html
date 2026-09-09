@@ -6,67 +6,12 @@
 
   <title>Resonance — Haoyin Yin</title>
 
+  <link rel="stylesheet" href="../styles.css">
+
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f5;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-    }
 
     /* =========================
-       NAVIGATION
-    ========================= */
-
-    .case-nav {
-      width: 100%;
-      padding: 25px 5vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid rgba(0,0,0,.14);
-      font-size: 13px;
-      letter-spacing: .02em;
-    }
-
-    .case-nav-left {
-      font-weight: 600;
-    }
-
-    .case-nav-right {
-      display: flex;
-      gap: 30px;
-    }
-
-    .case-nav-right a {
-      opacity: .65;
-      transition: opacity .2s ease;
-    }
-
-    .case-nav-right a:hover {
-      opacity: 1;
-    }
-
-    /* =========================
-       CASE STUDY CONTAINER
+       CASE STUDY
     ========================= */
 
     .case-study {
@@ -74,40 +19,88 @@
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 5vw 100px;
+      box-sizing: border-box;
     }
+
+    .case-section {
+      width: 100%;
+      padding: 85px 0;
+      border-top: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-section-content {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .case-section-content h2 {
+      max-width: 1050px;
+    }
+
+    .case-section-content p {
+      max-width: 950px;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .case-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(0,0,0,.14);
+    }
+
+    .case-nav a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .case-back {
+      font-size: 14px;
+    }
+
+    .case-index {
+      font-size: 14px;
+      opacity: .5;
+    }
+
 
     /* =========================
        HERO
     ========================= */
 
     .case-hero {
-      padding: 90px 0 80px;
+      padding: 90px 0 75px;
     }
 
-    .case-number {
+    .case-kicker {
       font-size: 13px;
-      letter-spacing: .08em;
       text-transform: uppercase;
-      margin-bottom: 35px;
+      letter-spacing: .12em;
       opacity: .55;
+      margin-bottom: 25px;
     }
 
     .case-hero h1 {
+      font-size: clamp(52px, 8vw, 112px);
+      line-height: .92;
+      letter-spacing: -.055em;
       margin: 0;
-      font-size: clamp(60px, 10vw, 145px);
-      line-height: .88;
-      letter-spacing: -.065em;
-      font-weight: 600;
-      max-width: 1200px;
+      max-width: 1100px;
     }
 
     .case-subtitle {
-      margin-top: 38px;
       font-size: clamp(22px, 3vw, 38px);
       line-height: 1.15;
-      letter-spacing: -.025em;
       max-width: 900px;
+      margin: 35px 0 0;
+      letter-spacing: -.025em;
     }
+
 
     /* =========================
        TEAM
@@ -124,17 +117,19 @@
 
     .case-team-item span {
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
       opacity: .5;
-      margin-bottom: 7px;
+      margin-bottom: 10px;
     }
 
     .case-team-item p {
       margin: 0;
-      font-size: 15px;
+      font-size: 16px;
+      line-height: 1.5;
     }
+
 
     /* =========================
        META
@@ -143,90 +138,30 @@
     .case-meta {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      padding: 22px 0 45px;
+      gap: 35px;
+      margin-top: 45px;
+      padding-top: 25px;
       border-top: 1px solid rgba(0,0,0,.14);
     }
 
     .case-meta-item span {
       display: block;
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: .1em;
       opacity: .5;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
 
     .case-meta-item p {
       margin: 0;
-      font-size: 14px;
+      font-size: 15px;
+      line-height: 1.45;
     }
+
 
     /* =========================
-       HERO IMAGE
-    ========================= */
-
-    .case-hero-image {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    .case-hero-image img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    .case-section {
-      width: 100%;
-      padding: 85px 0;
-      border-top: 1px solid rgba(0,0,0,.14);
-    }
-
-    .case-section-content {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .case-section-content h2 {
-      max-width: 1050px;
-      margin: 0 0 30px;
-      font-size: clamp(38px, 5vw, 72px);
-      line-height: .98;
-      letter-spacing: -.045em;
-      font-weight: 500;
-    }
-
-    .case-section-content h3 {
-      margin: 60px 0 20px;
-      font-size: 24px;
-      line-height: 1.1;
-      font-weight: 500;
-      letter-spacing: -.02em;
-    }
-
-    .case-section-content p {
-      max-width: 950px;
-      margin: 0 0 20px;
-      font-size: 18px;
-      line-height: 1.55;
-    }
-
-    .section-label {
-      display: block;
-      margin-bottom: 25px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .09em;
-      opacity: .5;
-    }
-
-    /* =========================
-       IMAGE
+       IMAGES
     ========================= */
 
     .case-content-image {
@@ -240,18 +175,44 @@
       height: auto;
     }
 
-    .image-placeholder {
-      width: 100%;
-      min-height: 420px;
-      background: #e8e8e4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      opacity: .55;
+    .case-image-caption {
+      margin-top: 12px;
+      font-size: 12px !important;
+      line-height: 1.4 !important;
+      opacity: .5;
     }
+
+
+    /* =========================
+       TYPOGRAPHY
+    ========================= */
+
+    .case-section h2 {
+      font-size: clamp(34px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin: 0 0 30px;
+    }
+
+    .case-section h3 {
+      font-size: 21px;
+      line-height: 1.2;
+      margin: 0 0 15px;
+    }
+
+    .case-section p {
+      font-size: 18px;
+      line-height: 1.65;
+      margin: 0 0 22px;
+    }
+
+    .case-lead {
+      font-size: clamp(22px, 3vw, 34px) !important;
+      line-height: 1.35 !important;
+      letter-spacing: -.02em;
+      max-width: 1000px !important;
+    }
+
 
     /* =========================
        TWO COLUMN
@@ -259,8 +220,8 @@
 
     .case-two-column {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 70px;
       margin-top: 55px;
     }
 
@@ -268,9 +229,6 @@
       min-width: 0;
     }
 
-    .case-two-column h3 {
-      margin-top: 0;
-    }
 
     /* =========================
        HIGHLIGHTS
@@ -278,49 +236,33 @@
 
     .case-highlights {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
       margin-top: 55px;
     }
 
     .case-highlight {
+      padding-top: 20px;
       border-top: 1px solid rgba(0,0,0,.25);
-      padding-top: 18px;
     }
 
     .case-highlight-number {
       font-size: 12px;
       opacity: .5;
-      margin-bottom: 45px;
+      letter-spacing: .1em;
+      margin-bottom: 22px;
     }
 
     .case-highlight h3 {
-      margin: 0 0 12px;
-      font-size: 25px;
-      line-height: 1;
+      font-size: 22px;
+      margin-bottom: 12px;
     }
 
     .case-highlight p {
-      font-size: 15px;
-      line-height: 1.45;
-      margin: 0;
+      font-size: 16px;
+      line-height: 1.55;
     }
 
-    /* =========================
-       KEY QUESTION
-    ========================= */
-
-    .case-question {
-      padding: 90px 0;
-    }
-
-    .case-question p {
-      max-width: 1200px;
-      font-size: clamp(32px, 5vw, 68px);
-      line-height: 1.02;
-      letter-spacing: -.045em;
-      margin: 0;
-    }
 
     /* =========================
        PROCESS
@@ -328,196 +270,130 @@
 
     .case-process {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 25px;
       margin-top: 55px;
     }
 
     .case-process-item {
-      border-top: 1px solid rgba(0,0,0,.25);
       padding-top: 18px;
+      border-top: 1px solid rgba(0,0,0,.25);
     }
 
     .case-process-item span {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
+      display: block;
+      font-size: 12px;
       opacity: .5;
+      margin-bottom: 15px;
+      letter-spacing: .08em;
     }
 
     .case-process-item h3 {
-      margin: 35px 0 12px;
-      font-size: 21px;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
 
     .case-process-item p {
-      font-size: 14px;
-      line-height: 1.45;
-      margin: 0;
+      font-size: 15px !important;
+      line-height: 1.5 !important;
     }
 
-    /* =========================
-       RECOGNITION
-    ========================= */
-
-    .recognition {
-      margin-top: 50px;
-      padding-top: 22px;
-      border-top: 1px solid rgba(0,0,0,.2);
-      max-width: 800px;
-    }
-
-    .recognition span {
-      display: block;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      opacity: .5;
-      margin-bottom: 8px;
-    }
-
-    .recognition p {
-      margin: 0;
-      font-size: 17px;
-    }
 
     /* =========================
        CLOSING
     ========================= */
 
     .case-closing {
-      padding: 120px 0 100px;
+      padding: 120px 0 80px;
       border-top: 1px solid rgba(0,0,0,.14);
     }
 
-    .case-closing p {
-      max-width: 1000px;
-      margin: 0;
-      font-size: clamp(38px, 6vw, 82px);
+    .case-closing h2 {
+      font-size: clamp(40px, 6vw, 80px);
       line-height: .98;
-      letter-spacing: -.055em;
+      letter-spacing: -.05em;
+      max-width: 1050px;
+      margin: 0;
     }
+
+    .case-closing p {
+      max-width: 750px;
+      margin-top: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
 
     /* =========================
        FOOTER
     ========================= */
 
     .case-footer {
-      width: 100%;
-      padding: 30px 5vw;
-      border-top: 1px solid rgba(0,0,0,.14);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 12px;
-      opacity: .7;
+      padding-top: 30px;
+      border-top: 1px solid rgba(0,0,0,.14);
+      font-size: 13px;
     }
 
     .case-footer a {
-      transition: opacity .2s ease;
+      color: inherit;
+      text-decoration: none;
     }
 
-    .case-footer a:hover {
-      opacity: .5;
-    }
 
     /* =========================
-       RESPONSIVE
+       MOBILE
     ========================= */
 
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
 
-      .case-nav {
-        padding: 20px 5vw;
-      }
-
-      .case-nav-right {
-        gap: 15px;
+      .case-study {
+        padding: 0 6vw 60px;
       }
 
       .case-hero {
-        padding: 65px 0 55px;
+        padding: 60px 0 55px;
       }
 
-      .case-hero h1 {
-        font-size: clamp(55px, 16vw, 100px);
-      }
-
-      .case-subtitle {
-        font-size: 25px;
-      }
-
-      .case-team {
+      .case-team,
+      .case-meta,
+      .case-two-column,
+      .case-highlights,
+      .case-process {
         grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .case-meta {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 35px;
       }
 
       .case-section {
         padding: 60px 0;
       }
 
-      .case-section-content h2 {
-        font-size: 45px;
-      }
-
       .case-section-content p {
         font-size: 16px;
       }
 
-      .case-two-column {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .case-highlights {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .case-process {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .case-question {
-        padding: 65px 0;
-      }
-
-      .case-question p {
-        font-size: 38px;
-      }
-
-      .case-closing {
-        padding: 80px 0;
+      .case-content-image {
+        margin-top: 35px;
       }
 
       .case-footer {
-        padding: 25px 5vw;
+        align-items: flex-start;
+        gap: 20px;
+        flex-direction: column;
       }
+
     }
 
-    @media (max-width: 500px) {
-
-      .case-process {
-        grid-template-columns: 1fr;
-      }
-
-      .case-nav-right a:nth-child(2) {
-        display: none;
-      }
-
-      .image-placeholder {
-        min-height: 260px;
-      }
-    }
   </style>
 </head>
 
+
 <body>
+
+<main class="case-study">
+
 
   <!-- =========================
        NAVIGATION
@@ -525,733 +401,1022 @@
 
   <nav class="case-nav">
 
-    <a href="../index.html" class="case-nav-left">
-      HAOYIN YIN
+    <a href="../index.html" class="case-back">
+      ← Back to selected work
     </a>
 
-    <div class="case-nav-right">
-      <a href="../index.html">Selected Work</a>
-      <a href="../index.html#about">About</a>
-    </div>
+    <span class="case-index">
+      06 / 06
+    </span>
 
   </nav>
 
 
-  <main class="case-study">
 
-    <!-- =========================
-         HERO
-    ========================= -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
-    <header class="case-hero">
+  <header class="case-hero">
 
-      <div class="case-number">
-        Selected Work / 06
-      </div>
+    <div class="case-kicker">
+      Selected Work / 06
+    </div>
 
-      <h1>
-        Resonance
-      </h1>
+    <h1>
+      Resonance
+    </h1>
 
-      <div class="case-subtitle">
-        Wearable Rhythm Experience for Hearing-Impaired Seniors
-      </div>
+    <p class="case-subtitle">
+      A Wearable Device Translating Rhythm into Touch and Light for Hearing-Impaired Seniors
+    </p>
 
-    </header>
-
-
-    <!-- =========================
-         PROJECT TEAM
-    ========================= -->
-
-    <section class="case-team">
-
-      <div class="case-team-item">
-        <span>Project Leader</span>
-        <p>
-          Haoyin Yin · MA Service Design, Royal College of Art
-        </p>
-      </div>
-
-      <div class="case-team-item">
-        <span>Project Type</span>
-        <p>
-          Interaction Design &amp; Product Design Project
-        </p>
-      </div>
-
-    </section>
+  </header>
 
 
-    <!-- =========================
-         PROJECT META
-    ========================= -->
 
-    <section class="case-meta">
+  <!-- =========================
+       PROJECT TEAM
+  ========================= -->
 
-      <div class="case-meta-item">
-        <span>Year</span>
-        <p>
-          2021
-        </p>
-      </div>
+  <section class="case-team">
 
-      <div class="case-meta-item">
-        <span>Discipline</span>
-        <p>
-          Interaction Design · Product Design · HCI
-        </p>
-      </div>
+    <div class="case-team-item">
 
-      <div class="case-meta-item">
-        <span>Focus</span>
-        <p>
-          Hearing Impairment · Music · Multisensory Interaction
-        </p>
-      </div>
+      <span>
+        Project Leader
+      </span>
 
-    </section>
-
-
-    <!-- =========================
-         MAIN HERO IMAGE
-    ========================= -->
-
-    <div class="case-hero-image">
-
-      <img
-        src="../assets/resonance-mainhero.jpg"
-        alt="Resonance main project image"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-      >
-
-      <div class="image-placeholder" style="display:none;">
-        Main Hero Image
-      </div>
+      <p>
+        Haoyin Yin · MA Service Design, Royal College of Art
+      </p>
 
     </div>
 
 
-    <!-- =========================
-         PROJECT OVERVIEW
-    ========================= -->
+    <div class="case-team-item">
 
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          01 / Project Overview
-        </span>
-
-        <h2>
-          Reimagining musical participation through touch, light and rhythm.
-        </h2>
-
-        <p>
-          Resonance is a wearable interaction system designed to help
-          hearing-impaired seniors participate in shared musical experiences.
-        </p>
-
-        <p>
-          Instead of relying solely on sound, the system translates musical
-          rhythm into tactile and visual feedback, creating another way to
-          perceive and experience music.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-overview.jpg"
-            alt="Resonance project overview"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Project Overview Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         RESEARCH
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          02 / Research
-        </span>
-
-        <h2>
-          Exploring music beyond the sense of hearing.
-        </h2>
-
-        <p>
-          The research explores how hearing-impaired older adults experience
-          music, rhythm and social participation, with particular attention
-          to the sensory and emotional dimensions of musical experiences.
-        </p>
-
-        <p>
-          This perspective opens up opportunities to use other sensory
-          channels to communicate musical information and create more
-          inclusive forms of participation.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-research.jpg"
-            alt="Resonance research"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Research Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         KEY QUESTION
-    ========================= -->
-
-    <section class="case-section case-question">
-
-      <span class="section-label">
-        03 / Key Question
+      <span>
+        Project Type
       </span>
 
       <p>
-        How might wearable interaction translate musical rhythm into
-        accessible multisensory experiences for hearing-impaired seniors?
+        Individual Project
       </p>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         DESIGN OPPORTUNITY
-    ========================= -->
 
-    <section class="case-section">
+  <!-- =========================
+       META
+  ========================= -->
 
-      <div class="case-section-content">
+  <section class="case-meta">
 
-        <span class="section-label">
-          04 / Design Opportunity
-        </span>
+    <div class="case-meta-item">
 
-        <h2>
-          Turning rhythm into something that can be felt and seen.
-        </h2>
+      <span>
+        Year
+      </span>
 
-        <div class="case-two-column">
+      <p>
+        2021
+      </p>
 
-          <div>
+    </div>
 
-            <h3>
-              Tactile
-            </h3>
 
-            <p>
-              Translate musical rhythm into physical vibration so users can
-              perceive changes in tempo and rhythm through touch.
-            </p>
+    <div class="case-meta-item">
 
+      <span>
+        Discipline
+      </span>
+
+      <p>
+        Interaction Design · Product Design · HCI
+      </p>
+
+    </div>
+
+
+    <div class="case-meta-item">
+
+      <span>
+        Focus
+      </span>
+
+      <p>
+        Hearing Impairment · Music · Multisensory Interaction
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       MAIN HERO
+       resonance-mainhero.jpg
+  ========================= -->
+
+  <div class="case-content-image">
+
+    <img
+      src="../assets/resonance-mainhero.jpg"
+      alt="Resonance wearable music experience for hearing-impaired seniors"
+    >
+
+  </div>
+
+
+
+  <!-- =========================
+       PROJECT OVERVIEW
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Project Overview
+      </h2>
+
+      <p class="case-lead">
+        Resonance explores how music can remain a shared experience
+        for older adults with hearing impairment by translating
+        musical rhythm into touch and light.
+      </p>
+
+      <p>
+        Rather than attempting to reproduce sound through another
+        conventional audio channel, the project investigates
+        alternative sensory pathways. A wearable device allows
+        musical information to be experienced through tactile and
+        visual feedback, creating a different way of participating
+        in music with others.
+      </p>
+
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
           </div>
 
-          <div>
-
-            <h3>
-              Visual
-            </h3>
-
-            <p>
-              Use light-based feedback to reinforce rhythmic information
-              and create a shared visual experience.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         DESIGN CONCEPT
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          05 / Design Concept
-        </span>
-
-        <h2>
-          A wearable interface that transforms sound into multisensory rhythm.
-        </h2>
-
-        <p>
-          Resonance translates selected characteristics of music into
-          tactile and visual signals delivered through a wearable device.
-        </p>
-
-        <p>
-          The concept creates an alternative sensory pathway between music
-          and the user, allowing rhythm to become a physical and visual
-          experience rather than an exclusively auditory one.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-concept.jpg"
-            alt="Resonance design concept"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Design Concept Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         SYSTEM
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          06 / Interaction System
-        </span>
-
-        <h2>
-          A continuous loop between music, rhythm and sensory feedback.
-        </h2>
-
-        <div class="case-highlights">
-
-          <div class="case-highlight">
-
-            <div class="case-highlight-number">
-              01
-            </div>
-
-            <h3>
-              Listen
-            </h3>
-
-            <p>
-              Musical input provides the source for rhythm-based interaction.
-            </p>
-
-          </div>
-
-
-          <div class="case-highlight">
-
-            <div class="case-highlight-number">
-              02
-            </div>
-
-            <h3>
-              Translate
-            </h3>
-
-            <p>
-              Musical rhythm is transformed into tactile and visual signals.
-            </p>
-
-          </div>
-
-
-          <div class="case-highlight">
-
-            <div class="case-highlight-number">
-              03
-            </div>
-
-            <h3>
-              Experience
-            </h3>
-
-            <p>
-              Users experience music through touch, light and shared
-              interaction.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-system.jpg"
-            alt="Resonance interaction system"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Interaction System Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         WEARABLE DESIGN
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          07 / Wearable Design
-        </span>
-
-        <h2>
-          Designing the wearable as an extension of the body.
-        </h2>
-
-        <p>
-          The wearable form is designed to support comfortable everyday use
-          while placing sensory feedback close to the user's body.
-        </p>
-
-        <p>
-          Physical form, material and interaction are considered together
-          so that the device can become part of the user's musical experience
-          rather than an intrusive technological object.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-product.jpg"
-            alt="Resonance wearable product design"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Wearable Design Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         INTERACTION DESIGN
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          08 / Interaction Design
-        </span>
-
-        <h2>
-          Making rhythm perceptible through touch and light.
-        </h2>
-
-        <p>
-          The interaction system explores how different rhythmic patterns
-          can be represented through variations in vibration and light.
-        </p>
-
-        <p>
-          The goal is not to reproduce music literally, but to create an
-          intuitive sensory relationship between rhythm and bodily perception.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-interaction.jpg"
-            alt="Resonance interaction design"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Interaction Design Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         PROTOTYPE
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          09 / Prototype
-        </span>
-
-        <h2>
-          Testing the relationship between rhythm and sensory feedback.
-        </h2>
-
-        <p>
-          Prototyping focuses on the physical interaction between the
-          wearable, vibration feedback and visual signals.
-        </p>
-
-        <div class="case-process">
-
-          <div class="case-process-item">
-
-            <span>Stage 01</span>
-
-            <h3>
-              Explore
-            </h3>
-
-            <p>
-              Explore sensory characteristics of rhythm and music.
-            </p>
-
-          </div>
-
-
-          <div class="case-process-item">
-
-            <span>Stage 02</span>
-
-            <h3>
-              Translate
-            </h3>
-
-            <p>
-              Develop mappings between musical rhythm and sensory feedback.
-            </p>
-
-          </div>
-
-
-          <div class="case-process-item">
-
-            <span>Stage 03</span>
-
-            <h3>
-              Prototype
-            </h3>
-
-            <p>
-              Build wearable interaction prototypes and test physical
-              feedback.
-            </p>
-
-          </div>
-
-
-          <div class="case-process-item">
-
-            <span>Stage 04</span>
-
-            <h3>
-              Refine
-            </h3>
-
-            <p>
-              Refine the sensory experience based on interaction testing.
-            </p>
-
-          </div>
-
-        </div>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-prototype.jpg"
-            alt="Resonance prototype"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Prototype Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         FINAL DESIGN
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          10 / Final Design
-        </span>
-
-        <h2>
-          A wearable rhythm experience for more inclusive musical participation.
-        </h2>
-
-        <p>
-          Resonance transforms musical rhythm into tactile and visual
-          feedback, enabling hearing-impaired seniors to engage with
-          music through alternative sensory pathways.
-        </p>
-
-        <p>
-          The final system positions the wearable not simply as an assistive
-          device, but as a medium for participation, expression and shared
-          experience.
-        </p>
-
-        <div class="case-content-image">
-
-          <img
-            src="../assets/resonance-final.jpg"
-            alt="Resonance final design"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-
-          <div class="image-placeholder" style="display:none;">
-            Final Design Image
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         DESIGN SIGNIFICANCE
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          11 / Design Significance
-        </span>
-
-        <h2>
-          Designing beyond the limitations of a single sense.
-        </h2>
-
-        <p>
-          Resonance demonstrates how multisensory interaction can create
-          alternative pathways for experiencing cultural and social
-          activities.
-        </p>
-
-        <p>
-          By translating rhythm into touch and light, the project explores
-          how inclusive interaction design can move beyond compensation
-          toward new forms of participation and experience.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         RECOGNITION
-    ========================= -->
-
-    <section class="case-section">
-
-      <div class="case-section-content">
-
-        <span class="section-label">
-          12 / Recognition
-        </span>
-
-        <h2>
-          Recognition
-        </h2>
-
-        <div class="recognition">
-
-          <span>
-            Recognition / Award
-          </span>
+          <h3>
+            Rhythm
+          </h3>
 
           <p>
-            Recognition information to be added.
+            Musical information is analysed to identify rhythmic
+            characteristics that can be translated into another
+            sensory form.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Touch &amp; Light
+          </h3>
+
+          <p>
+            Rhythm is communicated through tactile stimulation
+            and visual feedback rather than relying only on hearing.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Shared Experience
+          </h3>
+
+          <p>
+            The system is designed around participation, allowing
+            hearing-impaired seniors to engage with music alongside
+            other people.
           </p>
 
         </div>
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- =========================
-         CLOSING
-    ========================= -->
 
-    <section class="case-closing">
+  <!-- =========================
+       INSPIRATION
+       resonance-inspiration.jpg
+  ========================= -->
 
-      <p>
-        Reimagining musical participation through multisensory interaction,
-        wearable technology and inclusive design.
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Inspiration &amp; Background
+      </h2>
+
+      <p class="case-lead">
+        The project began with an interest in the social and
+        emotional value of music for older adults, and in what
+        happens when hearing loss makes conventional musical
+        participation difficult.
       </p>
 
-    </section>
+      <p>
+        The investigation considered the relationship between
+        ageing, hearing loss and participation in musical activities.
+        Instead of defining hearing impairment only as a limitation,
+        the project asked how design could introduce other sensory
+        routes into the experience of music.
+      </p>
 
-  </main>
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/resonance-inspiration.jpg"
+          alt="Resonance inspiration and background research"
+        >
+
+        <p class="case-image-caption">
+          Inspiration, background research and investigation into hearing loss and musical participation
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       MARKET RESEARCH
+       resonance-marketresearch.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Research &amp; Market Analysis
+      </h2>
+
+      <p class="case-lead">
+        Research examined existing approaches to hearing assistance,
+        music participation and sensory substitution to identify
+        opportunities for a different type of experience.
+      </p>
+
+      <p>
+        Existing products and services were reviewed alongside
+        research into hearing loss and the needs of older users.
+        The investigation helped establish the design space for
+        a system focused not simply on hearing better, but on
+        participating differently.
+      </p>
+
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/resonance-marketresearch.jpg"
+          alt="Resonance market analysis and research"
+        >
+
+        <p class="case-image-caption">
+          Market analysis and research into existing products and approaches
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       INTERVIEW & PERSONA
+       resonance-persona.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        User Research
+      </h2>
+
+      <p class="case-lead">
+        Interviews explored how older adults experience hearing
+        loss in everyday social situations and how it affects
+        their relationship with music and participation.
+      </p>
+
+      <div class="case-two-column">
+
+        <div>
+
+          <h3>
+            Interview
+          </h3>
+
+          <p>
+            Conversations with participants helped reveal attitudes
+            toward hearing loss, music and social interaction,
+            providing qualitative insight into everyday experiences
+            that could not be captured through product analysis alone.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Persona
+          </h3>
+
+          <p>
+            Personas were developed to represent different
+            experiences and motivations among older users,
+            helping translate research findings into design
+            requirements.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/resonance-persona.jpg"
+          alt="Resonance interview and persona research"
+        >
+
+        <p class="case-image-caption">
+          Interview findings, participant characteristics and persona development
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       USER JOURNEY
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        User Journey
+      </h2>
+
+      <p class="case-lead">
+        The user journey mapped the experience from encountering
+        music to participating in a shared musical environment,
+        revealing where alternative sensory feedback could become
+        meaningful.
+      </p>
+
+      <div class="case-process">
+
+        <div class="case-process-item">
+
+          <span>
+            01
+          </span>
+
+          <h3>
+            Encounter
+          </h3>
+
+          <p>
+            The user encounters a musical activity or shared
+            musical environment.
+          </p>
+
+        </div>
+
+
+        <div class="case-process-item">
+
+          <span>
+            02
+          </span>
+
+          <h3>
+            Translate
+          </h3>
+
+          <p>
+            Musical information is converted into tactile and
+            visual feedback.
+          </p>
+
+        </div>
+
+
+        <div class="case-process-item">
+
+          <span>
+            03
+          </span>
+
+          <h3>
+            Experience
+          </h3>
+
+          <p>
+            The user experiences rhythm through alternative
+            sensory channels.
+          </p>
+
+        </div>
+
+
+        <div class="case-process-item">
+
+          <span>
+            04
+          </span>
+
+          <h3>
+            Participate
+          </h3>
+
+          <p>
+            The experience supports participation with other
+            people in the shared environment.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       DESIGN CONCEPT
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Design Concept
+      </h2>
+
+      <p class="case-lead">
+        The design concept translates musical rhythm into
+        multisensory feedback through a wearable interface,
+        creating an alternative pathway for experiencing music.
+      </p>
+
+      <div class="case-two-column">
+
+        <div>
+
+          <h3>
+            Design Intention
+          </h3>
+
+          <p>
+            Move beyond a hearing-centred understanding of music
+            and explore how touch and light can communicate
+            rhythmic information.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Target Experience
+          </h3>
+
+          <p>
+            Enable hearing-impaired seniors to feel and perceive
+            musical rhythm while remaining part of a social
+            musical experience.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PROTOTYPING
+       resonance-prototype.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Prototyping
+      </h2>
+
+      <p class="case-lead">
+        Early prototypes explored materials, form, tactile feedback
+        and different ways of translating musical information into
+        a wearable experience.
+      </p>
+
+      <p>
+        The development moved between low-fidelity material
+        experiments and functional prototypes. Different forms
+        and tactile feedback positions were tested to understand
+        how the interaction could remain intuitive and comfortable
+        for older users.
+      </p>
+
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/resonance-prototype.jpg"
+          alt="Resonance prototype development"
+        >
+
+        <p class="case-image-caption">
+          Early prototypes, material exploration and tactile feedback testing
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       TECHNICAL SUPPORT
+       resonance-technicalsupport.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Technical Support &amp; Arduino
+      </h2>
+
+      <p class="case-lead">
+        The technical development explored how musical frequency
+        and rhythmic information could be processed and translated
+        into physical feedback.
+      </p>
+
+      <p>
+        Arduino was used during prototyping to connect the digital
+        processing of musical information with the physical
+        interaction of the wearable. The technical investigation
+        examined musical frequency ranges, signal processing and
+        the relationship between input information and tactile output.
+      </p>
+
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/resonance-technicalsupport.jpg"
+          alt="Resonance Arduino and technical support development"
+        >
+
+        <p class="case-image-caption">
+          Arduino prototyping, technical architecture and musical frequency investigation
+        </p>
+
+      </div>
+
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Musical Input
+          </h3>
+
+          <p>
+            Musical signals provide the source information for
+            the interactive system.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Signal Processing
+          </h3>
+
+          <p>
+            Musical information is processed to identify
+            characteristics suitable for translation.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Physical Feedback
+          </h3>
+
+          <p>
+            Processed information is converted into tactile
+            and visual interaction.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PRODUCT DESIGN
+       resonance-product.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Design Outcome
+      </h2>
+
+      <p class="case-lead">
+        The final wearable translates musical information into
+        an embodied interaction that can be experienced through
+        the user's hands and body.
+      </p>
+
+      <p>
+        The product form was developed around the body and the
+        interaction required to perceive musical rhythm. The
+        wearable integrates the interaction components into a
+        lightweight product language designed for use within
+        social musical environments.
+      </p>
+
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/resonance-product.jpg"
+          alt="Resonance final wearable product design"
+        >
+
+        <p class="case-image-caption">
+          Final wearable design and physical interaction outcome
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       STORYBOARD / EXPERIENCE
+       resonance-storyboard.jpg
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Shared Musical Experience
+      </h2>
+
+      <p class="case-lead">
+        Resonance is designed not only as an individual wearable,
+        but as part of a shared environment where people can
+        experience music together.
+      </p>
+
+      <p>
+        The storyboard develops the interaction beyond the
+        physical product, showing how the wearable can participate
+        in a broader social experience. A shared music environment
+        creates opportunities for hearing-impaired seniors to
+        engage with music alongside family, friends and other
+        participants.
+      </p>
+
+
+      <div class="case-content-image">
+
+        <img
+          src="../assets/resonance-storyboard.jpg"
+          alt="Resonance shared musical experience storyboard"
+        >
+
+        <p class="case-image-caption">
+          Shared experience scenario and service interaction storyboard
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       SYSTEM
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        From Wearable to Experience System
+      </h2>
+
+      <p class="case-lead">
+        The project extends from a wearable interaction into
+        a broader experience system connecting music, people,
+        technology and physical space.
+      </p>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Music
+          </h3>
+
+          <p>
+            Musical input provides the source of rhythm and
+            frequency information.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Wearable
+          </h3>
+
+          <p>
+            The wearable translates the musical information
+            into tactile and visual feedback.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Shared Space
+          </h3>
+
+          <p>
+            The wider experience creates a social context for
+            participating in music together.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       REFLECTION
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Reflection
+      </h2>
+
+      <p class="case-lead">
+        Resonance demonstrates how interaction design can use
+        multisensory translation to reconsider participation
+        rather than simply compensate for sensory loss.
+      </p>
+
+      <p>
+        The project moved from understanding hearing impairment
+        and the social role of music to exploring a complete
+        interaction system involving user research, wearable
+        design, Arduino prototyping and shared experience design.
+      </p>
+
+      <p>
+        More importantly, the project shifts the design question
+        from “How can hearing-impaired users hear music?” to
+        “How can they experience and participate in music through
+        other senses?”
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       DESIGN SIGNIFICANCE
+  ========================= -->
+
+  <section class="case-section">
+
+    <div class="case-section-content">
+
+      <h2>
+        Design Significance
+      </h2>
+
+      <div class="case-highlights">
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            01
+          </div>
+
+          <h3>
+            Sensory Translation
+          </h3>
+
+          <p>
+            Resonance explores translating musical information
+            between sensory modalities rather than relying
+            exclusively on auditory perception.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            02
+          </div>
+
+          <h3>
+            Inclusive Participation
+          </h3>
+
+          <p>
+            The design focuses on enabling participation in
+            shared experiences rather than treating hearing
+            impairment only as an individual limitation.
+          </p>
+
+        </div>
+
+
+        <div class="case-highlight">
+
+          <div class="case-highlight-number">
+            03
+          </div>
+
+          <h3>
+            Product + System
+          </h3>
+
+          <p>
+            The wearable is considered together with technology,
+            physical space and social interaction as a broader
+            experience system.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CLOSING
+  ========================= -->
+
+  <section class="case-closing">
+
+    <h2>
+      Making music
+      something we can
+      experience together.
+    </h2>
+
+    <p>
+      Resonance explores how touch, light and interaction can
+      open alternative pathways into music, creating more
+      inclusive possibilities for shared musical experiences.
+    </p>
+
+  </section>
+
 
 
   <!-- =========================
@@ -1271,10 +1436,13 @@
   </footer>
 
 
-  <script>
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+</main>
+
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
 </html>
